@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'texlyre', // Usually your GitHub org/user name.
-  projectName: '', // Usually your repo name.
+  projectName: 'texlyre.github.io', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -108,14 +108,14 @@ const config: Config = {
               label: 'Getting Started',
               to: '/docs/intro',
             },
-            {
-              label: 'User Guide',
-              to: '/docs/user-guide',
-            },
-            {
-              label: 'API Reference',
-              to: '/docs/api',
-            },
+            // {
+            //   label: 'User Guide',
+            //   to: '/docs/user-guide',
+            // },
+            // {
+            //   label: 'API Reference',
+            //   to: '/docs/api',
+            // },
           ],
         },
         {
