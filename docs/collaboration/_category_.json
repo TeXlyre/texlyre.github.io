@@ -1,0 +1,8 @@
+{
+  "label": "Collaboration",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Collaborative editing and file sharing."
+  }
+}

@@ -87,13 +87,13 @@ const config: Config = {
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://texlyre.github.io/texlyre',
-          label: 'Launch TeXlyre',
+          href: 'https://github.com/texlyre/texlyre',
+          label: 'GitHub',
           position: 'left',
         },
         {
-          href: 'https://github.com/texlyre/texlyre',
-          label: 'GitHub',
+          href: 'https://texlyre.github.io/texlyre',
+          label: 'Login to TeXlyre',
           position: 'right',
         },
       ],
@@ -143,12 +143,12 @@ const config: Config = {
               to: '/blog',
             },
             {
-              label: 'GitHub Organization',
-              href: 'https://github.com/texlyre',
-            },
-            {
               label: 'Launch TeXlyre',
               href: 'https://texlyre.github.io/texlyre',
+            },
+            {
+              label: 'GitHub Organization',
+              href: 'https://github.com/texlyre',
             },
           ],
         },
