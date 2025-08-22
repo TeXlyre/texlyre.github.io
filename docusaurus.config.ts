@@ -152,6 +152,19 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'Privacy Policy',
+              href: 'https://texlyre.github.io/texlyre/#privacy-policy',
+            },
+            {
+              label: 'AGPL 3.0 License',
+              href: 'https://github.com/TeXlyre/texlyre/blob/main/LICENSE',
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} TeXlyre Project.`,
     },
