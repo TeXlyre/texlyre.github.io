@@ -1,4 +1,5 @@
 import type {ReactNode} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -11,46 +12,81 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'In-Browser LaTeX Compilation',
+    Svg: require('@site/static/img/undraw_texlyre_engine.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Compile LaTeX documents directly in your browser using SwiftLaTeX WASM engines.
+        No server required - pdfTeX and XeTeX support with instant feedback.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Real-time Collaboration',
+    Svg: require('@site/static/img/undraw_texlyre_collab.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        TeXlyre enables seamless real-time LaTeX collaboration with live cursors,
+        peer-to-peer connections, and conflict-free document synchronization using Yjs CRDTs.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Local-First Privacy',
+    Svg: require('@site/static/img/undraw_texlyre_privacy.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Your data stays in your browser with TeXlyre's local-first architecture.
+        Work offline, sync when online, and maintain complete control over your documents.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, Svg, description, index}: FeatureItem & {index: number}) {
+  const [isVisible, setIsVisible] = useState(false);
+  const featureRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the element is visible
+        rootMargin: '-50px 0px', // Add some margin for better timing
+      }
+    );
+
+    if (featureRef.current) {
+      observer.observe(featureRef.current);
+    }
+
+    return () => {
+      if (featureRef.current) {
+        observer.unobserve(featureRef.current);
+      }
+    };
+  }, []);
+
+  const isEven = index % 2 === 0;
+
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div
+      ref={featureRef}
+      className={clsx(styles.featureContainer, {
+        [styles.featureReverse]: !isEven,
+        [styles.featureVisible]: isVisible,
+      })}
+    >
+      <div className={styles.featureContent}>
+        <div className={styles.featureText}>
+          <Heading as="h2" className={styles.featureTitle}>{title}</Heading>
+          <p className={styles.featureDescription}>{description}</p>
+        </div>
+        <div className={styles.featureImage}>
+          <Svg className={styles.featureSvg} role="img" />
+        </div>
       </div>
     </div>
   );
@@ -60,11 +96,9 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        {FeatureList.map((props, idx) => (
+          <Feature key={idx} {...props} index={idx} />
+        ))}
       </div>
     </section>
   );
