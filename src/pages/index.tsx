@@ -23,6 +23,19 @@ function HomepageHeader() {
             to="/docs/getting-started/quick-start-guide">
             TeXlyre Tutorial - 4min ⏱️
           </Link>
+          <Link
+            className={clsx("button button--primary button--lg", styles.sampleButton)}
+            to="https://texlyre.github.io/texlyre/#newProjectName:ArXiv%20Template%202020&newProjectDescription:A%20standard%20ArXiv%20template%20for%20preprint%20papers.%20This%20template%20is%20based%20on%20the%20ArXiv-style%20NeurIPS%20template%20(https%3A%2F%2Fgithub.com%2Fkourgeorge%2Farxiv-style).%20ArXiv%20template%20by%20George%20Kour%20is%20licensed%20under%20MIT%20-%20Copyright%20(c)%202020.%20&newProjectTags:paper%2Cjournal%2Cpreprint%2Carxiv%2Cscientific%2Copen-access%2Ctemplate&files:https%3A%2F%2Ftexlyre.github.io%2Ftexlyre-templates%2Ftemplates%2Facademic%2Farxiv-template-20%2Ftemplate.zip">
+            Try Sample Project
+          </Link>
+        </div>
+        <div className={styles.launchButtonContainer}>
+          <Link
+            className={clsx("button button--primary button--lg", styles.launchButton)}
+            to="https://texlyre.github.io/texlyre">
+            <img src="/img/logo.svg" alt="TeXlyre" className={styles.buttonLogo} />
+            Launch TeXlyre
+          </Link>
         </div>
       </div>
     </header>

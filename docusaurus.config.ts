@@ -150,6 +150,31 @@ const config: Config = {
               label: 'GitHub Organization',
               href: 'https://github.com/texlyre',
             },
+            {
+              label: 'Self-Host TeXlyre',
+              href: 'https://github.com/texlyre/texlyre-infrastructure',
+            },
+            {
+              label: 'TeXlyre LaTeX Templates',
+              href: 'https://texlyre.github.io/texlyre-templates',
+            },
+          ],
+        },
+        {
+          title: 'TeXlyre Tools',
+          items: [
+            {
+              label: 'Codemirror LaTeX Language',
+              href: 'https://texlyre.github.io/codemirror-lang-latex',
+            },
+            {
+              label: 'Codemirror BibTeX Language',
+              href: 'https://texlyre.github.io/codemirror-lang-bib',
+            },
+            {
+              label: 'FilePizza API',
+              href: 'https://texlyre.github.io/filepizza-client',
+            },
           ],
         },
         {
