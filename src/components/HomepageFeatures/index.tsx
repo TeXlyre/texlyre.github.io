@@ -53,8 +53,8 @@ function Feature({title, Svg, description, index}: FeatureItem & {index: number}
         setIsVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.3, // Trigger when 30% of the element is visible
-        rootMargin: '-50px 0px', // Add some margin for better timing
+        threshold: 0.1, // Lower threshold - triggers earlier
+        rootMargin: '0px 0px -100px 0px', // Larger bottom margin for hysteresis
       }
     );
 
