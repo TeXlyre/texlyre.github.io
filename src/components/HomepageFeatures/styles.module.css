@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   gap: 4rem;
-  min-height: 700px;
+  min-height: 600px;
 }
 
 .featureReverse .featureContent {
@@ -68,7 +68,7 @@
 .featureSvg {
   width: 800px !important;
   height: auto !important;
-  min-width: 800px;
+  min-width: 600px;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
