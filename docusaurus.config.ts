@@ -180,7 +180,7 @@ const config: Config = {
               href: 'https://filepizza.emaily.re',
             },
             {
-              label: 'Fork -> BibEditor (BibTidy)',
+              label: 'Fork -> BibEditor (BibTeX Tidy)',
               href: 'https://texlyre.github.io/bib-editor',
             },
           ],
