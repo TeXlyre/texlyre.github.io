@@ -176,11 +176,11 @@ const config: Config = {
               href: 'https://texlyre.github.io/filepizza-client',
             },
             {
-              label: 'Fork -> FilePizza',
+              label: 'Fork: FilePizza',
               href: 'https://filepizza.emaily.re',
             },
             {
-              label: 'Fork -> BibEditor (BibTeX Tidy)',
+              label: 'Fork: BibEditor (BibTeX Tidy)',
               href: 'https://texlyre.github.io/bib-editor',
             },
           ],
