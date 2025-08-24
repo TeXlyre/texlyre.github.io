@@ -175,6 +175,14 @@ const config: Config = {
               label: 'FilePizza API',
               href: 'https://texlyre.github.io/filepizza-client',
             },
+            {
+              label: 'Fork -> FilePizza',
+              href: 'https://filepizza.emaily.re',
+            },
+            {
+              label: 'Fork -> BibEditor (BibTidy)',
+              href: 'https://texlyre.github.io/bib-editor',
+            },
           ],
         },
         {
