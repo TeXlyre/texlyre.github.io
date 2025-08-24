@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState, useCallback} from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -45,29 +45,72 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({title, Svg, description, index}: FeatureItem & {index: number}) {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
   const featureRef = useRef<HTMLDivElement>(null);
+  const isScrollingRef = useRef(false);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout>();
+
+  const checkVisibility = useCallback(() => {
+    if (!featureRef.current) return;
+
+    const rect = featureRef.current.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Element is visible if any part is in viewport with generous margins
+    const isInViewport = rect.top < windowHeight * 0.8 && rect.bottom > windowHeight * 0.2;
+
+    if (isInViewport) {
+      setIsVisible(true);
+      setHasBeenVisible(true);
+    } else if (hasBeenVisible && !isScrollingRef.current) {
+      // Only hide if we're not currently scrolling and element was previously visible
+      setIsVisible(false);
+    }
+  }, [hasBeenVisible]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1, // Lower threshold - triggers earlier
-        rootMargin: '0px 0px -100px 0px', // Larger bottom margin for hysteresis
-      }
-    );
+    let rafId: number;
 
-    if (featureRef.current) {
-      observer.observe(featureRef.current);
-    }
+    const handleScroll = () => {
+      isScrollingRef.current = true;
+
+      // Clear existing timeout
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+
+      // Use RAF for smooth updates during scroll
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+
+      rafId = requestAnimationFrame(checkVisibility);
+
+      // Mark scrolling as finished after a delay
+      scrollTimeoutRef.current = setTimeout(() => {
+        isScrollingRef.current = false;
+        checkVisibility();
+      }, 150);
+    };
+
+    // Initial check
+    checkVisibility();
+
+    // Use passive scroll listener for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', checkVisibility, { passive: true });
 
     return () => {
-      if (featureRef.current) {
-        observer.unobserve(featureRef.current);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', checkVisibility);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      if (rafId) {
+        cancelAnimationFrame(rafId);
       }
     };
-  }, []);
+  }, [checkVisibility]);
 
   const isEven = index % 2 === 0;
 
