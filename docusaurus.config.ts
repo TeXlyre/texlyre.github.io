@@ -172,6 +172,10 @@ const config: Config = {
               href: 'https://texlyre.github.io/codemirror-lang-bib',
             },
             {
+              label: 'LaTeX WYSIWYM Visual Editor',
+              href: 'https://texlyre.github.io/codemirror-latex-visual',
+            },
+            {
               label: 'FilePizza API',
               href: 'https://texlyre.github.io/filepizza-client',
             },
