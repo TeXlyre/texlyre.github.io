@@ -172,7 +172,7 @@ const config: Config = {
               href: 'https://texlyre.github.io/codemirror-lang-bib',
             },
             {
-              label: 'LaTeX WYSIWYM Visual Editor',
+              label: 'LaTeX WYSIWYM Editor',
               href: 'https://texlyre.github.io/codemirror-latex-visual',
             },
             {
