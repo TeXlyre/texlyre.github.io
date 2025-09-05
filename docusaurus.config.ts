@@ -176,6 +176,10 @@ const config: Config = {
               href: 'https://texlyre.github.io/codemirror-latex-visual',
             },
             {
+              label: 'Vector to PDF Converter',
+              href: 'https://texlyre.github.io/vector-pdf-converter',
+            },
+            {
               label: 'FilePizza API',
               href: 'https://texlyre.github.io/filepizza-client',
             },
