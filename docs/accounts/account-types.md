@@ -42,7 +42,7 @@ Guest sessions automatically expire to protect privacy. Always export important 
 
 ## Full Accounts
 
-Full accounts provide persistent storage and access to all TeXlyre features. Account creation requires only a username and password, with email addresses being optional for account recovery purposes.
+Full accounts provide persistent storage and access to all TeXlyre features. Account creation requires only a username and password, with email addresses being optional.
 
 ### Full Account Benefits
 
@@ -68,7 +68,7 @@ The local storage approach means your account security depends primarily on your
 
 ## Upgrading from Guest to Full Account
 
-Guest sessions can be converted to full accounts at any time without losing current work. TeXlyre preserves all open projects, recent changes, and workspace state during the upgrade process.
+Guest sessions can be converted to full accounts at any time without losing current work. TeXlyre preserves all projects, recent changes, and workspace state (properties, settings, and currently opened file or document) during the upgrade process.
 
 ### Upgrade Process
 
@@ -99,7 +99,7 @@ Import account data using the "Import Account" option from the login screen. Sel
 The import process preserves collaboration URLs, meaning shared projects continue working after migration. However, active collaboration sessions may need to be re-established.
 
 :::tip Cross-Device Usage
-For regular cross-device usage, consider using file system backup with cloud storage rather than manual export/import. This provides automatic synchronization of project files while maintaining separate account profiles on each device.
+For regular cross-device usage, consider using file system backup with cloud storage rather than manual export/import. This provides synchronization of project files while maintaining separate account profiles on each device.
 :::
 
 ## Privacy Considerations
