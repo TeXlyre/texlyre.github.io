@@ -101,136 +101,132 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Documentation',
-          items: [
-            {
-              label: 'Getting Started',
-              to: '/docs/intro',
-            },
-            // {
-            //   label: 'User Guide',
-            //   to: '/docs/user-guide',
-            // },
-            // {
-            //   label: 'API Reference',
-            //   to: '/docs/api',
-            // },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Reddit Community',
-              href: 'https://reddit.com/r/TeXlyre',
-            },
-            {
-              label: 'GitHub Discussions',
-              href: 'https://github.com/texlyre/texlyre/discussions',
-            },
-            {
-              label: 'Issues & Support',
-              href: 'https://github.com/texlyre/texlyre/issues',
-            },
-          ],
-        },
-        {
-          title: 'Platforms',
-          items: [
-            {
-              html: `
-                <a href="https://github.com/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/github.svg" alt="GitHub" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
-                  GitHub
-                </a>
-              `,
-            },
-            {
-              html: `
-                <a href="https://www.npmjs.com/org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/npm.svg" alt="npm" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
-                  npm
-                </a>
-              `,
-            },
-            {
-              html: `
-                <a href="https://huggingface.co/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/huggingface.svg" alt="Hugging Face" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
-                  Hugging Face
-                </a>
-              `,
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'Launch TeXlyre',
-              href: 'https://texlyre.github.io/texlyre',
-            },
-            {
-              label: 'Self-Host TeXlyre',
-              href: 'https://github.com/texlyre/texlyre-infrastructure',
-            },
-            {
-              label: 'TeXlyre LaTeX Templates',
-              href: 'https://texlyre.github.io/texlyre-templates',
-            },
-          ],
-        },
-        {
-          title: 'TeXlyre Tools',
-          items: [
-            {
-              label: 'Codemirror LaTeX Language',
-              href: 'https://texlyre.github.io/codemirror-lang-latex',
-            },
-            {
-              label: 'Codemirror BibTeX Language',
-              href: 'https://texlyre.github.io/codemirror-lang-bib',
-            },
-            {
-              label: 'LaTeX WYSIWYM Editor',
-              href: 'https://texlyre.github.io/codemirror-latex-visual',
-            },
-            {
-              label: 'Vector to PDF Converter',
-              href: 'https://texlyre.github.io/vector-pdf-converter',
-            },
-            {
-              label: 'FilePizza API',
-              href: 'https://texlyre.github.io/filepizza-client',
-            },
-            {
-              label: 'Fork: FilePizza',
-              href: 'https://filepizza.emaily.re',
-            },
-            {
-              label: 'Fork: BibEditor (BibTeX Tidy)',
-              href: 'https://texlyre.github.io/bib-editor',
-            },
-          ],
-        },
-        {
-          title: 'Legal',
-          items: [
-            {
-              label: 'Privacy Policy',
-              href: 'https://texlyre.github.io/texlyre/#privacy-policy',
-            },
-            {
-              label: 'AGPL 3.0 License',
-              href: 'https://github.com/TeXlyre/texlyre/blob/main/LICENSE',
-            },
-          ],
-        },
+        [
+          {
+            title: 'Documentation',
+            items: [
+              {
+                label: 'Getting Started',
+                to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: '/blog',
+              },
+              {
+                label: 'Launch TeXlyre',
+                href: 'https://texlyre.github.io/texlyre',
+              },
+              {
+                label: 'Self-Host TeXlyre',
+                href: 'https://github.com/texlyre/texlyre-infrastructure',
+              },
+              {
+                label: 'TeXlyre LaTeX Templates',
+                href: 'https://texlyre.github.io/texlyre-templates',
+              },
+            ],
+          },
+          {
+            title: 'TeXlyre Tools',
+            items: [
+              {
+                label: 'Codemirror LaTeX Language',
+                href: 'https://texlyre.github.io/codemirror-lang-latex',
+              },
+              {
+                label: 'Codemirror BibTeX Language',
+                href: 'https://texlyre.github.io/codemirror-lang-bib',
+              },
+              {
+                label: 'LaTeX WYSIWYM Editor',
+                href: 'https://texlyre.github.io/codemirror-latex-visual',
+              },
+              {
+                label: 'Vector to PDF Converter',
+                href: 'https://texlyre.github.io/vector-pdf-converter',
+              },
+              {
+                label: 'FilePizza API',
+                href: 'https://texlyre.github.io/filepizza-client',
+              },
+              {
+                label: 'Fork: FilePizza',
+                href: 'https://filepizza.emaily.re',
+              },
+              {
+                label: 'Fork: BibEditor (BibTeX Tidy)',
+                href: 'https://texlyre.github.io/bib-editor',
+              },
+            ],
+          },
+        ],
+        [
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'Reddit Community',
+                href: 'https://reddit.com/r/TeXlyre',
+              },
+              {
+                label: 'GitHub Discussions',
+                href: 'https://github.com/texlyre/texlyre/discussions',
+              },
+              {
+                label: 'Issues & Support',
+                href: 'https://github.com/texlyre/texlyre/issues',
+              },
+            ],
+          },
+          {
+            title: 'Platforms',
+            items: [
+              {
+                html: `
+                  <a href="https://github.com/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                    <img src="/img/icons/github.svg" alt="GitHub" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                    GitHub
+                  </a>
+                `,
+              },
+              {
+                html: `
+                  <a href="https://www.npmjs.com/org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                    <img src="/img/icons/npm.svg" alt="npm" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                    npm
+                  </a>
+                `,
+              },
+              {
+                html: `
+                  <a href="https://huggingface.co/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                    <img src="/img/icons/huggingface.svg" alt="Hugging Face" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                    Hugging Face
+                  </a>
+                `,
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'Privacy Policy',
+                href: 'https://texlyre.github.io/texlyre/#privacy-policy',
+              },
+              {
+                label: 'AGPL 3.0 License',
+                href: 'https://github.com/TeXlyre/texlyre/blob/main/LICENSE',
+              },
+            ],
+          },
+        ],
       ],
       copyright: `Copyright © ${new Date().getFullYear()} TeXlyre Project.`,
     },
