@@ -112,7 +112,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'Quick Links',
           items: [
             {
               label: 'Blog',
