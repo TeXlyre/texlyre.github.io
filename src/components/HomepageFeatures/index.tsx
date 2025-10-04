@@ -12,12 +12,12 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'In-Browser LaTeX Compilation',
+    title: 'In-Browser LaTeX & Typst Compilation',
     Svg: require('@site/static/img/undraw_texlyre_engine.svg').default,
     description: (
       <>
-        Compile LaTeX documents directly in your browser using SwiftLaTeX WASM engines.
-        No server required - pdfTeX and XeTeX support with instant feedback.
+        Compile LaTeX and Typst documents directly in your browser.
+        No server required - SwiftLaTeX (pdfTeX and XeTeX) and Typst.ts WASM builds run on the client-end.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_texlyre_collab.svg').default,
     description: (
       <>
-        TeXlyre enables seamless real-time LaTeX collaboration with live cursors,
+        TeXlyre enables real-time collaboration with live cursors,
         peer-to-peer connections, and conflict-free document synchronization using Yjs CRDTs.
       </>
     ),
