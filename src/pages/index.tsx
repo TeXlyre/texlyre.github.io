@@ -26,7 +26,12 @@ function HomepageHeader() {
           <Link
             className={clsx("button button--primary button--lg", styles.sampleButton)}
             to="https://texlyre.github.io/texlyre/#newProjectName:ArXiv%20Template%202020&newProjectDescription:A%20standard%20ArXiv%20template%20for%20preprint%20papers.%20This%20template%20is%20based%20on%20the%20ArXiv-style%20NeurIPS%20template%20(https%3A%2F%2Fgithub.com%2Fkourgeorge%2Farxiv-style).%20ArXiv%20template%20by%20George%20Kour%20is%20licensed%20under%20MIT%20-%20Copyright%20(c)%202020.%20&newProjectTags:paper%2Cjournal%2Cpreprint%2Carxiv%2Cscientific%2Copen-access%2Ctemplate&files:https%3A%2F%2Ftexlyre.github.io%2Ftexlyre-templates%2Ftemplates%2Facademic%2Farxiv-template-20%2Ftemplate.zip">
-            Try Sample Project
+            Try a LaTeX Project
+          </Link>
+          <Link
+            className={clsx("button button--primary button--lg", styles.sampleButton)}
+            to="https://texlyre.github.io/texlyre/#newProjectName:Appreciated%20Letter&newProjectDescription:Correspond%20with%20business%20associates%20and%20your%20friends%20via%20mail.%20This%20template%20follows%20DIN%205008%20standards%20for%20professional%20correspondence%20(https%3A%2F%2Fgithub.com%2Ftypst%2Ftemplates).%20Appreciated%20Letter%20template%20by%20Typst%20GmbH%20is%20licensed%20under%20MIT-0.&newProjectType:typst&newProjectTags:correspondence%2Cmail%2Cletter%2CDIN%205008%2Coffice%2Ctypst&files:https%3A%2F%2Ftexlyre.github.io%2Ftexlyre-templates%2Ftemplates%2Fletters%2Fappreciated-letter%2Ftemplate.zip">
+            Try a Typst Project
           </Link>
         </div>
         <div className={styles.launchButtonContainer}>
