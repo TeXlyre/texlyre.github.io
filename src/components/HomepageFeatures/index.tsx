@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Compile LaTeX and Typst documents directly in your browser.
-        No server required - SwiftLaTeX (pdfTeX and XeTeX) and Typst.ts WASM builds run on the client-end.
+        No server required - SwiftLaTeX (pdfTeX and XeTeX) and Typst.ts WASM builds run on the client-end
       </>
     ),
   },
@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         TeXlyre enables real-time collaboration with live cursors,
-        peer-to-peer connections, and conflict-free document synchronization using Yjs CRDTs.
+        peer-to-peer connections, and conflict-free document synchronization using Yjs CRDTs
       </>
     ),
   },
@@ -37,7 +37,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Your data stays in your browser with TeXlyre's local-first architecture.
-        Work offline, sync when online, and maintain complete control over your documents.
+        Work offline, sync when online, and maintain complete control over your documents
       </>
     ),
   },
