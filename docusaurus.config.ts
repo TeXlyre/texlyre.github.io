@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'TeXlyre',
-  tagline: 'Local-first real-time LaTeX collaboration platform',
+  tagline: 'Local-first real-time LaTeX and Typst collaboration platform',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -127,7 +127,7 @@ const config: Config = {
               href: 'https://github.com/texlyre/texlyre-infrastructure',
             },
             {
-              label: 'TeXlyre LaTeX Templates',
+              label: 'TeXlyre Templates',
               href: 'https://texlyre.github.io/texlyre-templates',
             },
           ],
@@ -231,7 +231,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['latex', 'bash', 'javascript', 'typescript', 'json'],
+      additionalLanguages: ['latex', 'typst', 'bash', 'javascript', 'typescript', 'json'],
     },
   } satisfies Preset.ThemeConfig,
 };
