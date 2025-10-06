@@ -2,9 +2,12 @@
 sidebar_position: 3
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Quick Start Guide
 
-This guide walks you through creating your first complete LaTeX document in TeXlyre, from initial setup to sharing with collaborators. You'll learn the essential workflow that applies to most TeXlyre projects.
+This guide walks you through creating your first complete document in TeXlyre, from initial setup to sharing with collaborators. You'll learn the essential workflow that applies to most TeXlyre projects.
 
 ## Creating Your First Document
 
@@ -14,7 +17,10 @@ Name your project "My First TeXlyre Document" and add a description like "Learni
 
 Once created, TeXlyre opens your empty project. The file explorer on the left is empty, and the main area prompts you to create your first file.
 
-## Setting Up Your LaTeX Structure
+## Setting Up Your Document Structure
+
+<Tabs groupId="tex-engine">
+<TabItem value="latex" label="LaTeX" default>
 
 Create your main LaTeX file by clicking the "New File" button in the file explorer. Name it `main.tex` to establish it as your primary document. TeXlyre will automatically detect this as your main compilation target.
 
@@ -57,25 +63,82 @@ TeXlyre successfully combines the power of LaTeX with modern collaborative editi
 \end{document}
 ```
 
-As you type, TeXlyre provides syntax highlighting and automatically saves your changes. The editor understands LaTeX commands and structures, highlighting them appropriately to make your code more readable.
+</TabItem>
+<TabItem value="typst" label="Typst">
+
+Create your main Typst file by clicking the "New File" button in the file explorer. Name it `main.typ` to establish it as your primary document. TeXlyre will automatically detect this as your main compilation target.
+
+Start with a basic Typst document structure:
+
+```typst
+#set document(title: "My First TeXlyre Document", author: "Your Name")
+#set page(numbering: "1")
+#set text(font: "Linux Libertine", size: 11pt)
+
+#align(center)[
+  #text(size: 17pt, weight: "bold")[My First TeXlyre Document]
+  
+  Your Name
+  
+  #datetime.today().display()
+]
+
+= Introduction
+
+This is my first document created in TeXlyre. The local-first approach means this content stays in my browser while still enabling collaboration with others.
+
+= Features I'm Learning
+
+TeXlyre provides several key capabilities that make Typst writing more efficient and collaborative.
+
+== Real-time Editing
+
+Multiple collaborators can edit the same document simultaneously without conflicts.
+
+== Instant Compilation
+
+Typst compilation happens directly in the browser using WebAssembly engines.
+
+= Conclusion
+
+TeXlyre successfully combines the power of Typst with modern collaborative editing.
+```
+
+</TabItem>
+</Tabs>
+
+As you type, TeXlyre provides syntax highlighting and automatically saves your changes. The editor understands LaTeX and Typst commands and structures, highlighting them appropriately to make your code more readable.
 
 ## Compiling Your Document
 
-With your LaTeX content ready, compile it to see the PDF output. Click the play button in the compilation controls, or press F9 to start compilation.
+With your content ready, compile it to see the PDF output. Click the play button in the compilation controls, or press F9 to start compilation.
 
-TeXlyre compiles your document using local WebAssembly engines. The first compilation may take a moment as it downloads necessary LaTeX packages, but subsequent compilations are much faster.
+TeXlyre compiles your document using local WebAssembly engines. The first compilation may take a moment as it downloads necessary packages, but subsequent compilations are much faster.
 
 ### Viewing the Output
 
 Once compilation completes, switch to the PDF tab to view your generated document. The PDF viewer includes zoom controls, page navigation, and the ability to download the final PDF file.
 
-If compilation errors occur, the Log tab displays detailed error information. TeXlyre's error parser translates common LaTeX errors into plain English explanations with suggestions for fixes.
+If compilation errors occur, the Log tab displays detailed error information. TeXlyre's error parser translates common errors into plain English explanations with suggestions for fixes.
 
 ### Understanding Compilation Settings
+
+<Tabs groupId="tex-engine">
+<TabItem value="latex" label="LaTeX" default>
 
 TeXlyre defaults to pdfTeX for most documents, which handles standard LaTeX content well. For documents requiring Unicode support or advanced typography, switch to XeTeX using the engine selector in the compilation controls.
 
 The platform automatically detects your main file when you have only one `.tex` file. For complex projects with multiple LaTeX files, you can manually specify the main file in the compilation settings.
+
+</TabItem>
+<TabItem value="typst" label="Typst">
+
+TeXlyre uses the Typst compiler which provides fast compilation with native Unicode support. The default output format is PDF.
+
+The platform automatically detects your main file when you have only one `.typ` file. For complex projects with multiple Typst files, you can manually specify the main file in the compilation settings.
+
+</TabItem>
+</Tabs>
 
 :::tip Compilation Shortcuts
 - **F9**: Compile document
@@ -85,11 +148,14 @@ The platform automatically detects your main file when you have only one `.tex` 
 
 ## Adding Images and Files
 
-Most LaTeX documents include images or other supporting files. Create an `images` folder in your file explorer to organize visual content.
+Most documents include images or other supporting files. Create an `images` folder in your file explorer to organize visual content.
 
 Upload an image by dragging it from your computer into the `images` folder, or use the upload button in the file explorer. TeXlyre supports common image formats including PNG, JPEG, and PDF.
 
-Reference your uploaded image in LaTeX:
+Reference your uploaded image:
+
+<Tabs groupId="tex-engine">
+<TabItem value="latex" label="LaTeX" default>
 
 ```latex
 \begin{figure}[h]
@@ -99,6 +165,19 @@ Reference your uploaded image in LaTeX:
     \label{fig:example}
 \end{figure}
 ```
+
+</TabItem>
+<TabItem value="typst" label="Typst">
+
+```typst
+#figure(
+  image("images/your-image.png", width: 50%),
+  caption: [Your image caption here],
+) <fig_example>
+```
+
+</TabItem>
+</Tabs>
 
 Recompile your document to see the image included in your PDF output.
 
@@ -128,6 +207,9 @@ As your project grows, organize files into logical folders. Create folders for d
 
 ### Bibliography Management
 
+<Tabs groupId="tex-engine">
+<TabItem value="latex" label="LaTeX" default>
+
 For documents requiring citations, create a `references.bib` file to store your bibliography entries. TeXlyre includes bibliography management tools that help format and organize your references.
 
 Add bibliography support to your main document:
@@ -140,9 +222,26 @@ Add bibliography support to your main document:
 \bibliography{references}
 ```
 
+</TabItem>
+<TabItem value="typst" label="Typst">
+
+For documents requiring citations, create a `references.bib` or `references.yml` file to store your bibliography entries. TeXlyre includes bibliography management tools that help format and organize your references.
+
+Add bibliography support to your main document:
+
+```typst
+#bibliography("references.bib", style: "ieee")
+```
+
+</TabItem>
+</Tabs>
+
 ### Multiple Document Projects
 
-Complex projects often split content across multiple LaTeX files. Create separate files for each chapter or section, then include them in your main document:
+Complex projects often split content across multiple files. Create separate files for each chapter or section, then include them in your main document:
+
+<Tabs groupId="tex-engine">
+<TabItem value="latex" label="LaTeX" default>
 
 ```latex
 \include{chapters/introduction}
@@ -150,6 +249,19 @@ Complex projects often split content across multiple LaTeX files. Create separat
 \include{chapters/results}
 \include{chapters/conclusion}
 ```
+
+</TabItem>
+<TabItem value="typst" label="Typst">
+
+```typst
+#include "chapters/introduction.typ"
+#include "chapters/methodology.typ"
+#include "chapters/results.typ"
+#include "chapters/conclusion.typ"
+```
+
+</TabItem>
+</Tabs>
 
 This approach keeps your main file clean and makes collaboration easier when different people work on different sections.
 

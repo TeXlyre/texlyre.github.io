@@ -2,7 +2,7 @@
 slug: introducing-texlyre
 title: Introducing TeXlyre - Local-First Real-Time LaTeX Collaboration
 authors: [slorber]
-tags: [texlyre, latex, collaborative-editing, yjs, wasm, react, typescript]
+tags: [texlyre, latex, typst, collaborative-editing, yjs, wasm, react, typescript]
 ---
 
 **TeXlyre** is a **[local-first](https://www.inkandswitch.com/essay/local-first/)** real-time LaTeX collaboration platform that enables researchers, academics, and teams to work together on scientific documents. Built with cutting-edge technologies including React, TypeScript, and Yjs, TeXlyre enables collaborative document editing with complete offline capabilities.

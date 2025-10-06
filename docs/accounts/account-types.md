@@ -12,7 +12,7 @@ Guest accounts provide immediate access to TeXlyre without any registration proc
 
 ### Guest Account Features
 
-Guest sessions include full access to TeXlyre's core functionality. You can create projects, edit documents, compile LaTeX, collaborate with others, and use all integrated tools. The editing experience is identical to full accounts, with real-time collaboration, syntax highlighting, and instant compilation.
+Guest sessions include full access to TeXlyre's core functionality. You can create projects, edit documents, compile LaTeX/Typst, collaborate with others, and use all integrated tools. The editing experience is identical to full accounts, with real-time collaboration, syntax highlighting, and instant compilation.
 
 Guest accounts support file uploads, project organization, and sharing capabilities. You can invite collaborators, participate in shared projects, and use the integrated chat and commenting systems.
 
@@ -46,7 +46,7 @@ Full accounts provide persistent storage and access to all TeXlyre features. Acc
 
 ### Full Account Benefits
 
-Your projects persist indefinitely in your browser's local storage. This enables long-term project development, complex document workflows, and gradual accumulation of a personal LaTeX library.
+Your projects persist indefinitely in your browser's local storage. This enables long-term project development, complex document workflows, and gradual accumulation of a personal LaTeX/Typst library.
 
 Full accounts unlock file system backup capabilities, allowing you to connect TeXlyre to local folders for automatic synchronization. This feature works with cloud storage services to provide cross-device access and automatic backup.
 

@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Creating Projects
 
-Projects in TeXlyre organize your LaTeX documents, files, and collaboration settings into manageable workspaces. Each project provides an isolated environment for specific writing tasks, whether you're crafting academic papers, books, presentations, or technical documentation.
+Projects in TeXlyre organize your LaTeX/Typst documents, files, and collaboration settings into manageable workspaces. Each project provides an isolated environment for specific writing tasks, whether you're crafting academic papers, books, presentations, or technical documentation.
 
 ## Starting a New Project
 
@@ -26,7 +26,7 @@ Select a template to preview its structure and styling before creation. Template
 
 ### Importing Existing Work
 
-Import projects from other TeXlyre instances or migrate work from external LaTeX environments. The import process supports TeXlyre export files and can extract projects from ZIP archives containing LaTeX source files.
+Import projects from other TeXlyre instances or migrate work from external LaTeX/Typst environments. The import process supports TeXlyre export files and can extract projects from ZIP archives containing LaTeX/Typst source files.
 
 Import workflows preserve project structure and file relationships when possible. Complex projects with custom configurations may require manual adjustment after import to ensure all components function correctly.
 
@@ -62,7 +62,7 @@ Consider creating test projects for experimenting with new features or sharing e
 
 ### Document Structure
 
-Start new projects by creating your main LaTeX document and organizing supporting files. Establish a logical file structure early in the project to maintain organization as content grows.
+Start new projects by creating your main LaTeX/Typst document and organizing supporting files. Establish a logical file structure early in the project to maintain organization as content grows.
 
 Create folders for different content types such as chapters, figures, data files, and bibliography sources. Clear organization makes collaboration easier and helps you locate specific files quickly.
 
@@ -70,7 +70,7 @@ Consider your project's final structure when organizing initial files. Academic 
 
 ### Main File Configuration
 
-Identify your project's main LaTeX file that serves as the compilation entry point. TeXlyre can auto-detect main files in simple projects, but complex projects benefit from explicit main file specification.
+Identify your project's main LaTeX/Typst file that serves as the compilation entry point. TeXlyre can auto-detect main files in simple projects, but complex projects benefit from explicit main file specification.
 
 The main file typically contains your document preamble, package imports, and high-level structure while including content from other files. This approach enables efficient collaboration by allowing team members to work on different sections simultaneously.
 
@@ -83,6 +83,12 @@ Choose the appropriate LaTeX engine for your project's requirements. pdfTeX work
 Consider your project's specific needs when selecting engines. Documents requiring Unicode text, custom fonts, or complex mathematical notation might benefit from XeTeX's advanced capabilities.
 
 Engine selection affects compilation behavior and available features. Test your chosen engine with representative content early in the project to ensure it meets your formatting and output requirements.
+
+### Output Format
+
+Choose the Typst output format to render your Typst documents. Currently, PDF rendering is the default output format, however, TeXlyre also supports SVG and HTML rendering. 
+
+Note that including SVG figures in your Typst document may not render PDF in full or may be distorted due to Typst's built-in conversion engine. 
 
 ## Project Templates in Detail
 

@@ -1,12 +1,12 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'TeXlyre',
-  tagline: 'Local-first real-time LaTeX and Typst collaboration platform',
+  tagline: 'Local-First LaTeX & Typst Web Editor with Real-Time Collaboration + Offline Support',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -85,7 +85,7 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/texlyre/texlyre',
           label: 'GitHub',
@@ -98,7 +98,7 @@ const config: Config = {
         },
       ],
     },
-    
+
     footer: {
       style: 'dark',
       links: [
@@ -224,14 +224,31 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: 'Socials',
+          items: [
+            {
+              html: `
+        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+          <a href="https://reddit.com/r/TeXlyre" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+            <img src="/img/icons/reddit.svg" alt="Reddit" style="width: 32px; height: 32px;" />
+          </a>
+          <a href="https://youtube.com/@TeXlyre" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <img src="/img/icons/youtube.svg" alt="YouTube" style="width: 32px; height: 32px;" />
+          </a>
+        </div>
+      `,
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} TeXlyre Project.`,
     },
-    
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['latex', 'bash', 'javascript', 'typescript', 'json'],
+      additionalLanguages: ['latex', 'typst', 'bash', 'javascript', 'typescript', 'json'],
     },
   } satisfies Preset.ThemeConfig,
 };

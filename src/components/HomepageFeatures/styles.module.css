@@ -14,8 +14,10 @@
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, transform; /* Optimize for animations */
-  backface-visibility: hidden; /* Prevent flicker */
+  will-change: opacity, transform;
+  /* Optimize for animations */
+  backface-visibility: hidden;
+  /* Prevent flicker */
 }
 
 .featureContainer:last-child {
@@ -50,9 +52,8 @@
   opacity: 0;
   transform: translateX(30px);
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-  min-width: 800px;
   overflow: visible;
-  will-change: opacity, transform; /* Optimize for animations */
+  will-change: opacity, transform;
 }
 
 .featureReverse .featureImage {
@@ -65,9 +66,9 @@
 }
 
 .featureSvg {
-  width: 800px !important;
+  width: 100%;
+  max-width: 800px;
   height: auto !important;
-  min-width: 500px;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 
@@ -78,7 +79,8 @@
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
-  will-change: opacity, transform; /* Optimize for animations */
+  will-change: opacity, transform;
+  /* Optimize for animations */
 }
 
 .featureVisible .featureTitle {
@@ -93,7 +95,8 @@
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-  will-change: opacity, transform; /* Optimize for animations */
+  will-change: opacity, transform;
+  /* Optimize for animations */
 }
 
 .featureVisible .featureDescription {
@@ -103,6 +106,7 @@
 
 /* Mobile responsiveness */
 @media (max-width: 996px) {
+
   .featureContent,
   .featureReverse .featureContent {
     flex-direction: column;
@@ -119,6 +123,7 @@
   .featureReverse .featureImage {
     transform: translateY(20px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    width: 100%;
   }
 
   .featureVisible .featureImage {
@@ -126,8 +131,8 @@
   }
 
   .featureSvg {
-    width: 500px !important;
-    max-width: none !important;
+    width: 100% !important;
+    max-width: 500px !important;
     transition: all 0.4s ease-out 0.1s;
   }
 
@@ -142,6 +147,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
+
     .featureContainer,
     .featureImage,
     .featureTitle,

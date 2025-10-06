@@ -1,12 +1,17 @@
 texlyre:
     label: TeXlyre
     permalink: /texlyre
-    description: TeXlyre LaTeX editor
+    description: TeXlyre LaTeX & Typst editor
 
 latex:
     label: LaTeX
     permalink: /latex
     description: LaTeX language
+
+typst:
+    label: Typst
+    permalink: /typst
+    description: Typst language
 
 markdown:
     label: Markdown
@@ -72,5 +77,3 @@ german:
     label: German
     permalink: /german
     description: German language
-
-

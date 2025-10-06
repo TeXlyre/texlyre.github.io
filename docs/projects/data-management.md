@@ -78,7 +78,7 @@ Safari and mobile browsers support core TeXlyre functionality but may have reduc
 
 ### Migration Verification
 
-After importing your account on a new device, verify that all projects opened correctly and linked documents maintain their connections. Check that compilation settings and LaTeX engines work as expected in the new environment.
+After importing your account on a new device, verify that all projects opened correctly and linked documents maintain their connections. Check that compilation settings and LaTeX/Typst engines work as expected in the new environment.
 
 Test collaboration features by joining existing shared projects or creating test collaborations. Ensure your cursor colors and identity settings transferred correctly and that real-time editing functions properly.
 

@@ -4,15 +4,13 @@ sidebar_position: 2
 
 # First Steps
 
-Your first experience with TeXlyre begins at the authentication screen, where you'll choose how to start your LaTeX journey. This decision affects how your projects are stored and what features become available.
-
 ## Choosing Your Account Type
 
 TeXlyre offers two ways to get started, each suited to different needs and situations.
 
 ### Guest Sessions
 
-Guest sessions provide immediate access to TeXlyre's full feature set without any registration process. Click "Try as Guest" to begin editing immediately. Guest accounts include all core functionality: document editing, LaTeX compilation, real-time collaboration, and file management.
+Guest sessions provide immediate access to TeXlyre's full feature set without any registration process. Click "Try as Guest" to begin editing immediately. Guest accounts include all core functionality: document editing, LaTeX/Typst compilation, real-time collaboration, and file management.
 
 The trade-off with guest sessions is persistence. Your projects exist only for the current browser session and disappear when you close the browser or after 24 hours, whichever comes first. Guest sessions also cannot access file system backup features.
 
@@ -30,7 +28,7 @@ You can convert a guest session to a full account at any time without losing you
 
 ## Understanding the Interface
 
-TeXlyre's interface adapts to your current activity. The main areas include the project dashboard, file explorer, document editor, and LaTeX output viewer.
+TeXlyre's interface adapts to your current activity. The main areas include the project dashboard, file explorer, document editor, and PDF/SVG/HTML output viewer.
 
 ### Project Dashboard
 
@@ -40,7 +38,7 @@ Use the search bar to quickly find specific projects. Filter by tags to organize
 
 ### Navigation Between Projects and Files
 
-TeXlyre organizes content at two levels: projects and files within projects. Projects represent complete LaTeX documents or related sets of documents, like a research paper or book chapter. Within each project, you'll work with individual files including LaTeX sources, images, data files, and generated outputs.
+TeXlyre organizes content at two levels: projects and files within projects. Projects represent complete LaTeX/Typst documents or related sets of documents, like a research paper or book chapter. Within each project, you'll work with individual files including LaTeX/Typst sources, images, data files, and generated outputs.
 
 The interface provides clear navigation between these levels. Use the "Projects" button to return to your project dashboard. Within a project, the file explorer shows your project's file structure.
 
@@ -62,7 +60,7 @@ Access templates through the "Import Projects" button, then select "From Templat
 
 ## Basic Navigation
 
-Once inside a project, TeXlyre's split-pane interface shows your file explorer on the left and the main work area on the right. The work area switches between document editing and LaTeX output viewing.
+Once inside a project, TeXlyre's split-pane interface shows your file explorer on the left and the main work area on the right. The work area switches between document editing and LaTeX/Typst output viewing.
 
 ### File Explorer
 
@@ -72,7 +70,7 @@ Create new files and folders using the plus icons in the file explorer header. U
 
 ### Document Editor
 
-The document editor provides syntax highlighting for LaTeX and other text formats. The editor understands LaTeX commands and highlights them appropriately, making it easier to spot syntax errors and structure your content.
+The document editor provides syntax highlighting for typesetting and other text formats. The editor understands LaTeX and Typst commands, and highlights them appropriately, making it easier to spot syntax errors and structure your content.
 
 Switch between files by clicking them in the file explorer. The editor remembers your cursor position in each file, allowing quick context switching between related documents.
 
@@ -84,7 +82,7 @@ TeXlyre automatically saves your changes as you type. You'll see a brief "Saved"
 
 TeXlyre distinguishes between collaborative documents and regular files, though both appear in your project structure.
 
-**Documents** support real-time collaboration. When multiple people work on the same document, everyone sees live changes, cursors, and selections. Documents work best for LaTeX source files that benefit from collaborative editing.
+**Documents** support real-time collaboration. When multiple people work on the same document, everyone sees live changes, cursors, and selections. Documents work best for LaTeX/Typst source files that benefit from collaborative editing.
 
 **Files** store content that doesn't require real-time collaboration, such as images, data files, or generated outputs. Files can be shared between collaborators but don't support live editing.
 
@@ -92,4 +90,4 @@ TeXlyre distinguishes between collaborative documents and regular files, though 
 
 ## Next Steps
 
-With your first project created and the interface understood, you're ready to start writing LaTeX content. The [Quick Start Guide](./quick-start-guide) walks through creating a complete document from start to finish, including compilation and sharing with collaborators.
+With your first project created and the interface understood, you're ready to start writing LaTeX or Typst content. The [Quick Start Guide](./quick-start-guide) walks through creating a complete document from start to finish, including compilation and sharing with collaborators.
