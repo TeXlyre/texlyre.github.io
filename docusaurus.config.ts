@@ -224,7 +224,7 @@ const config: Config = {
             },
             {
               label: 'Attributions',
-              to: '/attributions',
+              to: '/docs/attributions',
             },
           ],
         },
