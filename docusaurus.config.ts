@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'TeXlyre',
-  tagline: 'Local-First LaTeX & Typst Web Editor with Real-Time Collaboration + Offline Support',
+  tagline: 'The Local-First LaTeX & Typst Web Editor',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
