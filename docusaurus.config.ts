@@ -222,6 +222,10 @@ const config: Config = {
               label: 'AGPL 3.0 License',
               href: 'https://github.com/TeXlyre/texlyre/blob/main/LICENSE',
             },
+            {
+              label: 'Attributions',
+              to: '/attributions',
+            },
           ],
         },
         {
