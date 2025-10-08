@@ -46,6 +46,9 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/texlyre/docs/tree/main/',
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
+          ],
         },
         blog: {
           showReadingTime: true,
@@ -61,6 +64,9 @@ const config: Config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
+          ],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -112,6 +118,14 @@ const config: Config = {
             {
               label: 'Installation',
               to: '/docs/installation',
+            },
+            {
+              label: 'Configuring TeXlyre',
+              to: '/docs/configuration#configuration-files',
+            },
+            {
+              label: 'Deploying a GitHub Fork',
+              to: '/docs/configuration#github-pages-deployment',
             },
           ],
         },
