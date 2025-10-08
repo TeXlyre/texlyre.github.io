@@ -109,6 +109,10 @@ const config: Config = {
               label: 'Getting Started',
               to: '/docs/intro',
             },
+            {
+              label: 'Installation',
+              to: '/docs/installation',
+            },
           ],
         },
         {
