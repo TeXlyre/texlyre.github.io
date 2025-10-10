@@ -1,3 +1,4 @@
+##################################### PNG ####################################
 google-chrome --headless --no-sandbox --hide-scrollbars \
   --window-size=1920,1080 \
   --incognito \

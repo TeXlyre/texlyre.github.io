@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 type Project = {
     title: string;
     description: string;
-    imagePath: string;
+    image: string;
     link: string;
 };
 
@@ -16,69 +16,46 @@ const projects: Project[] = [
     {
         title: 'CodeMirror LaTeX Language',
         description: 'Syntax highlighting and language support for LaTeX in CodeMirror 6',
-        imagePath: '/img/codemirror-lang-latex.png',
+        image: 'img/codemirror-lang-latex.png',
         link: 'https://texlyre.github.io/codemirror-lang-latex/',
     },
     {
         title: 'CodeMirror BibTeX Language',
         description: 'Syntax highlighting and language support for BibTeX in CodeMirror 6',
-        imagePath: '/img/codemirror-lang-bib.png',
+        image: 'img/codemirror-lang-bib.png',
         link: 'https://texlyre.github.io/codemirror-lang-bib/',
     },
     {
         title: 'WASM LaTeX Tools',
         description: 'WebAssembly-powered LaTeX utilities for browser-based compilation',
-        imagePath: '/img/wasm-latex-tools.png',
+        image: 'img/wasm-latex-tools.png',
         link: 'https://texlyre.github.io/wasm-latex-tools/',
     },
     {
         title: 'CodeMirror LaTeX Visual',
         description: 'Visual editing enhancements for LaTeX in CodeMirror',
-        imagePath: '/img/codemirror-latex-visual.png',
+        image: 'img/codemirror-latex-visual.png',
         link: 'https://texlyre.github.io/codemirror-latex-visual/',
     },
     {
         title: 'Vector PDF Converter',
         description: 'Convert between vector PDF formats in the browser',
-        imagePath: '/img/vector-pdf-converter.png',
+        image: 'img/vector-pdf-converter.png',
         link: 'https://texlyre.github.io/vector-pdf-converter/',
     },
     {
         title: 'FilePizza Client',
         description: 'Peer-to-peer file transfer directly in your browser',
-        imagePath: '/img/filepizza-client.png',
+        image: 'img/filepizza-client.png',
         link: 'https://texlyre.github.io/filepizza-client/',
     },
     {
         title: 'TeXlyre Templates',
         description: 'Collection of LaTeX and Typst templates for various use cases',
-        imagePath: '/img/texlyre-templates.png',
+        image: 'img/texlyre-templates.png',
         link: 'https://texlyre.github.io/texlyre-templates/',
     },
 ];
-
-function ProjectSlide({ project }: { project: Project }) {
-    const imageUrl = useBaseUrl(project.imagePath);
-
-    return (
-        <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.slideLink}
-        >
-            <img
-                src={imageUrl}
-                alt={project.title}
-                className={styles.slideImage}
-            />
-            <div className={styles.slideInfo}>
-                <h3 className={styles.slideTitle}>{project.title}</h3>
-                <p className={styles.slideDescription}>{project.description}</p>
-            </div>
-        </a>
-    );
-}
 
 export default function ProjectCarousel(): ReactNode {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -143,7 +120,22 @@ export default function ProjectCarousel(): ReactNode {
                                     [styles.slideActive]: index === currentIndex,
                                 })}
                             >
-                                <ProjectSlide project={project} />
+                                <a
+                                    href={project.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.slideLink}
+                                >
+                                    <img
+                                        src={useBaseUrl(project.image)}
+                                        alt={project.title}
+                                        className={styles.slideImage}
+                                    />
+                                    <div className={styles.slideInfo}>
+                                        <h3 className={styles.slideTitle}>{project.title}</h3>
+                                        <p className={styles.slideDescription}>{project.description}</p>
+                                    </div>
+                                </a>
                             </div>
                         ))}
                     </div>
