@@ -25,12 +25,14 @@
     position: relative;
     max-width: 1100px;
     margin: 0 auto;
+    isolation: isolate;
 }
 
 .carouselContent {
     position: relative;
     width: 100%;
-    aspect-ratio: 1320 / 1080;
+    aspect-ratio: 16 / 9;
+    min-height: 220px;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -49,11 +51,15 @@
     opacity: 0;
     transform: translateX(100%);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .slideActive {
-    opacity: 1;
-    transform: translateX(0);
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    pointer-events: auto;
+    z-index: 2;
 }
 
 .slideLink {
@@ -67,7 +73,7 @@
 .slideImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 

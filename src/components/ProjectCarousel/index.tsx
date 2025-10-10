@@ -8,7 +8,7 @@ import styles from './styles.module.css';
 type Project = {
     title: string;
     description: string;
-    image: string;
+    image: string; // path under /static, e.g. 'img/foo.png'
     link: string;
 };
 
@@ -75,34 +75,23 @@ export default function ProjectCarousel(): ReactNode {
 
     useEffect(() => {
         if (!isAutoPlaying) return;
-
-        const interval = setInterval(() => {
-            goToNext();
-        }, 5000);
-
-        return () => clearInterval(interval);
+        const id = setInterval(goToNext, 5000);
+        return () => clearInterval(id);
     }, [isAutoPlaying, goToNext]);
 
-    const handleMouseEnter = useCallback(() => {
-        setIsAutoPlaying(false);
-    }, []);
-
-    const handleMouseLeave = useCallback(() => {
-        setIsAutoPlaying(true);
-    }, []);
+    const active = projects[currentIndex];
+    const activeSrc = useBaseUrl(active.image);
 
     return (
         <section className={styles.carousel}>
             <div className="container">
                 <Heading as="h2" className={styles.title}>TeXlyre Ecosystem</Heading>
-                <p className={styles.subtitle}>
-                    Explore the open-source projects that power TeXlyre
-                </p>
+                <p className={styles.subtitle}>Explore the open-source projects that power TeXlyre</p>
 
                 <div
                     className={styles.carouselContainer}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={() => setIsAutoPlaying(false)}
+                    onMouseLeave={() => setIsAutoPlaying(true)}
                 >
                     <button
                         className={clsx(styles.navButton, styles.navButtonPrev)}
@@ -113,31 +102,32 @@ export default function ProjectCarousel(): ReactNode {
                     </button>
 
                     <div className={styles.carouselContent}>
-                        {projects.map((project, index) => (
-                            <div
-                                key={index}
-                                className={clsx(styles.slide, {
-                                    [styles.slideActive]: index === currentIndex,
-                                })}
+                        {/* Only render the active slide */}
+                        <div className={clsx(styles.slide, styles.slideActive)}>
+                            <a
+                                href={active.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.slideLink}
                             >
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.slideLink}
-                                >
-                                    <img
-                                        src={useBaseUrl(project.image)}
-                                        alt={project.title}
-                                        className={styles.slideImage}
-                                    />
-                                    <div className={styles.slideInfo}>
-                                        <h3 className={styles.slideTitle}>{project.title}</h3>
-                                        <p className={styles.slideDescription}>{project.description}</p>
-                                    </div>
-                                </a>
-                            </div>
-                        ))}
+                                <img
+                                    src={activeSrc}
+                                    alt={active.title}
+                                    className={styles.slideImage}
+                                    decoding="async"
+                                    loading="eager"           // ensure it loads even inside a hidden-ish container
+                                    onError={(e) => {
+                                        // Helpful in prod if something blocks images unexpectedly
+                                        // eslint-disable-next-line no-console
+                                        console.warn('Carousel image failed to load:', (e.target as HTMLImageElement).src);
+                                    }}
+                                />
+                                <div className={styles.slideInfo}>
+                                    <h3 className={styles.slideTitle}>{active.title}</h3>
+                                    <p className={styles.slideDescription}>{active.description}</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
 
                     <button
