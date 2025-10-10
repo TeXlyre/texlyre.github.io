@@ -2,12 +2,13 @@ import type { ReactNode } from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
 type Project = {
     title: string;
     description: string;
-    image: string;
+    imagePath: string;
     link: string;
 };
 
@@ -15,46 +16,69 @@ const projects: Project[] = [
     {
         title: 'CodeMirror LaTeX Language',
         description: 'Syntax highlighting and language support for LaTeX in CodeMirror 6',
-        image: require('@site/static/img/codemirror-lang-latex.png'),
+        imagePath: '/img/codemirror-lang-latex.png',
         link: 'https://texlyre.github.io/codemirror-lang-latex/',
     },
     {
         title: 'CodeMirror BibTeX Language',
         description: 'Syntax highlighting and language support for BibTeX in CodeMirror 6',
-        image: require('@site/static/img/codemirror-lang-bib.png'),
+        imagePath: '/img/codemirror-lang-bib.png',
         link: 'https://texlyre.github.io/codemirror-lang-bib/',
     },
     {
         title: 'WASM LaTeX Tools',
         description: 'WebAssembly-powered LaTeX utilities for browser-based compilation',
-        image: require('@site/static/img/wasm-latex-tools.png'),
+        imagePath: '/img/wasm-latex-tools.png',
         link: 'https://texlyre.github.io/wasm-latex-tools/',
     },
     {
         title: 'CodeMirror LaTeX Visual',
         description: 'Visual editing enhancements for LaTeX in CodeMirror',
-        image: require('@site/static/img/codemirror-latex-visual.png'),
+        imagePath: '/img/codemirror-latex-visual.png',
         link: 'https://texlyre.github.io/codemirror-latex-visual/',
     },
     {
         title: 'Vector PDF Converter',
         description: 'Convert between vector PDF formats in the browser',
-        image: require('@site/static/img/vector-pdf-converter.png'),
+        imagePath: '/img/vector-pdf-converter.png',
         link: 'https://texlyre.github.io/vector-pdf-converter/',
     },
     {
         title: 'FilePizza Client',
         description: 'Peer-to-peer file transfer directly in your browser',
-        image: require('@site/static/img/filepizza-client.png'),
+        imagePath: '/img/filepizza-client.png',
         link: 'https://texlyre.github.io/filepizza-client/',
     },
     {
         title: 'TeXlyre Templates',
         description: 'Collection of LaTeX and Typst templates for various use cases',
-        image: require('@site/static/img/texlyre-templates.png'),
+        imagePath: '/img/texlyre-templates.png',
         link: 'https://texlyre.github.io/texlyre-templates/',
     },
 ];
+
+function ProjectSlide({ project }: { project: Project }) {
+    const imageUrl = useBaseUrl(project.imagePath);
+
+    return (
+        <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.slideLink}
+        >
+            <img
+                src={imageUrl}
+                alt={project.title}
+                className={styles.slideImage}
+            />
+            <div className={styles.slideInfo}>
+                <h3 className={styles.slideTitle}>{project.title}</h3>
+                <p className={styles.slideDescription}>{project.description}</p>
+            </div>
+        </a>
+    );
+}
 
 export default function ProjectCarousel(): ReactNode {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -119,22 +143,7 @@ export default function ProjectCarousel(): ReactNode {
                                     [styles.slideActive]: index === currentIndex,
                                 })}
                             >
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.slideLink}
-                                >
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className={styles.slideImage}
-                                    />
-                                    <div className={styles.slideInfo}>
-                                        <h3 className={styles.slideTitle}>{project.title}</h3>
-                                        <p className={styles.slideDescription}>{project.description}</p>
-                                    </div>
-                                </a>
+                                <ProjectSlide project={project} />
                             </div>
                         ))}
                     </div>
