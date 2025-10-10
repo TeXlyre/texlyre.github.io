@@ -1,0 +1,225 @@
+.carousel {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fafc 100%);
+}
+
+[data-theme='dark'] .carousel {
+    background: linear-gradient(180deg, #1a202c 0%, #2d3748 100%);
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--ifm-heading-color);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--ifm-color-content);
+    margin-bottom: 3rem;
+}
+
+.carouselContainer {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carouselContent {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1320 / 1080;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .carouselContent {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slideActive {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slideLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slideInfo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+    padding: 3rem 2rem 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.slideLink:hover .slideInfo {
+    transform: translateY(0);
+}
+
+.slideTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.slideDescription {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ifm-color-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .navButton {
+    background: rgba(45, 55, 72, 0.9);
+    color: var(--ifm-color-primary-light);
+}
+
+.navButton:hover {
+    background: var(--ifm-color-primary);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.navButtonPrev {
+    left: -25px;
+}
+
+.navButtonNext {
+    right: -25px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--ifm-color-primary);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator:hover {
+    transform: scale(1.2);
+}
+
+.indicatorActive {
+    background: var(--ifm-color-primary);
+}
+
+@media (max-width: 996px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .navButtonPrev {
+        left: 10px;
+    }
+
+    .navButtonNext {
+        right: 10px;
+    }
+
+    .slideInfo {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .slideTitle {
+        font-size: 1.2rem;
+    }
+
+    .slideDescription {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navButton {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .slideInfo {
+        position: static;
+        transform: none;
+        background: rgba(0, 0, 0, 0.85);
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slide {
+        transition: none;
+    }
+
+    .slideInfo {
+        transition: none;
+    }
+
+    .navButton {
+        transition: none;
+    }
+}
