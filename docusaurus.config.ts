@@ -162,6 +162,10 @@ const config: Config = {
               href: 'https://texlyre.github.io/codemirror-lang-bib',
             },
             {
+              label: 'WASM LaTeX Tools',
+              href: 'https://texlyre.github.io/wasm-latex-tools',
+            },
+            {
               label: 'LaTeX WYSIWYM Editor',
               href: 'https://texlyre.github.io/codemirror-latex-visual',
             },
