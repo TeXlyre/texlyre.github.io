@@ -231,6 +231,14 @@ const config: Config = {
                 </a>
               `,
             },
+                        {
+              html: `
+                <a href="https://crowdin.com/project/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                  <img src="/img/icons/crowdin.svg" alt="Crowdin" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                  Hugging Face
+                </a>
+              `,
+            },
           ],
         },
         {
