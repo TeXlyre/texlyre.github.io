@@ -69,11 +69,8 @@ Define default settings and optional local overrides:
 userdata: {
   default: {
     settings: {
-      editor: {
-        fontSize: 'base',
-        fontFamily: 'monospace',
-        // ...
-      },
+      editorFontSize: 'base',
+      editorFontFamily: 'monospace',
       // ...
     },
     properties: {
@@ -84,11 +81,16 @@ userdata: {
     },
     secrets: {},
   },
+  mobile: {
+    settings: {
+      themePlugin: 'texlyre-mobile-theme',
+      // ...
+      },
+    },
+  },
   local: {
     settings: {
-      latex: {
-        texliveEndpoint: 'http://localhost:5004',
-      },
+      latexTexliveEndpoint: 'http://localhost:5004',
       // ...
     },
   },
@@ -110,8 +112,9 @@ This command:
 2. Generates `plugins.config.js`
 3. Generates `userdata.json` from `default` settings
 4. Generates `userdata.local.json` by merging `default` with `local` overrides
-5. Updates `vite.config.ts` with the correct `baseUrl`
-6. Updates `index.html` with title and favicon
+5. Generates `userdata.mobile.json` by merging local with mobile and is used when a mobile browser is detected
+6. Updates `vite.config.ts` with the correct `baseUrl`
+7. Updates `index.html` with title and favicon
 
 ### Production Build
 
