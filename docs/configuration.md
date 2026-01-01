@@ -245,37 +245,10 @@ const config: TexlyreConfig = {
 ### Recommended Workflow
 
 1. **Edit** `texlyre.config.ts` with desired changes
-2. **Run** `npm run generate-configs` to update generated files
-3. **Test** changes locally with `npm run dev`
+2. **Run** `npm run generate-configs` to update generated configuration files
+3. **Preview** changes locally with `npm run dev`
 4. **Commit** both `texlyre.config.ts` and generated files
 5. **Deploy** using `npm run start` or GitHub Actions
-
-### Local Development Overrides
-
-Use the `local` configuration block for development-specific settings:
-
-```typescript
-userdata: {
-  default: {
-    settings: {
-      latex: {
-        texliveEndpoint: 'https://texlive.emaily.re',
-      },
-    },
-  },
-  local: {
-    settings: {
-      latex: {
-        texliveEndpoint: 'http://localhost:5004',
-      },
-    },
-  },
-}
-```
-
-This generates:
-- `userdata.json` with production endpoints
-- `userdata.local.json` with local development endpoints
 
 ## Troubleshooting
 
