@@ -113,7 +113,7 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/docs/intro',
+              to: '/docs/welcome',
             },
             {
               label: 'Installation',
