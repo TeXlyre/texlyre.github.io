@@ -191,6 +191,10 @@ const config: Config = {
           title: 'Community',
           items: [
             {
+              label: 'Contact Us',
+              href: 'mailto:contact@texlyre.org?subject=[texlyre.org]',
+            },
+            {
               label: 'Reddit Community',
               href: 'https://reddit.com/r/TeXlyre',
             },
