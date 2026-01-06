@@ -179,7 +179,7 @@ const config: Config = {
             },
             {
               label: 'Fork: FilePizza',
-              href: 'https://filepizza.emaily.re',
+              href: 'https://filepizza.texlyre.org',
             },
             {
               label: 'Fork: BibEditor (BibTeX Tidy)',
