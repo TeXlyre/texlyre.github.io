@@ -166,6 +166,10 @@ const config: Config = {
               href: 'https://texlyre.github.io/wasm-latex-tools',
             },
             {
+              label: 'TeXlyre BusyTeX (TexLive 2025)',
+              href: 'https://texlyre.github.io/texlyre-busytex',
+            },
+            {
               label: 'LaTeX WYSIWYM Editor',
               href: 'https://texlyre.github.io/codemirror-latex-visual',
             },
