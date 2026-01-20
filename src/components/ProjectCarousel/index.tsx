@@ -32,6 +32,12 @@ const projects: Project[] = [
         link: 'https://texlyre.github.io/wasm-latex-tools/',
     },
     {
+        title: 'TeXlyre BusyTeX',
+        description: 'Full LaTeX compilation in the browser with XeLaTeX, PdfLaTeX, and LuaLaTeX support',
+        image: 'img/texlyre-busytex.png',
+        link: 'https://texlyre.github.io/texlyre-busytex/',
+    },
+    {
         title: 'CodeMirror LaTeX Visual',
         description: 'Visual editing enhancements for LaTeX in CodeMirror',
         image: 'img/codemirror-latex-visual.png',
