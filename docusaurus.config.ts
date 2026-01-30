@@ -275,6 +275,9 @@ const config: Config = {
           <a href="https://reddit.com/r/TeXlyre" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
             <img src="/img/icons/reddit.svg" alt="Reddit" style="width: 32px; height: 32px;" />
           </a>
+          <a href="https://lemmy.world/c/TeXlyre" target="_blank" rel="noopener noreferrer" aria-label="Lemmy">
+            <img src="/img/icons/lemmy.svg" alt="Lemmy" style="width: 32px; height: 32px;" />
+          </a>
           <a href="https://youtube.com/@TeXlyre" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <img src="/img/icons/youtube.svg" alt="YouTube" style="width: 32px; height: 32px;" />
           </a>
