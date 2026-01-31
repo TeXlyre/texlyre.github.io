@@ -12,9 +12,13 @@ Vectors and icons by <a href="https://github.com/garudatechnologydevelopers/sket
 
 Lemmy logo by <a href="https://github.com/LemmyNet/lemmy/commit/977a996920e5e907ac8dae2d3afa4bbbb8836441" target="_blank">Andy Cuccaro (@andycuccaro)</a> under the CC-BY-SA 4.0 License
 
+Modified by [Fares Abawi](https://abawi.me) under the same license
+
 ### PeerTube Icon
 
 Peertube logo by <a href="https://openiconlibrary.com/packs/aegis-icons/peertube-ef0fe8" target="_blank"> Aegis Icons</a> under the CC BY-SA 4.0 License
+
+Modified by [Fares Abawi](https://abawi.me) under the same license
 
 ### Docusaurus Icon
 
