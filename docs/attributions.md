@@ -10,8 +10,7 @@ The icons, logos, and trademarks used in this project are the property of their 
 
 Vectors and icons by <a href="https://github.com/garudatechnologydevelopers/sketch-icons?ref=svgrepo.com" target="_blank">Garuda Technology</a> in MIT License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
 
-GITHUB®, the GITHUB® <a href="https://brand.github.com/foundations/logo" target="_blank">logo design</a>, the INVERTOCAT logo design, OCTOCAT®, and the OCTOCAT® logo design are trademarks of GitHub, Inc., registered in the United States and other countries.
-The OCTOCAT design is the exclusive property of GitHub, Inc and has been federally registered with the United States Copyright Office. All rights reserved.
+GITHUB®, the GITHUB® logo design, the INVERTOCAT logo design, OCTOCAT®, and the OCTOCAT® logo design are trademarks of GitHub, Inc., registered in the United States and other countries. The OCTOCAT design is the exclusive property of GitHub, Inc and has been federally registered with the United States Copyright Office. All rights reserved. <a href="https://github.com/logos" target="_blank">GitHub Logos and Usage</a>
 
 The npm logo is a trademark of npm, Inc. <a href="https://docs.npmjs.com/policies/logos-and-usage" target="_blank">npm Logos and Usage</a>
 
