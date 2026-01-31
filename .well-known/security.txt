@@ -1,0 +1,5 @@
+Contact: mailto:security@texlyre.org
+Contact: https://github.com/texlyre/texlyre/security/advisories/new
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://texlyre.github.io/.well-known/security.txt
