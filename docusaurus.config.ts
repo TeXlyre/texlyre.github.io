@@ -197,10 +197,18 @@ const config: Config = {
             {
               label: 'Contact Us',
               href: 'mailto:contact@texlyre.org?subject=[texlyre.org]',
+            },    
+            {
+              label: 'Matrix Chat',
+              href: 'https://matrix.to/#/#texlyre:matrix.org',
             },
             {
               label: 'Reddit Community',
               href: 'https://reddit.com/r/TeXlyre',
+            },
+            {
+              label: 'Lemmy Community',
+              href: 'https://lemmy.world/c/TeXlyre',
             },
             {
               label: 'GitHub Discussions',
@@ -280,6 +288,9 @@ const config: Config = {
           </a>
           <a href="https://youtube.com/@TeXlyre" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <img src="/img/icons/youtube.svg" alt="YouTube" style="width: 32px; height: 32px;" />
+          </a>
+          <a href="https://makertube.net/c/texlyre" target="_blank" rel="noopener noreferrer" aria-label="PeerTube">
+            <img src="/img/icons/peertube.svg" alt="PeerTube" style="width: 32px; height: 32px;" />
           </a>
         </div>
       `,
