@@ -35,6 +35,24 @@
   gap: 2rem;
 }
 
+.header-sponsor-link {
+  background: linear-gradient(135deg, #ea4aaa 0%, #ff6b9d 100%);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.header-sponsor-link:hover {
+  background: linear-gradient(135deg, #d63384 0%, #ea4aaa 100%);
+  color: white !important;
+  text-decoration: none;
+}
+
+html[data-theme='dark'] .header-sponsor-link {
+  background: linear-gradient(135deg, #ea4aaa 0%, #ff6b9d 100%);
+}
+
 @media (max-width: 996px) {
   .footer__links {
     grid-template-columns: repeat(2, 1fr);

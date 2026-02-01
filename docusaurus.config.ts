@@ -98,6 +98,12 @@ const config: Config = {
           position: 'left',
         },
         {
+          href: 'https://github.com/sponsors/texlyre',
+          label: 'Sponsor',
+          position: 'left',
+          className: 'header-sponsor-link',
+        },
+        {
           href: 'https://texlyre.github.io/texlyre',
           label: 'Login to TeXlyre',
           position: 'right',
