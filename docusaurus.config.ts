@@ -232,7 +232,7 @@ const config: Config = {
             {
               html: `
                 <a href="https://github.com/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/github.svg" alt="GitHub" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                  <img src="/img/icons/github.svg" alt="GitHub" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px; transform: scale(1.4);" />
                   GitHub
                 </a>
               `,
