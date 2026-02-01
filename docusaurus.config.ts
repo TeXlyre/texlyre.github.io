@@ -247,6 +247,14 @@ const config: Config = {
             },
             {
               html: `
+                <a href="https://gitlab.com/TeXlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                  <img src="/img/icons/gitlab.svg" alt="GitLab" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                  GitLab (Mirror of GitHub)
+                </a>
+              `,
+            },
+            {
+              html: `
                 <a href="https://www.npmjs.com/org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
                   <img src="/img/icons/npm.svg" alt="npm" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
                   npm
