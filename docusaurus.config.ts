@@ -197,7 +197,7 @@ const config: Config = {
             {
               label: 'Contact Us',
               href: 'mailto:contact@texlyre.org?subject=[texlyre.org]',
-            },    
+            },
             {
               label: 'Matrix Chat',
               href: 'https://matrix.to/#/#texlyre:matrix.org',
@@ -233,6 +233,14 @@ const config: Config = {
             },
             {
               html: `
+                <a href="https://codeberg.org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
+                  <img src="/img/icons/codeberg.svg" alt="Codeberg" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                  Codeberg (Mirror to GitHub)
+                </a>
+              `,
+            },
+            {
+              html: `
                 <a href="https://www.npmjs.com/org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
                   <img src="/img/icons/npm.svg" alt="npm" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
                   npm
@@ -247,7 +255,7 @@ const config: Config = {
                 </a>
               `,
             },
-                        {
+            {
               html: `
                 <a href="https://crowdin.com/project/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
                   <img src="/img/icons/crowdin.svg" alt="Crowdin" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
