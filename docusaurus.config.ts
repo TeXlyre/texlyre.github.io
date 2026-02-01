@@ -248,7 +248,7 @@ const config: Config = {
             {
               html: `
                 <a href="https://gitlab.com/TeXlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/gitlab.svg" alt="GitLab" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px; transform: scale(1.2);" />
+                  <img src="/img/icons/gitlab.svg" alt="GitLab" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px; transform: scale(1.5);" />
                   GitLab (Mirror of GitHub)
                 </a>
               `,
