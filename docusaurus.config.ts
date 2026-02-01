@@ -241,7 +241,7 @@ const config: Config = {
               html: `
                 <a href="https://codeberg.org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
                   <img src="/img/icons/codeberg.svg" alt="Codeberg" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
-                  Codeberg (Mirror to GitHub)
+                  Codeberg (Mirror of GitHub)
                 </a>
               `,
             },
