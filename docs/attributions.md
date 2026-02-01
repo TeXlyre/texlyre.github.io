@@ -18,6 +18,16 @@ The reddit logo and wordmark are trademarks of Reddit, Inc. <a href="https://www
 
 YouTube and the YouTube logo are trademarks of Google LLC. <a href="https://www.youtube.com/howyoutubeworks/resources/brand-resources/" target="_blank">YouTube Brand Resources</a>
 
+### GitLab Icon
+
+The GitLab logo is a trademark of GitLab Inc. and is used in accordance with GitLab’s trademark and logo usage guidelines.
+<a href="https://about.gitlab.com/press/press-kit/" target="_blank">GitLab Logos and Brand Guidelines</a>
+
+### Codeberg
+
+The Codeberg logo is a trademark of Codeberg e.V. and is used in accordance with Codeberg’s branding and logo usage guidelines.
+<a href="https://codeberg.org/Codeberg/Design" target="_blank">Codeberg Brand and Design Resources</a>
+
 ### Hugging Face Icon
 
 The Hugging Face logo is a trademark of Hugging Face, Inc. <a href="https://huggingface.co/brand" target="_blank">Hugging Face Brand Assets</a>
