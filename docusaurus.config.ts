@@ -240,7 +240,7 @@ const config: Config = {
             {
               html: `
                 <a href="https://codeberg.org/texlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/codeberg.svg" alt="Codeberg" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px;" />
+                  <img src="/img/icons/codeberg.svg" alt="Codeberg" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px; filter: brightness(0) invert(1);" />
                   Codeberg (Mirror of GitHub)
                 </a>
               `,
@@ -248,7 +248,7 @@ const config: Config = {
             {
               html: `
                 <a href="https://gitlab.com/TeXlyre" target="_blank" rel="noopener noreferrer" class="footer__link-item">
-                  <img src="/img/icons/gitlab.svg" alt="GitLab" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px; transform: scale(1.5);" />
+                  <img src="/img/icons/gitlab.svg" alt="GitLab" style="margin-right: 0.5rem; vertical-align: middle; width: 16px; height: 16px; transform: scale(1.7);" />
                   GitLab (Mirror of GitHub)
                 </a>
               `,
