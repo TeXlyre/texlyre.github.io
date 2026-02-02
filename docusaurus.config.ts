@@ -182,7 +182,7 @@ const config: Config = {
               href: 'https://texlyre.github.io/wasm-latex-tools',
             },
             {
-              label: 'TeXlyre BusyTeX (TexLive 2025)',
+              label: 'TeXlyre BusyTeX (TeX Live 2025)',
               href: 'https://texlyre.github.io/texlyre-busytex',
             },
             {
