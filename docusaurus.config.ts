@@ -340,3 +340,5 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 };
+
+export default config;
