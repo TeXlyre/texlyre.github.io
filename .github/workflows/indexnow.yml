@@ -1,0 +1,29 @@
+name: Submit to IndexNow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Checkout scripts
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: scripts
+          sparse-checkout-cone-mode: false
+          path: main-scripts
+
+      - name: Submit sitemap URLs
+        run: node main-scripts/scripts/submit-indexnow.js
