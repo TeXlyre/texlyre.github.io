@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunktexlyre=globalThis.webpackChunktexlyre||[]).push([[7472],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Introducing TeXlyre - Local-First Real-Time LaTeX Collaboration","permalink":"/blog/introducing-texlyre","unlisted":false,"date":"2025-08-22T00:00:00.000Z"}]}')}}]);
