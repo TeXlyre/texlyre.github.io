@@ -21,9 +21,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          sparse-checkout: scripts
+          sparse-checkout: |
+            scripts
+            package.json
+            yarn.lock
           sparse-checkout-cone-mode: false
           path: main-scripts
+
+      - name: Install dependencies
+        working-directory: main-scripts
+        run: yarn install --frozen-lockfile
 
       - name: Submit sitemap URLs
         run: node main-scripts/scripts/submit-indexnow.js
