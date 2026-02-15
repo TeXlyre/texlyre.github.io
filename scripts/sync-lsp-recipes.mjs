@@ -10,7 +10,10 @@ fs.mkdirSync(OUT, { recursive: true });
 
 // helper
 const writeDoc = (outPath, title, sourceMd) => {
-    const frontMatter = `---\nid: index\ntitle: ${title}\n---\n\n`;
+    const yamlQuote = (s) =>
+        `"${String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+
+    const frontMatter = `---\nid: index\ntitle: ${yamlQuote(title)}\n---\n\n`;
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, frontMatter + sourceMd, "utf8");
 };
