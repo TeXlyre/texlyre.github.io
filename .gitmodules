@@ -1,0 +1,3 @@
+[submodule "external/texlyre-lsp-recipes"]
+	path = external/texlyre-lsp-recipes
+	url = https://github.com/TeXlyre/texlyre-lsp-recipes
