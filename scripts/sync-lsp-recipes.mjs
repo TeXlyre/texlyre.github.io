@@ -40,6 +40,25 @@ writeDoc(
  * docs/supported-lsp/<recipe>/index.md
  */
 const OUT = path.join(DOCS, "supported-lsp");
+
+fs.writeFileSync(
+    path.join(DOCS, "supported-lsp", "_category_.json"),
+    JSON.stringify(
+        {
+            label: "Supported LSP",
+            link: {
+                type: "generated-index",
+                title: "Supported LSP",
+                description:
+                    "Language Server Protocol implementations supported by TeXlyre.",
+            },
+        },
+        null,
+        2
+    ),
+    "utf8"
+);
+
 const recipesDir = path.join(SRC, "recipes");
 
 for (const entry of fs.readdirSync(recipesDir, { withFileTypes: true })) {
@@ -57,3 +76,4 @@ for (const entry of fs.readdirSync(recipesDir, { withFileTypes: true })) {
 }
 
 console.log("Synced LSP docs");
+
