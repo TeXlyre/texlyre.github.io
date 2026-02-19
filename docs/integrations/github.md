@@ -10,11 +10,11 @@ TeXlyre can back up your projects to GitHub repositories using a personal access
 
 Navigate to [GitHub → Settings → Developer Settings → Personal access tokens → Tokens (classic)](https://github.com/settings/tokens).
 
-![GitHub classic tokens list](../../static/img/integration/github-tokens-list.png)
+![GitHub classic tokens list](../img/github-tokens-list.png)
 
 Click **Generate new token**, then select **Generate new token (classic)**.
 
-![GitHub generate token dropdown](../../static/img/integration/github-tokens-generate.png)
+![GitHub generate token dropdown](../img/github-tokens-generate.png)
 
 Enter a descriptive note such as `TeXlyre` and set an expiration that matches your usage needs.
 
@@ -22,9 +22,9 @@ Enter a descriptive note such as `TeXlyre` and set an expiration that matches yo
 
 Under **Select scopes**, enable the following:
 
-![GitHub token scopes — top](../../static/img/integration/github-token-scopes-top.png)
+![GitHub token scopes — top](../img/github-token-scopes-top.png)
 
-![GitHub token scopes — bottom](../../static/img/integration/github-token-scopes-bottom.png)
+![GitHub token scopes — bottom](../img/github-token-scopes-bottom.png)
 
 | Scope | Purpose |
 |---|---|

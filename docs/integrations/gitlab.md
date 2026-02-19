@@ -12,7 +12,7 @@ Navigate to [GitLab → User Settings → Personal access tokens](https://gitlab
 
 Click **Add new token**.
 
-![GitLab personal access token creation](../../static/img/integration/gitlab-token-create.png)
+![GitLab personal access token creation](../img/gitlab-token-create.png)
 
 Enter a descriptive **Token name** such as `TeXlyre` and set an **Expiration date**.
 

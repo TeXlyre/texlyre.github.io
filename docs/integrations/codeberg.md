@@ -10,7 +10,7 @@ TeXlyre can back up your projects to Codeberg repositories using an access token
 
 Navigate to [Codeberg → User Settings → Applications](https://codeberg.org/user/settings/applications).
 
-![Codeberg access token creation](../../static/img/integration/codeberg-token-create.png)
+![Codeberg access token creation](../img/codeberg-token-create.png)
 
 Under **Generate new token**, enter a descriptive **Token name** such as `TeXlyre`.
 

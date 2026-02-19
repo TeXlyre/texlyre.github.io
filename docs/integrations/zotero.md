@@ -12,7 +12,7 @@ Your **User ID** is a numeric identifier distinct from your Zotero username. You
 
 Navigate to [Zotero → Settings → Security](https://www.zotero.org/settings/security).
 
-![Zotero security settings showing Applications section](../../static/img/integration/zotero-security-settings.png)
+![Zotero security settings showing Applications section](../img/zotero-security-settings.png)
 
 Scroll to the **Applications** section. Your User ID is displayed above the list of API keys as:
 
@@ -24,7 +24,7 @@ Copy this number. Do not use your Zotero username — the API requires the numer
 
 On the same [Security settings page](https://www.zotero.org/settings/security), click **Create new private key**.
 
-![Zotero new key creation page](../../static/img/integration/zotero-token-create.png)
+![Zotero new key creation page](../img/zotero-token-create.png)
 
 Enter a **Key Name** such as `TeXlyre`.
 
