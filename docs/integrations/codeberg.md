@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Codeberg
+# Codeberg (Forgejo)
 
 TeXlyre can back up your projects to Codeberg repositories using an access token. Codeberg runs on Forgejo. Tokens are stored encrypted in your browser's local storage and are never transmitted to external servers.
 
