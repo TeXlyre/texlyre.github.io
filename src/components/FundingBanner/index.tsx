@@ -17,7 +17,7 @@ const funders: Funder[] = [
         height: 50,
     },
     {
-        name: 'NGI Zero Core',
+        name: 'NGI Zero',
         logo: 'img/sponsors/ngi0.svg',
         url: 'https://nlnet.nl/NGI0/',
         height: 50,
