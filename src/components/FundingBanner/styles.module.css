@@ -1,0 +1,63 @@
+.funding {
+    padding: 3rem 0 4rem;
+    text-align: center;
+    border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ifm-color-emphasis-600);
+    margin-bottom: 1.5rem;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem 3.5rem;
+}
+
+.logoLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+}
+
+.logoLink:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    object-fit: contain;
+}
+
+[data-theme='dark'] .logo {
+    filter: brightness(0.9) contrast(1.1);
+}
+
+.logoName {
+    font-size: 0.75rem;
+    color: var(--ifm-color-emphasis-600);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .logos {
+        gap: 2rem 2.5rem;
+    }
+
+    .logo {
+        height: 36px !important;
+    }
+}

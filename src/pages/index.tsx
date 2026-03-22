@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import ProjectCarousel from '@site/src/components/ProjectCarousel';
+import FundingBanner from '@site/src/components/FundingBanner';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -58,6 +59,7 @@ export default function Home(): ReactNode {
       <main>
         <HomepageFeatures />
         <ProjectCarousel />
+        <FundingBanner />
       </main>
     </Layout>
   );
