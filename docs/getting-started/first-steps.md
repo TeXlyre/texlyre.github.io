@@ -22,7 +22,7 @@ Full accounts store your projects permanently in your browser's local storage. C
 
 Full accounts unlock all TeXlyre features, including file system backup, persistent settings, and the ability to upgrade your workspace over time. Your account data remains local to your browser and device.
 
-:::tip Upgrading from Guest
+:::tip[Upgrading from Guest]
 You can convert a guest session to a full account at any time without losing your current work. Look for the upgrade prompt in the interface or click the upgrade button in the user menu.
 :::
 
@@ -74,7 +74,7 @@ The document editor provides syntax highlighting for typesetting and other text 
 
 Switch between files by clicking them in the file explorer. The editor remembers your cursor position in each file, allowing quick context switching between related documents.
 
-:::info Auto-Save
+:::info[Auto-Save]
 TeXlyre automatically saves your changes as you type. You'll see a brief "Saved" indicator when changes are written to storage. Manual save actions aren't necessary, but you can force a save using Ctrl+S.
 :::
 

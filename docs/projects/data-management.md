@@ -110,6 +110,6 @@ If you used TeXlyre on shared or public computers, account deletion provides a c
 
 Creating a new TeXlyre account after deletion starts completely fresh with no connection to your previous account or projects. You'll need to import exported data or recreate projects manually if you want to restore previous work.
 
-:::warning Data Recovery
+:::warning[Data Recovery]
 Deleted TeXlyre accounts cannot be recovered. The deletion process permanently removes all data with no backup or recovery options available through the interface. Always export important data before proceeding with account deletion.
 :::

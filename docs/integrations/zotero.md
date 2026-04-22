@@ -58,6 +58,6 @@ The Zotero integration is accessible directly from the editor header when a LaTe
 6. Enter your TeXlyre account password to securely store your credentials.
 7. Click **Unlock**.
 
-:::warning User ID vs. Username
+:::warning[User ID vs. Username]
 The **User ID** is a numeric value found in **Settings → Security → Applications**, not your Zotero login username. Using your username instead of the ID will cause authentication to fail.
 :::

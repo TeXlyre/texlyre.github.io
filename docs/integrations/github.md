@@ -46,10 +46,10 @@ Click **Generate token** and copy the token immediately — GitHub will not disp
 7. Enter your TeXlyre account password to securely store your token.
 8. Click **Unlock**.
 
-:::note Changing the Endpoint
+:::note[Changing the Endpoint]
 To change the connected repository endpoint, navigate to **Settings → Backup → GitHub**.
 :::
 
-:::warning Token Expiry
+:::warning[Token Expiry]
 When your token expires, backups will stop silently. Regenerate your token on GitHub and update it in TeXlyre settings before the expiry date.
 :::

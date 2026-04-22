@@ -22,7 +22,7 @@ Choose your path based on your needs:
 
 **For Collaboration**: Share project links with others to begin real-time collaborative editing. No accounts are required for collaborators to join.
 
-:::tip Browser Compatibility
+:::tip[Browser Compatibility]
 TeXlyre works best in Chrome, Edge, and Firefox. Some advanced features like file system backup require Chrome or Edge for full functionality.
 :::
 

@@ -118,6 +118,6 @@ Use descriptive naming and tagging for projects you might not access frequently 
 
 Consider exporting completed projects for long-term storage while maintaining active projects in your TeXlyre workspace. This approach balances preservation with workspace efficiency.
 
-:::tip Organization Evolution
+:::tip[Organization Evolution]
 Your organizational system will evolve as your TeXlyre usage patterns become clear. Start with simple categorization and refine your approach based on how you actually use the platform. Effective organization emerges from consistent use rather than perfect initial planning.
 :::

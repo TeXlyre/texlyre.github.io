@@ -45,6 +45,6 @@ Click **Generate Token** and copy the token immediately — it will not be shown
 8. Enter your TeXlyre account password to securely store your token.
 9. Click **Unlock**.
 
-:::note Changing the Endpoint
+:::note[Changing the Endpoint]
 To change the connected repository instance URL, navigate to **Settings → Backup → Gitea**.
 :::

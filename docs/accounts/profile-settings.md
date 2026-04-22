@@ -42,7 +42,7 @@ TeXlyre assigns unique colors to each collaborator's cursor and text selections 
 
 Color selection affects only future collaborative sessions. Existing collaboration sessions continue using previously assigned colors until you rejoin the session.
 
-:::tip Color Visibility
+:::tip[Color Visibility]
 Choose colors that are easily distinguishable from common text and background colors. Avoid very light colors that might be hard to see, and consider accessibility for collaborators who may have color vision differences.
 :::
 
@@ -78,7 +78,7 @@ Username and email changes apply immediately to your local account. Color custom
 
 Password updates require additional verification and may take a moment longer to process while TeXlyre re-encrypts your account's sensitive data.
 
-:::warning Browser Storage
+:::warning[Browser Storage]
 Remember that TeXlyre accounts exist only in your current browser. Profile changes don't synchronize across different browsers or devices unless you manually export and import your account data.
 :::
 

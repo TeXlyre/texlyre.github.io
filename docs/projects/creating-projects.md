@@ -114,6 +114,6 @@ Document your template structure and usage instructions to help collaborators un
 
 Consider contributing useful templates to the community template gallery. Sharing templates helps other users while demonstrating expertise in specific document types or formatting approaches.
 
-:::tip Template Customization
+:::tip[Template Customization]
 Don't feel constrained by template structures. Templates provide starting points that you can modify extensively to meet your specific needs. Remove unnecessary sections, add custom elements, and adjust formatting to create documents that serve your exact requirements.
 :::

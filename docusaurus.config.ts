@@ -19,7 +19,11 @@ const config: Config = {
   projectName: 'texlyre.github.io',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'en',
@@ -85,8 +89,8 @@ const config: Config = {
   themeConfig: {
     image: 'img/main_showcase_dark.png',
     metadata: [
-      {name: 'keywords', content: 'LaTeX editor, Typst editor, collaborative editor, local-first, open-source, web editor, LaTeX online, Typst online'},
-      {name: 'description', content: 'TeXlyre is a local-first LaTeX and Typst collaborative web editor. Write, compile, and collaborate on LaTeX and Typst documents directly in your browser.'},
+      { name: 'keywords', content: 'LaTeX editor, Typst editor, collaborative editor, local-first, open-source, web editor, LaTeX online, Typst online' },
+      { name: 'description', content: 'TeXlyre is a local-first LaTeX and Typst collaborative web editor. Write, compile, and collaborate on LaTeX and Typst documents directly in your browser.' },
     ],
     navbar: {
       title: 'TeXlyre',

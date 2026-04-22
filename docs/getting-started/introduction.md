@@ -24,7 +24,7 @@ TeXlyre includes full LaTeX engines (pdfTeX, XeTeX, and LuaTeX) and the Typst co
 
 Running in the browser sandbox means shell-escape is unavailable, so packages that invoke external tools (such as `minted` for syntax highlighting or `svg` for on-the-fly conversion) will not work, and some precompiled fonts and system dependencies are not bundled. Initial compilation can also be slower than a native installation, especially on the first run while engines and packages are fetched and cached.
 
-:::warning Biber not yet available
+:::warning[Biber not yet available]
 Biber is not supported at this time, so bibliographies should be processed with BibTeX for now. Support may be expanded in the future.
 :::
 
@@ -40,7 +40,7 @@ Export individual projects or your entire account as ZIP files. The file system 
 
 TeXlyre works in all modern browsers but performs best in Chrome and Edge, which support the full range of features including file system access. Firefox provides core functionality with some limitations around file system integration. Safari offers basic compatibility.
 
-:::info Storage Considerations
+:::info[Storage Considerations]
 Browser storage typically ranges from 50-100GB depending on available disk space. For large projects with many images or datasets, use file system backup to offload files to your computer's storage.
 :::
 

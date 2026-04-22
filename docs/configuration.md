@@ -16,7 +16,7 @@ The following files are **automatically generated** from `texlyre.config.ts`:
 - **`userdata.json`** - Default user settings and properties
 - **`userdata.local.json`** - Local development overrides (when `userdata.local` is defined)
 
-:::danger Automatic Overwrites
+:::danger[Automatic Overwrites]
 
 Running `npm run start` or `npm run generate-configs` will **completely overwrite** the following files:
 
@@ -153,7 +153,7 @@ In the export dialog, ensure **"Include settings, properties, and encrypted secr
 
 The downloaded ZIP file contains `userdata.json` in the root directory. Extract this file to use as your custom configuration.
 
-:::warning Manual Secret Cleanup
+:::warning[Manual Secret Cleanup]
 
 The exported `userdata.json` includes encrypted secrets. You must manually set the `secrets` field to an empty object:
 
@@ -167,7 +167,7 @@ The exported `userdata.json` includes encrypted secrets. You must manually set t
 
 :::
 
-:::danger Configuration Override
+:::danger[Configuration Override]
 
 Placing a custom `userdata.json` in your repository will be **overwritten** when running:
 
@@ -222,7 +222,7 @@ The GitHub Actions workflow automatically:
 
 ![GitHub Actions workflow showing successful deployment](./img/github-actions-workflow.png)
 
-:::danger Production Configuration
+:::danger[Production Configuration]
 
 The deployment process **always** regenerates configuration files from `texlyre.config.ts`. Manual edits to generated files will not persist through deployments.
 

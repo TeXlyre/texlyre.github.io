@@ -40,10 +40,10 @@ Click **Generate token** and copy the token immediately — GitLab will not disp
 7. Enter your TeXlyre account password to securely store your token.
 8. Click **Unlock**.
 
-:::note Self-Hosted GitLab
+:::note[Self-Hosted GitLab]
 If you use a self-hosted GitLab instance, you can change the API endpoint by navigating to **Settings → Backup → GitLab** and updating the instance URL (e.g. `https://gitlab.example.com`).
 :::
 
-:::warning Token Expiry
+:::warning[Token Expiry]
 When your token expires, backups will stop silently. Regenerate your token on GitLab and update it in TeXlyre settings before the expiry date.
 :::

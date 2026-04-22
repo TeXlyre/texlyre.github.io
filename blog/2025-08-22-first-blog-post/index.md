@@ -7,9 +7,9 @@ tags: [texlyre, latex, typst, collaborative-editing, yjs, wasm, react, typescrip
 
 **TeXlyre** is a **[local-first](https://www.inkandswitch.com/essay/local-first/)** real-time LaTeX collaboration platform that enables researchers, academics, and teams to work together on scientific documents. Built with cutting-edge technologies including React, TypeScript, and Yjs, TeXlyre enables collaborative document editing with complete offline capabilities.
 
-<!-- truncate -->
+{/* truncate */}
 
-:::note Blog post from August 22, 2025
+:::note[Blog post from August 22, 2025]
 
 Some features and details described here may be outdated. Please refer to the [TeXlyre GitHub repository](https://github.com/TeXlyre/texlyre) for the latest updates.
 
@@ -31,7 +31,7 @@ TeXlyre's collaboration engine uses **Yjs CRDTs** (Conflict-free Replicated Data
 
 ![Multiple users editing simultaneously with different colored cursors](./showcase/collab_cursor_zoomed.png)
 
-:::tip Real-time Communication
+:::tip[Real-time Communication]
 
 Beyond document editing, TeXlyre includes integrated chat and commenting systems, enabling collaborators to discuss changes and provide feedback directly within the editing environment.
 
@@ -51,7 +51,7 @@ The live compilation system provides:
 
 ![LaTeX compilation in progress with error panel and PDF output](./showcase/error_parser_zoomed.png)
 
-:::info Technical Achievement
+:::info[Technical Achievement]
 
 Running LaTeX compilation entirely in the browser represents a significant technical achievement, eliminating the complexity of server-side compilation while maintaining full feature parity with traditional LaTeX workflows.
 
@@ -99,7 +99,7 @@ TeXlyre provides various templates to jumpstart your projects, from academic pap
 
 ![Getting started with a template](./showcase/templates_zoomed.png)
 
-:::tip Collaboration URLs
+:::tip[Collaboration URLs]
 
 TeXlyre uses simple URLs like `http://localhost:5173/#yjs:abc123def456` to enable instant collaboration access. Just share the link with your team members!
 
@@ -151,7 +151,7 @@ The File System Access API enables TeXlyre to work directly with local folders, 
 - WebRTC-based protocol for maximum security
 - Yjs manages file metadata and synchronization state
 
-:::note Technical Implementation
+:::note[Technical Implementation]
 
 While Yjs handles real-time collaboration (live document editing, cursor tracking, file lists), FilePizza manages the transfer of non-collaborative binary files, creating a comprehensive sharing ecosystem.
 
@@ -194,7 +194,7 @@ TeXlyre leverages modern web technologies for optimal performance:
 - **Firefox**: Core collaboration features with limited file system integration  
 - **Safari**: Partial compatibility with reduced file system access
 
-:::warning Mobile Support
+:::warning[Mobile Support]
 
 The File System API hasn't been thoroughly tested on mobile browsers. Use file system backup features with caution on mobile devices.
 
@@ -214,7 +214,7 @@ TeXlyre prioritizes user privacy through its architecture:
 - **GitHub integration**: Optional and requires your own token
 - **IP address processing**: Temporary, only for connection establishment
 
-:::info Open Source Infrastructure
+:::info[Open Source Infrastructure]
 
 TeXlyre's infrastructure components are all open source, enabling complete self-hosting for maximum privacy and control.
 

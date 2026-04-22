@@ -44,6 +44,6 @@ Click **Generate token** and copy the token immediately — it will not be shown
 7. Enter your TeXlyre account password to securely store your token.
 8. Click **Unlock**.
 
-:::note Changing the Endpoint
+:::note[Changing the Endpoint]
 To change the connected repository endpoint, navigate to **Settings → Backup → Forgejo**.
 :::

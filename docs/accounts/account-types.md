@@ -36,7 +36,7 @@ Guest accounts work well for several specific scenarios:
 
 **Public Computer Usage**: Access TeXlyre from shared computers where you don't want to leave persistent data or account information.
 
-:::warning Session Expiration
+:::warning[Session Expiration]
 Guest sessions automatically expire to protect privacy. Always export important work before ending your session if you want to preserve it for future use.
 :::
 
@@ -98,7 +98,7 @@ Import account data using the "Import Account" option from the login screen. Sel
 
 The import process preserves collaboration URLs, meaning shared projects continue working after migration. However, active collaboration sessions may need to be re-established.
 
-:::tip Cross-Device Usage
+:::tip[Cross-Device Usage]
 For regular cross-device usage, consider using file system backup with cloud storage rather than manual export/import. This provides synchronization of project files while maintaining separate account profiles on each device.
 :::
 

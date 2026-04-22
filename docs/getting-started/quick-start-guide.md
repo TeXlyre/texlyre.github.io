@@ -140,7 +140,7 @@ The platform automatically detects your main file when you have only one `.typ` 
 </TabItem>
 </Tabs>
 
-:::tip Compilation Shortcuts
+:::tip[Compilation Shortcuts]
 - **F9**: Compile document
 - **Shift+F9**: Clear cache and compile (useful for troubleshooting)
 - **F8**: Stop compilation (if running)
