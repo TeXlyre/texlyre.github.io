@@ -20,9 +20,15 @@ Live cursors and text changes appear instantly. Conflict-free replicated data ty
 
 ## Browser-Based Compilation
 
-TeXlyre includes full LaTeX engines (pdfTeX, XeTeX) and the Typst compiler running entirely in your browser using WebAssembly. Documents compile locally, providing immediate feedback without network delays.
+TeXlyre includes full LaTeX engines (pdfTeX, XeTeX, and LuaTeX) and the Typst compiler running entirely in your browser using WebAssembly. Documents compile locally, providing immediate feedback without network delays.
 
-Package management happens automatically, downloading only what your document requires.
+Running in the browser sandbox means shell-escape is unavailable, so packages that invoke external tools (such as `minted` for syntax highlighting or `svg` for on-the-fly conversion) will not work, and some precompiled fonts and system dependencies are not bundled. Initial compilation can also be slower than a native installation, especially on the first run while engines and packages are fetched and cached.
+
+:::warning Biber not yet available
+Biber is not supported at this time, so bibliographies should be processed with BibTeX for now. Support may be expanded in the future.
+:::
+
+To keep compilation fast and lightweight, package management happens automatically in the background, downloading only what your document requires rather than bundling a full distribution upfront.
 
 ## Data Storage and Backup
 

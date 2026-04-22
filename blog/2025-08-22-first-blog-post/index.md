@@ -9,6 +9,12 @@ tags: [texlyre, latex, typst, collaborative-editing, yjs, wasm, react, typescrip
 
 <!-- truncate -->
 
+:::note Blog post from August 22, 2025
+
+Some features and details described here may be outdated. Please refer to the [TeXlyre GitHub repository](https://github.com/TeXlyre/texlyre) for the latest updates.
+
+:::
+
 ## The Problem with Traditional LaTeX Collaboration
 
 Traditional LaTeX collaboration often involves cumbersome workflows: emailing files back and forth, managing version conflicts manually, or relying on cloud services that don't understand LaTeX's unique requirements. Existing solutions either lack real-time collaboration features or require constant internet connectivity, making them unsuitable for researchers who need to work offline or in low-connectivity environments.

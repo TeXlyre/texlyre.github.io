@@ -78,11 +78,9 @@ Configure your main file early in the project to ensure compilation works correc
 
 ### Engine Selection
 
-Choose the appropriate LaTeX engine for your project's requirements. pdfTeX works well for most standard documents, while XeTeX provides better support for complex typography and font requirements.
+Select the engine that matches your document's requirements. pdfTeX is the fastest option and is suitable for most standard papers and reports using Latin-script text and common packages. XeTeX is preferable when the document requires system or OpenType fonts, right-to-left scripts, or substantial Unicode content. LuaTeX covers the same Unicode and font capabilities as XeTeX, and is the appropriate choice when a package depends on Lua scripting or on lower-level control over TeX internals, such as advanced `fontspec` features or extended `microtype` functionality.
 
-Consider your project's specific needs when selecting engines. Documents requiring Unicode text, custom fonts, or complex mathematical notation might benefit from XeTeX's advanced capabilities.
-
-Engine selection affects compilation behavior and available features. Test your chosen engine with representative content early in the project to ensure it meets your formatting and output requirements.
+Switching engines mid-project can surface package incompatibilities, so it is worth compiling a representative section with the chosen engine early rather than discovering issues close to a deadline.
 
 ### Output Format
 

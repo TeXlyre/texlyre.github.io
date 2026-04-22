@@ -126,7 +126,7 @@ If compilation errors occur, the Log tab displays detailed error information. Te
 <Tabs groupId="tex-engine">
 <TabItem value="latex" label="LaTeX" default>
 
-TeXlyre defaults to pdfTeX for most documents, which handles standard LaTeX content well. For documents requiring Unicode support or advanced typography, switch to XeTeX using the engine selector in the compilation controls.
+TeXlyre defaults to pdfTeX for most documents, which handles standard LaTeX content well. For documents requiring Unicode support or advanced typography, switch to XeTeX or LuaTeX using the engine selector in the compilation controls.
 
 The platform automatically detects your main file when you have only one `.tex` file. For complex projects with multiple LaTeX files, you can manually specify the main file in the compilation settings.
 

@@ -1,5 +1,5 @@
-import type {ReactNode} from 'react';
-import {useEffect, useRef, useState, useCallback} from 'react';
+import type { ReactNode } from 'react';
+import { useEffect, useRef, useState, useCallback } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Compile LaTeX and Typst documents directly in your browser.
-        No server required - SwiftLaTeX (pdfTeX and XeTeX) and Typst.ts WASM builds run on the client-end
+        No server required — SwiftLaTeX, BusyTeX, and Typst.ts WASM builds run entirely on the client, with support for pdfTeX, XeTeX, and LuaTeX.
       </>
     ),
   },
@@ -43,12 +43,12 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description, index}: FeatureItem & {index: number}) {
+function Feature({ title, Svg, description, index }: FeatureItem & { index: number }) {
   const [isVisible, setIsVisible] = useState(false);
   const [hasBeenVisible, setHasBeenVisible] = useState(false);
   const featureRef = useRef<HTMLDivElement>(null);
   const isScrollingRef = useRef(false);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout>();
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
   const checkVisibility = useCallback(() => {
     if (!featureRef.current) return;
@@ -69,7 +69,7 @@ function Feature({title, Svg, description, index}: FeatureItem & {index: number}
   }, [hasBeenVisible]);
 
   useEffect(() => {
-    let rafId: number;
+    let rafId: number | undefined;
 
     const handleScroll = () => {
       isScrollingRef.current = true;
