@@ -13,7 +13,7 @@ TeXlyre is now funded by the [NLnet Foundation](https://nlnet.nl/project/TeXlyre
 
 :::info[About NGI0 Commons]
 
-NGI0 Commons is part of the European Commission's Next Generation Internet initiative, run by NLnet. It supports projects building the free, open, trustworthy internet of the future. The full list of funded projects is available at [nlnet.nl/commonsfund](https://nlnet.nl/commonsfund/).
+NGI0 Commons is part of the European Commission's Next Generation Internet initiative, run by NLnet. It supports projects building the free, open, trustworthy internet of the future. The full list of funded projects is available at [nlnet.nl/project](https://nlnet.nl/project).
 
 :::
 
