@@ -69,7 +69,7 @@ Output, identical across pdflatex, lualatex, and xelatex:
 
 `ltx-talk` is a presentation class that uses LaTeX's `\DocumentMetadata` interface and the tagging pipeline to produce a structurally tagged PDF, including math content. This only compiles with full tagging capability under LuaLaTeX, which is itself the reason Milestone 1b was necessary, since prior to this upgrade, TeXlyre had no LuaLaTeX engine support.
 
-```latex engine=lualatex
+```latex engine=lualatex pdfheight=550
 \DocumentMetadata{tagging = on}
 \documentclass{ltx-talk}
 
