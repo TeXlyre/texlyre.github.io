@@ -5,6 +5,12 @@ authors: [slorber]
 tags: [texlyre, latex, busytex, luatex, pdftex, xetex, texlive2026, synctex, nlnet]
 ---
 
+:::info Part of the NGI0 Core roadmap
+
+This post reports on Task 1 of TeXlyre's NGI0 Commons grant. For the full project roadmap, see [TeXlyre joins NGI0 Commons](/blog/nlnet-ngi0-funding-overview).
+
+:::
+
 TeXlyre's in-browser LaTeX compilation has been upgraded from TeX Live 2020 to TeX Live 2026. LuaLaTeX now works alongside pdfLaTeX and XeLaTeX, and SyncTeX provides bidirectional navigation between source and PDF.
 
 ## Background
