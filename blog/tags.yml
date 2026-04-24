@@ -53,11 +53,64 @@ wasm:
     permalink: /wasm
     description: WebAssembly technology
 
+busytex:
+  label: BusyTeX
+  permalink: /busytex
+  description: BusyTeX WebAssembly LaTeX engine
+
+luatex:
+  label: LuaTeX
+  permalink: /luatex
+  description: LuaTeX engine
+
+pdftex:
+  label: pdfTeX
+  permalink: /pdftex
+  description: pdfTeX engine
+
+xetex:
+  label: XeTeX
+  permalink: /xetex
+  description: XeTeX engine
+
+texlive2026:
+  label: TeX Live 2026
+  permalink: /texlive2026
+  description: TeX Live 2026
+
+synctex:
+  label: SyncTeX
+  permalink: /synctex
+  description: SyncTeX source/PDF navigation
+
+nlnet:
+  label: NLnet
+  permalink: /nlnet
+  description: NLnet Foundation funding
+
 docusaurus:
     label: Docusaurus
     permalink: /docusaurus
     description: Docusaurus documentation framework
 
+ngi0:
+  label: NGI0
+  permalink: /ngi0
+  description: NGI0 funding programme
+
+funding:
+  label: funding
+  permalink: /funding
+
+roadmap:
+  label: roadmap
+  permalink: /roadmap
+
+chelys:
+  label: Chelys
+  permalink: /chelys
+  description: Chelys companion application
+  
 chinese:
     label: Chinese
     permalink: /chinese

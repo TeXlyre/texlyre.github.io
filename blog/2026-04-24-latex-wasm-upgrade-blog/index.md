@@ -1,7 +1,7 @@
 ---
 slug: latex-wasm-engine-upgrade
 title: LaTeX WebAssembly Engine Modernization
-authors: [slorber]
+authors: [fabawi]
 tags: [texlyre, latex, busytex, luatex, pdftex, xetex, texlive2026, synctex, nlnet]
 ---
 

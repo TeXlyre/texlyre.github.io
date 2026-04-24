@@ -1,7 +1,7 @@
 ---
 slug: introducing-texlyre
 title: Introducing TeXlyre - Local-First Real-Time LaTeX Collaboration
-authors: [slorber]
+authors: [fabawi]
 tags: [texlyre, latex, typst, collaborative-editing, yjs, wasm, react, typescript]
 ---
 
