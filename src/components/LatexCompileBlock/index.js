@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import OriginalCodeBlock from '@theme-original/CodeBlock';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useBusyTex } from './useBusyTex';
 import { useCompileLock } from './compileLock';
 import { useLatexCompileConfig } from './config';
@@ -41,6 +42,7 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
     const config = useLatexCompileConfig();
     const activeEngine = engine || config.engine;
     const activeHeight = pdfHeight || config.pdfHeight;
+    const logoUrl = useBaseUrl('/img/logo.svg');
 
     const { compile, stop, status, error, log } = useBusyTex({
         basePath: config.assetBase,
@@ -97,6 +99,17 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
                         Open in new tab ↗
                     </a>
                 )}
+                <span className={styles.spacer} />
+                <a
+                    className={styles.credit}
+                    href="https://github.com/TeXlyre/texlyre-busytex"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Powered by texlyre-busytex"
+                >
+                    <img className={styles.creditLogo} src={logoUrl} alt="" />
+                    <span>Powered by texlyre-busytex</span>
+                </a>
             </div>
             <OriginalCodeBlock {...codeBlockProps}>{source}</OriginalCodeBlock>
             {error && (
