@@ -1,6 +1,6 @@
 ---
 slug: nlnet-ngi0-funding-overview
-title: TeXlyre joins NGI0 Commons: project roadmap and milestones
+title: "TeXlyre joins NGI0 Commons: Project roadmap and milestones"
 authors: [fabawi]
 tags: [nlnet, ngi0, funding, roadmap, chelys]
 ---
