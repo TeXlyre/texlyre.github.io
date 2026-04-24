@@ -12,6 +12,12 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      LATEX_ASSET_PATH: ${{ vars.LATEX_ASSET_PATH || '/core/busytex' }}
+      LATEX_REMOTE_ENDPOINT: ${{ vars.LATEX_REMOTE_ENDPOINT || 'https://texlive2026.texlyre.org' }}
+      LATEX_COLLECTIONS: ${{ vars.LATEX_COLLECTIONS || 'recommended' }}
+      LATEX_PDF_HEIGHT: ${{ vars.LATEX_PDF_HEIGHT || '600' }}
+      LATEX_ENGINE: ${{ vars.LATEX_ENGINE || 'pdflatex' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -26,6 +32,20 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+
+      - name: Install texlyre-busytex
+        run: yarn add texlyre-busytex
+
+      - name: Swizzle CodeBlock
+        run: |
+          if [ ! -f src/theme/CodeBlock/index.js ] && [ ! -f src/theme/CodeBlock/index.jsx ]; then
+            yarn swizzle @docusaurus/theme-classic CodeBlock -- --wrap --danger --typescript=false
+          else
+            echo "CodeBlock already swizzled, skipping."
+          fi
+
+      - name: Download BusyTeX assets
+        run: yarn texlyre-busytex download-assets ./static/core
 
       - name: Build website
         run: yarn build

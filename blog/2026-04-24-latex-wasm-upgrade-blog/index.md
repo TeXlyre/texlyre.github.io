@@ -41,7 +41,7 @@ Each of the three examples below targets a different capability introduced after
 
 `zref-clever` is a cross-referencing package released on CTAN in 2022 and was not yet available in TeX Live 2020.
 
-```latex
+```latex engine=pdflatex
 \documentclass{article}
 \usepackage{zref-clever}
 \usepackage{amsmath}
@@ -69,7 +69,7 @@ Output, identical across pdflatex, lualatex, and xelatex:
 
 `ltx-talk` is a presentation class that uses LaTeX's `\DocumentMetadata` interface and the tagging pipeline to produce a structurally tagged PDF, including math content. This only compiles with full tagging capability under LuaLaTeX, which is itself the reason Milestone 1b was necessary, since prior to this upgrade, TeXlyre had no LuaLaTeX engine support.
 
-```latex
+```latex engine=lualatex
 \DocumentMetadata{tagging = on}
 \documentclass{ltx-talk}
 
@@ -94,7 +94,7 @@ The resulting PDF carries structural tags for both text and math, readable by sc
 
 `tabularray` (first CTAN release in 2021) replaces `tabular`'s positional column specifiers with a key-value syntax. It compiles under all three engines.
 
-```latex
+```latex engine=pdflatex
 \documentclass{article}
 \usepackage{xcolor}
 \usepackage{tabularray}

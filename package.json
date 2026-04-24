@@ -25,6 +25,7 @@
     "prism-react-renderer": "^2.4.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "texlyre-busytex": "^1.1.1",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
