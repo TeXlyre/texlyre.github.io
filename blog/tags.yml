@@ -73,10 +73,10 @@ xetex:
   permalink: /xetex
   description: XeTeX engine
 
-texlive2026:
-  label: TeX Live 2026
-  permalink: /texlive2026
-  description: TeX Live 2026
+texlive:
+  label: TeX Live
+  permalink: /texlive
+  description: TeX Live
 
 synctex:
   label: SyncTeX
@@ -110,7 +110,7 @@ chelys:
   label: Chelys
   permalink: /chelys
   description: Chelys companion application
-  
+
 chinese:
     label: Chinese
     permalink: /chinese

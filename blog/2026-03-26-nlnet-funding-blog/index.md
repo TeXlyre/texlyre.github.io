@@ -5,16 +5,13 @@ authors: [fabawi]
 tags: [nlnet, ngi0, funding, roadmap, chelys]
 ---
 
-
-<div style={{textAlign: 'center'}}>
-  ![Sponsors](./showcase/sponsors_banner.svg)
-</div>
-
 TeXlyre is now funded by the [NLnet Foundation](https://nlnet.nl/project/TeXlyre/) through the [NGI0 Commons](https://nlnet.nl/commonsfund/) fund. This post lays out the project roadmap and the tasks that will be delivered over the course of the grant.
 
-<!-- truncate -->
+![Sponsors](./showcase/sponsors_banner.svg)
 
-:::info About NGI0 Commons
+{/* truncate */}
+
+:::info[About NGI0 Commons]
 
 NGI0 Commons is part of the European Commission's Next Generation Internet initiative, run by NLnet. It supports projects building the free, open, trustworthy internet of the future. The full list of funded projects is available at [nlnet.nl/commonsfund](https://nlnet.nl/commonsfund/).
 
@@ -32,7 +29,7 @@ Upgrade TeXlyre's WASM-based LaTeX compilation from TeX Live 2020 to contemporar
 - [x] **1b.** LuaLaTeX support via modernized BusyTeX, with compatibility verified against contemporary packages
 - [x] **1c.** SyncTeX bidirectional jump-to-source and jump-to-PDF navigation
 
-:::tip Completed
+:::tip[Completed]
 
 Full report: [WebAssembly engine upgrade](/blog/latex-wasm-engine-upgrade)
 

@@ -2,10 +2,10 @@
 slug: latex-wasm-engine-upgrade
 title: LaTeX WebAssembly Engine Modernization
 authors: [fabawi]
-tags: [texlyre, latex, busytex, luatex, pdftex, xetex, texlive2026, synctex, nlnet]
+tags: [texlyre, latex, busytex, luatex, pdftex, xetex, texlive, synctex, nlnet]
 ---
 
-:::info Part of the NGI0 Core roadmap
+:::info[Part of the NGI0 Core roadmap]
 
 This post reports on Task 1 of TeXlyre's NGI0 Commons grant. For the full project roadmap, see [TeXlyre joins NGI0 Commons](/blog/nlnet-ngi0-funding-overview).
 
