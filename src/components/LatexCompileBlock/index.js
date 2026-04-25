@@ -95,8 +95,12 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
                     {label}
                 </button>
                 {pdfUrl && (
-                    <a className={styles.link} href={pdfUrl} target="_blank" rel="noreferrer">
-                        Open in new tab ↗
+                    <a className={styles.link}
+                        href={pdfUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <span>Open in new tab ↗</span>
                     </a>
                 )}
                 <span className={styles.spacer} />

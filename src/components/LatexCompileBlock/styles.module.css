@@ -46,12 +46,16 @@
 }
 
 .link {
-    font-size: var(--ifm-font-size-small);
     color: var(--ifm-link-color);
     text-decoration: none;
 }
 
-.link:hover {
+.link span {
+    font-size: var(--ifm-font-size-small);
+}
+
+.link:hover span,
+.link:hover span::after {
     text-decoration: underline;
 }
 
@@ -101,10 +105,14 @@
 
 @media (max-width: 520px) {
     .link {
+        flex-shrink: 0;
+    }
+
+    .link span {
         font-size: 0;
     }
 
-    .link::after {
+    .link span::after {
         content: "↗";
         font-size: var(--ifm-font-size-small);
     }
