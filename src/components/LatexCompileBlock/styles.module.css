@@ -46,16 +46,15 @@
 }
 
 .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
     color: var(--ifm-link-color);
     text-decoration: none;
-}
-
-.link span {
     font-size: var(--ifm-font-size-small);
 }
 
-.link:hover span,
-.link:hover span::after {
+.link:hover {
     text-decoration: underline;
 }
 
@@ -104,24 +103,15 @@
 }
 
 @media (max-width: 520px) {
-    .link {
-        flex-shrink: 0;
-    }
-
-    .link span {
-        font-size: 0;
-    }
-
-    .link span::after {
-        content: "↗";
-        font-size: var(--ifm-font-size-small);
+    .linkLabel {
+        display: none;
     }
 
     .credit span {
-        font-size: 0;
+        display: none;
     }
 
-    .credit span::after {
+    .credit::after {
         content: "texlyre-busytex";
         font-size: 0.75rem;
     }

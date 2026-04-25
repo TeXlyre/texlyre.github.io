@@ -100,7 +100,8 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <span>Open in new tab ↗</span>
+                        <span className={styles.linkLabel}>Open in new tab</span>
+                        <span className={styles.linkArrow}>↗</span>
                     </a>
                 )}
                 <span className={styles.spacer} />
