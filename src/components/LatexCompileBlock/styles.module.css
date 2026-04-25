@@ -98,3 +98,23 @@
     border-radius: var(--ifm-code-border-radius);
     background: var(--ifm-background-surface-color);
 }
+
+@media (max-width: 520px) {
+    .link {
+        font-size: 0;
+    }
+
+    .link::after {
+        content: "↗";
+        font-size: var(--ifm-font-size-small);
+    }
+
+    .credit span {
+        font-size: 0;
+    }
+
+    .credit span::after {
+        content: "texlyre-busytex";
+        font-size: 0.75rem;
+    }
+}
