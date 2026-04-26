@@ -1,6 +1,6 @@
 ---
 slug: nlnet-ngi0-funding-overview
-title: "TeXlyre joins NGI0 Commons: Project roadmap and milestones"
+title: "TeXlyre Joins NGI0 Commons: Project Roadmap and Milestones"
 authors: [fabawi]
 tags: [nlnet, ngi0, funding, roadmap, chelys]
 ---
@@ -19,7 +19,7 @@ NGI0 Commons is part of the European Commission's Next Generation Internet initi
 
 ## Roadmap
 
-The grant covers 11 tasks, broken into milestones. Each task below links to its completion report when available. Checked items are completed and reported.
+The grant covers 8 tasks, broken into milestones. Each task below links to its completion report when available. Checked items are completed and reported.
 
 ### Task 1: WebAssembly engine modernization
 

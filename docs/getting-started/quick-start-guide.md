@@ -26,7 +26,7 @@ Create your main LaTeX file by clicking the "New File" button in the file explor
 
 Start with a basic LaTeX document structure:
 
-```latex engine=pdflatex
+```latex engine=pdflatex,xelatex,lualatex
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}

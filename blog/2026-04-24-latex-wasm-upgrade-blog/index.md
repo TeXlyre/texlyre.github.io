@@ -25,23 +25,23 @@ The work spans three repositories that together form the engine stack. Each link
 
 ## Milestone 1a: Dynamic package downloading
 
-Rather than bundling TeX Live collections into the WASM image as was previously done in [BusyTeX](https://github.com/busytex/busytex), packages are now fetched from a dedicated TeX Live package server (see the [texlyre-busytex-build diff](https://github.com/TeXlyre/texlyre-busytex-build/compare/2e52146^...nlnet_032026_T1-luatex__synctex__tl_on_demand) for the server and kpse resolver implementation). A remote `kpse` resolver bridges the WebAssembly filesystem to the server, so when the engine requests a package during compilation, it's fetched, cached client-side, and served locally on subsequent runs. Cache misses are tracked explicitly to avoid redundant downloads, and ZIP-packaged collections are supported for environments where bulk loading makes sense.
+Rather than bundling all required TeX Live collections into the WASM image as was previously done in [BusyTeX](https://github.com/busytex/busytex), packages are now fetched from a dedicated TeX Live package server (see the [texlyre-busytex-build diff](https://github.com/TeXlyre/texlyre-busytex-build/compare/2e52146^...nlnet_032026_T1-luatex__synctex__tl_on_demand) for the server and kpse resolver implementation). A remote `kpse` resolver bridges the WebAssembly filesystem to the server, so when the engine requests a package during compilation, it's fetched, cached client-side, and served locally on subsequent runs. Cache misses are tracked explicitly to avoid redundant downloads, and ZIP-packaged collections are supported for environments where bulk loading is needed.
 
-Integration with the application layer (engine selection, lazy loading, cache handling) is in the [texlyre](https://github.com/TeXlyre/texlyre/compare/c23b811^...nlnet_032026_T1-synctex) and [texlyre-busytex](https://github.com/TeXlyre/texlyre-busytex/compare/37d32e0^...nlnet_032026_T1-tl_on_demand) diffs.
+Integration with the application layer (engine selection, lazy loading, and cache handling) is in the [texlyre](https://github.com/TeXlyre/texlyre/compare/c23b811^...nlnet_032026_T1-synctex) and [texlyre-busytex](https://github.com/TeXlyre/texlyre-busytex/compare/37d32e0^...nlnet_032026_T1-tl_on_demand) diffs.
 
-Packages outside the bundled core are now fetched on demand, making any CTAN package available without rebuilding the engine.
+Packages outside the bundled core are now fetched on demand, making any CTAN package available without rebuilding the engine or the bundle data.
 
 ## Milestone 1b: LuaLaTeX and modern package compatibility
 
-BusyTeX now builds against TeX Live 2026, with LuaTeX (LuaHBTeX) supported alongside pdfTeX and XeTeX. Multi-engine hyphenation generation and WASM format file rebuilding were both needed to make the new engines work properly. The build system changes are in the [texlyre-busytex-build diff](https://github.com/TeXlyre/texlyre-busytex-build/compare/2e52146^...nlnet_032026_T1-luatex__synctex__tl_on_demand); the engine selection and multi-tool wiring is in the [texlyre-busytex diff](https://github.com/TeXlyre/texlyre-busytex/compare/37d32e0^...nlnet_032026_T1-tl_on_demand).
+BusyTeX now builds against TeX Live 2026, with LuaTeX (LuaHBTeX) supported alongside pdfTeX and XeTeX. Multi-engine hyphenation generation and WASM format file rebuilding were both needed to make the new engines work properly across different languages. The build system changes are in the [texlyre-busytex-build diff](https://github.com/TeXlyre/texlyre-busytex-build/compare/2e52146^...nlnet_032026_T1-luatex__synctex__tl_on_demand); the engine and multi-tool selection interface is in the [texlyre-busytex diff](https://github.com/TeXlyre/texlyre-busytex/compare/37d32e0^...nlnet_032026_T1-tl_on_demand).
 
-Each of the three examples below targets a different capability introduced after TeX Live 2020: modern cross-referencing, accessibility tagging, and key-value table syntax
+Each of the three examples below targets a different capability or package introduced after TeX Live 2020: modern cross-referencing, accessibility tagging, and key-value table syntax
 
 ### Cross-referencing with `zref-clever`
 
 `zref-clever` is a cross-referencing package released on CTAN in 2022 and was not yet available in TeX Live 2020.
 
-```latex engine=pdflatex pdfheight=800
+```latex engine=pdflatex,xelatex,lualatex pdfheight=800
 \documentclass{article}
 \usepackage{zref-clever}
 \usepackage{amsmath}
@@ -88,13 +88,13 @@ Output, identical across pdflatex, lualatex, and xelatex:
 \end{document}
 ```
 
-The resulting PDF carries structural tags for both text and math, readable by screen readers and other assistive tooling. Authoring accessible documents is now possible directly from the browser instead of requiring a local TeX installation.
+The resulting PDF carries structural tags for both text and math, readable by screen readers and other assistive tools. Authoring accessible documents is now possible directly from the browser instead of requiring a local TeX installation.
 
 ### Modern tables with `tabularray`
 
 `tabularray` (first CTAN release in 2021) replaces `tabular`'s positional column specifiers with a key-value syntax. It compiles under all three engines.
 
-```latex engine=pdflatex
+```latex engine=pdflatex,xelatex,lualatex
 \documentclass{article}
 \usepackage{xcolor}
 \usepackage{tabularray}
@@ -120,8 +120,8 @@ All dependencies (`tabularray`, `xcolor`, `ninecolors`, and their transitive req
 SyncTeX is implemented across three layers, with one diff per layer:
 
 - Engine layer ([texlyre-busytex-build diff](https://github.com/TeXlyre/texlyre-busytex-build/compare/2e52146^...nlnet_032026_T1-luatex__synctex__tl_on_demand)): SyncTeX generation enabled in the BusyTeX build, producing `.synctex.gz` output alongside the PDF.
-- API layer ([texlyre-busytex diff](https://github.com/TeXlyre/texlyre-busytex/compare/37d32e0^...nlnet_032026_T1-tl_on_demand)): a SyncTeX parser and source map service that decode the SyncTeX data into coordinates usable by the editor.
-- UI layer ([texlyre diff](https://github.com/TeXlyre/texlyre/compare/c23b811^...nlnet_032026_T1-synctex)): forward navigation (click in source, highlight in PDF) and reverse navigation (click in PDF, cursor jumps to source), integrated with both the PDF.js renderer and the canvas renderer.
+- API layer ([texlyre-busytex diff](https://github.com/TeXlyre/texlyre-busytex/compare/37d32e0^...nlnet_032026_T1-tl_on_demand)): an interface for extracting the SyncTeX file within a compilation session.
+- UI layer ([texlyre diff](https://github.com/TeXlyre/texlyre/compare/c23b811^...nlnet_032026_T1-synctex)): a SyncTeX parser and source map service that decode the SyncTeX data into coordinates usable by the editor.It supports forward navigation (click in source, highlight in PDF) and reverse navigation (click in PDF, cursor jumps to source), integrated with both the PDF.js renderer and the canvas renderer.
 
 ![SyncTeX source-to-PDF highlighting](./showcase/synctex_highlight_zoomed.svg)
 
