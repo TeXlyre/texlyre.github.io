@@ -5,10 +5,11 @@ import LatexCompileBlock from '@site/src/components/LatexCompileBlock';
 
 function parseMeta(metastring) {
     if (typeof metastring !== 'string') return {};
-    const engine = metastring.match(/\bengine=(pdflatex|xelatex|lualatex)\b/);
+    const engine = metastring.match(/\bengine=((?:pdflatex|xelatex|lualatex)(?:,(?:pdflatex|xelatex|lualatex))*)\b/);
     const height = metastring.match(/\bpdfheight=(\d+)(px)?\b/);
+    const engines = engine ? Array.from(new Set(engine[1].split(','))) : undefined;
     return {
-        engine: engine ? engine[1] : undefined,
+        engines,
         pdfHeight: height ? parseInt(height[1], 10) : undefined,
     };
 }
@@ -19,7 +20,7 @@ export default function CodeBlock(props) {
         props.className.split(' ').includes('language-latex');
     const meta = isLatex ? parseMeta(props.metastring) : {};
 
-    if (!isLatex || !meta.engine || typeof props.children !== 'string') {
+    if (!isLatex || !meta.engines || !meta.engines.length || typeof props.children !== 'string') {
         return <OriginalCodeBlock {...props} />;
     }
 
@@ -29,7 +30,7 @@ export default function CodeBlock(props) {
                 <LatexCompileBlock
                     {...props}
                     source={props.children}
-                    engine={meta.engine}
+                    engines={meta.engines}
                     pdfHeight={meta.pdfHeight}
                 />
             )}

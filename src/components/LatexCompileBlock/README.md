@@ -149,7 +149,7 @@ With custom preview height:
 ```
 ````
 
-Fences without `engine=` render as plain code blocks.
+Fences without `engine=` render as plain code blocks. Comma-separated engines e.g., `engine=pdflatex,xelatex` will render a dropdown next to the compile button.
 
 Supported engines: `pdflatex`, `xelatex`, `lualatex`.
 

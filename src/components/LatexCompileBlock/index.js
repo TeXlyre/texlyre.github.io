@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import OriginalCodeBlock from '@theme-original/CodeBlock';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useBusyTex } from './useBusyTex';
@@ -8,16 +8,36 @@ import styles from './styles.module.css';
 
 function PlayIcon() {
     return (
-        <svg className={styles.icon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M8 5v14l11-7z" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={styles.icon}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+        >
+            <polygon points="5 3 19 12 5 21 5 3" />
         </svg>
     );
 }
 
 function StopIcon() {
     return (
-        <svg className={styles.icon} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <rect x="6" y="6" width="12" height="12" rx="1" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={styles.icon}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+        >
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
         </svg>
     );
 }
@@ -25,12 +45,14 @@ function StopIcon() {
 function SpinnerIcon() {
     return (
         <svg
+            xmlns="http://www.w3.org/2000/svg"
             className={`${styles.icon} ${styles.spinner}`}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2.5"
+            strokeWidth="2"
             strokeLinecap="round"
+            strokeLinejoin="round"
             aria-hidden="true"
         >
             <path d="M21 12a9 9 0 1 1-6.2-8.55" />
@@ -38,9 +60,56 @@ function SpinnerIcon() {
     );
 }
 
-export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBlockProps }) {
+function ChevronIcon() {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={styles.icon}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+        >
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+    );
+}
+
+function ExternalLinkIcon() {
+    return (
+        <svg
+            className={styles.icon}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+        >
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15,3 21,3 21,9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+        </svg>
+    );
+}
+
+
+export default function LatexCompileBlock({ source, engine, engines, pdfHeight, ...codeBlockProps }) {
     const config = useLatexCompileConfig();
-    const activeEngine = engine || config.engine;
+    const engineList = useMemo(() => {
+        if (Array.isArray(engines) && engines.length) return engines;
+        return [engine || config.engine];
+    }, [engines, engine, config.engine]);
+
+    const [activeEngine, setActiveEngine] = useState(engineList[0]);
+    useEffect(() => {
+        if (!engineList.includes(activeEngine)) setActiveEngine(engineList[0]);
+    }, [engineList, activeEngine]);
+
     const activeHeight = pdfHeight || config.pdfHeight;
     const logoUrl = useBaseUrl('/img/logo.svg');
 
@@ -50,9 +119,28 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
         remoteEndpoint: config.remoteEndpoint,
     });
     const [pdfUrl, setPdfUrl] = useState(null);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const menuRef = useRef(null);
     const globalBusy = useCompileLock();
 
     const localBusy = status === 'loading' || status === 'compiling';
+    const hasChoice = engineList.length > 1;
+
+    useEffect(() => {
+        if (!menuOpen) return;
+        const onDocClick = (e) => {
+            if (menuRef.current && !menuRef.current.contains(e.target)) setMenuOpen(false);
+        };
+        const onKey = (e) => {
+            if (e.key === 'Escape') setMenuOpen(false);
+        };
+        document.addEventListener('mousedown', onDocClick);
+        document.addEventListener('keydown', onKey);
+        return () => {
+            document.removeEventListener('mousedown', onDocClick);
+            document.removeEventListener('keydown', onKey);
+        };
+    }, [menuOpen]);
 
     const onClick = async () => {
         if (localBusy) {
@@ -63,9 +151,7 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
         if (url) setPdfUrl(url);
     };
 
-    const buttonClass = localBusy
-        ? `button button--danger button--sm ${styles.button}`
-        : `button button--primary button--sm ${styles.button}`;
+    const baseClass = localBusy ? 'button button--danger button--sm' : 'button button--primary button--sm';
 
     const label = localBusy
         ? status === 'loading'
@@ -85,23 +171,56 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
     return (
         <div className={styles.container}>
             <div className={styles.toolbar}>
-                <button
-                    type="button"
-                    className={buttonClass}
-                    onClick={onClick}
-                    disabled={globalBusy && !localBusy}
-                >
-                    {icon}
-                    {label}
-                </button>
-                {pdfUrl && (
-                    <a className={styles.link}
-                        href={pdfUrl}
-                        target="_blank"
-                        rel="noreferrer"
+                <div className={hasChoice ? styles.split : undefined} ref={menuRef}>
+                    <button
+                        type="button"
+                        className={`${baseClass} ${styles.button} ${hasChoice ? styles.splitMain : ''}`}
+                        onClick={onClick}
+                        disabled={globalBusy && !localBusy}
                     >
+                        {icon}
+                        {label}
+                    </button>
+                    {hasChoice && (
+                        <>
+                            <button
+                                type="button"
+                                className={`${baseClass} ${styles.splitToggle}`}
+                                onClick={() => setMenuOpen((v) => !v)}
+                                disabled={localBusy || (globalBusy && !localBusy)}
+                                aria-haspopup="listbox"
+                                aria-expanded={menuOpen}
+                                aria-label="Choose engine"
+                            >
+                                <ChevronIcon />
+                            </button>
+                            {menuOpen && (
+                                <ul className={styles.menu} role="listbox">
+                                    {engineList.map((name) => (
+                                        <li key={name}>
+                                            <button
+                                                type="button"
+                                                role="option"
+                                                aria-selected={name === activeEngine}
+                                                className={`${styles.menuItem} ${name === activeEngine ? styles.menuItemActive : ''}`}
+                                                onClick={() => {
+                                                    setActiveEngine(name);
+                                                    setMenuOpen(false);
+                                                }}
+                                            >
+                                                {name}
+                                            </button>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </>
+                    )}
+                </div>
+                {pdfUrl && (
+                    <a className={styles.link} href={pdfUrl} target="_blank" rel="noreferrer">
                         <span className={styles.linkLabel}>Open in new tab</span>
-                        <span className={styles.linkArrow}>↗</span>
+                        <ExternalLinkIcon />
                     </a>
                 )}
                 <span className={styles.spacer} />
@@ -117,20 +236,24 @@ export default function LatexCompileBlock({ source, engine, pdfHeight, ...codeBl
                 </a>
             </div>
             <OriginalCodeBlock {...codeBlockProps}>{source}</OriginalCodeBlock>
-            {error && (
-                <div className={styles.error}>
-                    {error}
-                    {log ? `\n\n${log.slice(-2000)}` : ''}
-                </div>
-            )}
-            {pdfUrl && (
-                <iframe
-                    className={styles.preview}
-                    src={pdfUrl}
-                    title="Compiled PDF"
-                    style={{ height: `${activeHeight}px` }}
-                />
-            )}
-        </div>
+            {
+                error && (
+                    <div className={styles.error}>
+                        {error}
+                        {log ? `\n\n${log.slice(-2000)}` : ''}
+                    </div>
+                )
+            }
+            {
+                pdfUrl && (
+                    <iframe
+                        className={styles.preview}
+                        src={pdfUrl}
+                        title="Compiled PDF"
+                        style={{ height: `${activeHeight}px` }}
+                    />
+                )
+            }
+        </div >
     );
 }
