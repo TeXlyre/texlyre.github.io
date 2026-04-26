@@ -159,8 +159,28 @@
     background: var(--ifm-background-surface-color);
 }
 
+.linkDesktop {
+    display: inline-flex;
+}
+
+.linkMobile {
+    display: none;
+}
+
 @media (max-width: 640px) {
     .linkLabel {
+        display: none;
+    }
+
+    .linkDesktop {
+        display: none;
+    }
+
+    .linkMobile {
+        display: inline-flex;
+    }
+
+    .preview {
         display: none;
     }
 
