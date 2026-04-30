@@ -358,8 +358,4 @@
     </g>
   </g>
 
-  <!-- Status indicator -->
-  <g id="statusIndicator" transform="translate(330, 645)">
-    <text x="235" y="0" text-anchor="middle" fill="#4a5568" font-size="14" font-family="Arial" font-weight="bold">🔒 Peer-to-Peer • 🏠 Local-First • 🛡️ Private</text>
-  </g>
 </svg>
