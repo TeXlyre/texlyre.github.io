@@ -28,13 +28,13 @@
   </defs>
 
   <!-- Title -->
-  <text x="565" y="42" text-anchor="middle" fill="#2d3748" font-size="28" font-family="Arial" font-weight="bold">Local-First Privacy</text>
-  <text x="565" y="67" text-anchor="middle" fill="#718096" font-size="14" font-family="Arial">
+  <text x="525" y="42" text-anchor="middle" fill="#2d3748" font-size="28" font-family="Arial" font-weight="bold">Local-First Privacy</text>
+  <text x="525" y="67" text-anchor="middle" fill="#718096" font-size="14" font-family="Arial">
     The server helps peers find each other — document data syncs directly and stays local.
   </text>
 
   <!-- Phase Timeline: reduced left padding and more even spacing -->
-  <g id="phaseTimeline" transform="translate(224, 88)">
+  <g id="phaseTimeline" transform="translate(185, 88)">
     <rect x="0" y="0" width="680" height="46" rx="23" fill="#f7fafc" stroke="#e2e8f0" stroke-width="1"></rect>
 
     <g>
