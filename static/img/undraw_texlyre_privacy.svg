@@ -119,25 +119,25 @@
   <!-- Connection Request Packets -->
   <g id="connectionPackets">
     <!-- Request from A to Server -->
-    <g id="requestToServer">
-      <rect x="300" y="245" width="35" height="20" rx="3" fill="#3182ce" opacity="0" />
-      <text x="317" y="257" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial" opacity="0">REQ</text>
+    <g id="requestToServer" opacity="0">
+      <rect x="300" y="245" width="35" height="20" rx="3" fill="#3182ce" />
+      <text x="317" y="257" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">REQ</text>
       <animateTransform attributeName="transform" type="translate" values="0,0; 185,-40; 185,-40" dur="18s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="1;1;0;0;0" dur="18s" repeatCount="indefinite" />
     </g>
 
     <!-- Server queries B -->
-    <g id="serverToB">
-      <rect x="565" y="205" width="35" height="20" rx="3" fill="#805ad5" opacity="0" />
-      <text x="582" y="217" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial" opacity="0">QRY</text>
+    <g id="serverToB" opacity="0">
+      <rect x="565" y="205" width="35" height="20" rx="3" fill="#805ad5" />
+      <text x="582" y="217" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">QRY</text>
       <animateTransform attributeName="transform" type="translate" values="0,0; 185,40; 185,40" dur="18s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0;1;1;0;0" dur="18s" repeatCount="indefinite" />
     </g>
 
     <!-- Server returns address to A -->
-    <g id="serverToA">
-      <rect x="485" y="225" width="35" height="20" rx="3" fill="#d69e2e" opacity="0" />
-      <text x="502" y="237" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial" opacity="0">ADDR</text>
+    <g id="serverToA" opacity="0">
+      <rect x="485" y="225" width="35" height="20" rx="3" fill="#d69e2e" />
+      <text x="502" y="237" text-anchor="middle" fill="#ffffff" font-size="8" font-family="Arial">ADDR</text>
       <animateTransform attributeName="transform" type="translate" values="0,0; -185,40; -185,40" dur="18s" repeatCount="indefinite" />
       <animate attributeName="opacity" values="0;0;1;1;0" dur="18s" repeatCount="indefinite" />
     </g>
@@ -261,14 +261,14 @@
 
   <!-- Connection Status Labels -->
   <g id="connectionStatus">
-    <text x="525" y="290" text-anchor="middle" fill="#805ad5" font-size="12" font-family="Arial" font-weight="bold" opacity="0">
-      Connection Setup
+    <g opacity="0">
       <animate attributeName="opacity" values="1;1;0;0;0" dur="18s" repeatCount="indefinite" />
-    </text>
-    <text x="525" y="290" text-anchor="middle" fill="#38a169" font-size="12" font-family="Arial" font-weight="bold" opacity="0">
-      Direct P2P Connection
+      <text x="525" y="290" text-anchor="middle" fill="#805ad5" font-size="12" font-family="Arial" font-weight="bold">Connection Setup</text>
+    </g>
+    <g opacity="0">
       <animate attributeName="opacity" values="0;0;0;0;1" dur="18s" repeatCount="indefinite" />
-    </text>
+      <text x="525" y="290" text-anchor="middle" fill="#38a169" font-size="12" font-family="Arial" font-weight="bold">Direct P2P Connection</text>
+    </g>
   </g>
 
   <!-- Privacy Features Grid -->

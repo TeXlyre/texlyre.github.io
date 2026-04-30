@@ -35,12 +35,14 @@
 
       <!-- Animated equation in editor -->
       <g id="equationEditor">
-        <text x="25" y="300" fill="#faf089" font-size="10" font-family="monospace" opacity="1">E = mc^2
+        <g opacity="1">
           <animate attributeName="opacity" values="1;1;1;0;0;0" dur="8s" repeatCount="indefinite" />
-        </text>
-        <text x="25" y="300" fill="#faf089" font-size="10" font-family="monospace" opacity="0">F = ma
+          <text x="25" y="300" fill="#faf089" font-size="10" font-family="monospace">E = mc^2</text>
+        </g>
+        <g opacity="0">
           <animate attributeName="opacity" values="0;0;0;1;1;1" dur="8s" repeatCount="indefinite" />
-        </text>
+          <text x="25" y="300" fill="#faf089" font-size="10" font-family="monospace">F = ma</text>
+        </g>
       </g>
 
       <text x="25" y="320" fill="#90cdf4" font-size="10" font-family="monospace">\end{equation}</text>

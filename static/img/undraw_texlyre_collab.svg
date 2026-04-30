@@ -93,12 +93,14 @@
     </rect>
     <!-- Alice's text that changes as she types -->
     <g id="aliceText">
-      <text x="35" y="125" fill="#2d3748" font-size="12" font-family="Arial" opacity="1">Alice is editing this paragraph about quantum mechanics and its
+      <g opacity="1">
         <animate attributeName="opacity" values="1;1;1;1;0;0;0;0" dur="8s" repeatCount="indefinite" />
-      </text>
-      <text x="35" y="125" fill="#2d3748" font-size="12" font-family="Arial" opacity="0">Alice is editing this paragraph about quantum mechanics and its applications in modern
+        <text x="35" y="125" fill="#2d3748" font-size="12" font-family="Arial">Alice is editing this paragraph about quantum mechanics and its</text>
+      </g>
+      <g opacity="0">
         <animate attributeName="opacity" values="0;0;0;0;1;1;1;1" dur="8s" repeatCount="indefinite" />
-      </text>
+        <text x="35" y="125" fill="#2d3748" font-size="12" font-family="Arial">Alice is editing this paragraph about quantum mechanics and its applications in modern</text>
+      </g>
     </g>
 
     <rect x="30" y="140" width="520" height="20" rx="3" fill="#fff5f5" opacity="0.6">
@@ -118,18 +120,18 @@
     <text x="40" y="230" fill="#4a5568" font-size="10" font-family="monospace">\begin{equation}</text>
     <!-- Animated equation changes synchronized with Carol's cursor -->
     <g>
-      <!-- Stage 1: Original equation (cursor at beginning) -->
-      <text x="60" y="250" fill="#2d3748" font-size="14" font-family="serif" font-style="italic" opacity="1">∫₀^∞ e^(-x²) dx = √π/2
+      <g opacity="1">
         <animate attributeName="opacity" values="1;1;1;0;0;0;0;0;0;0;0;0" dur="12s" repeatCount="indefinite" />
-      </text>
-      <!-- Stage 2: Cursor at integral limits - changing from ₀^∞ to ₋∞^∞ -->
-      <text x="60" y="250" fill="#2d3748" font-size="14" font-family="serif" font-style="italic" opacity="0">∫₋∞^∞ e^(-x²) dx = √π/2
+        <text x="60" y="250" fill="#2d3748" font-size="14" font-family="serif" font-style="italic">∫₀^∞ e^(-x²) dx = √π/2</text>
+      </g>
+      <g opacity="0">
         <animate attributeName="opacity" values="0;0;0;1;1;1;0;0;0;0;0;0" dur="12s" repeatCount="indefinite" />
-      </text>
-      <!-- Stage 3: Cursor at the end - changing result from √π/2 to √π -->
-      <text x="60" y="250" fill="#2d3748" font-size="14" font-family="serif" font-style="italic" opacity="0">∫₋∞^∞ e^(-x²) dx = √π
+        <text x="60" y="250" fill="#2d3748" font-size="14" font-family="serif" font-style="italic">∫₋∞^∞ e^(-x²) dx = √π/2</text>
+      </g>
+      <g opacity="0">
         <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;1;1;1;1" dur="12s" repeatCount="indefinite" />
-      </text>
+        <text x="60" y="250" fill="#2d3748" font-size="14" font-family="serif" font-style="italic">∫₋∞^∞ e^(-x²) dx = √π</text>
+      </g>
     </g>
     <text x="40" y="270" fill="#4a5568" font-size="10" font-family="monospace">\end{equation}</text>
 
@@ -212,9 +214,10 @@
       <rect x="391" y="106" width="45" height="16" rx="3" fill="#3ecc5f">
         <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,0; 0,0; 0,0; 120,0; 120,0; 120,0; 120,0" dur="8s" repeatCount="indefinite" />
       </rect>
-      <text x="413" y="117" text-anchor="middle" fill="white" font-size="9" font-family="Arial">Alice
+      <g>
         <animateTransform attributeName="transform" attributeType="XML" type="translate" values="0,0; 0,0; 0,0; 0,0; 120,0; 120,0; 120,0; 120,0" dur="8s" repeatCount="indefinite" />
-      </text>
+        <text x="413" y="117" text-anchor="middle" fill="white" font-size="9" font-family="Arial">Alice</text>
+      </g>
     </g>
 
     <g id="cursor2">
@@ -249,11 +252,12 @@
           values="0,0; 0,0; 0,0; 20,0; 20,0; 20,0; 180,0; 180,0; 180,0; 180,0; 180,0; 180,0"
           dur="12s" repeatCount="indefinite" />
       </rect>
-      <text x="88" y="241" text-anchor="middle" fill="white" font-size="9" font-family="Arial">Carol
+      <g>
         <animateTransform attributeName="transform" attributeType="XML" type="translate"
           values="0,0; 0,0; 0,0; 20,0; 20,0; 20,0; 180,0; 180,0; 180,0; 180,0; 180,0; 180,0"
           dur="12s" repeatCount="indefinite" />
-      </text>
+        <text x="88" y="241" text-anchor="middle" fill="white" font-size="9" font-family="Arial">Carol</text>
+      </g>
     </g>
   </g>
 
