@@ -149,7 +149,7 @@ npm run lint
 Fix linting issues and format code:
 
 ```bash npm2yarn
-npm run clean
+npm run lint:full
 ```
 
 This runs ESLint with auto-fix and Biome formatter.
@@ -169,7 +169,7 @@ npm run clean:cache
 Generate configuration files:
 
 ```bash npm2yarn
-npm run generate-configs
+npm run generate:configs
 ```
 
 ### Generate Plugin Index
@@ -177,7 +177,7 @@ npm run generate-configs
 Regenerate the plugin registry:
 
 ```bash npm2yarn
-npm run generate-plugins
+npm run generate:plugins
 ```
 
 ### Generate Font Manifest
@@ -185,7 +185,7 @@ npm run generate-plugins
 Regenerate the font manifest:
 
 ```bash npm2yarn
-npm run generate-fonts
+npm run generate:fonts
 ```
 
 ## Common Workflows
@@ -202,7 +202,7 @@ npm run dev
 ### Before Committing
 
 ```bash npm2yarn
-npm run clean
+npm run lint:full
 npm run test
 ```
 

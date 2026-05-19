@@ -18,7 +18,7 @@ The following files are **automatically generated** from `texlyre.config.ts`:
 
 :::danger[Automatic Overwrites]
 
-Running `npm run start` or `npm run generate-configs` will **completely overwrite** the following files:
+Running `npm run start` or `npm run generate:configs` will **completely overwrite** the following files:
 
 - `plugins.config.js`
 - `userdata.json`
@@ -104,7 +104,7 @@ userdata: {
 Generate configuration files during development:
 
 ```bash
-npm run generate-configs
+npm run generate:configs
 ```
 
 This command:
@@ -172,7 +172,7 @@ The exported `userdata.json` includes encrypted secrets. You must manually set t
 Placing a custom `userdata.json` in your repository will be **overwritten** when running:
 
 - `npm run start`
-- `npm run generate-configs`
+- `npm run generate:configs`
 
 To preserve custom configurations, update `texlyre.config.ts` instead.
 
@@ -215,7 +215,7 @@ const config: TexlyreConfig = {
 
 The GitHub Actions workflow automatically:
 
-1. Runs `npm run generate-configs`
+1. Runs `npm run generate:configs`
 2. Overwrites `plugins.config.js`, `userdata.json`, and `userdata.local.json`
 3. Builds the application
 4. Deploys to GitHub Pages
@@ -245,7 +245,7 @@ const config: TexlyreConfig = {
 ### Recommended Workflow
 
 1. **Edit** `texlyre.config.ts` with desired changes
-2. **Run** `npm run generate-configs` to update generated configuration files
+2. **Run** `npm run generate:configs` to update generated configuration files
 3. **Preview** changes locally with `npm run dev`
 4. **Commit** both `texlyre.config.ts` and generated files
 5. **Deploy** using `npm run start` or GitHub Actions
@@ -257,7 +257,7 @@ const config: TexlyreConfig = {
 If configuration changes don't appear:
 
 1. Verify `texlyre.config.ts` syntax is valid
-2. Run `npm run generate-configs` manually
+2. Run `npm run generate:configs` manually
 3. Clear browser cache and reload
 4. Check browser console for configuration errors
 
