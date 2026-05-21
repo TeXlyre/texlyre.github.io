@@ -20,6 +20,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/TeXlyre/texlyre.git
 cd texlyre
 npm install
+npm run build:prod
 ```
 
 ## Development Commands
