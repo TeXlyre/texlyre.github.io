@@ -19,6 +19,8 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  --ifm-heading-color: #fff;
+  --ifm-description-color: #fff;
   --ifm-color-primary: #3badd6;
   --ifm-color-primary-dark: #28a4d1;
   --ifm-color-primary-darker: #239ecb;
@@ -29,10 +31,49 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.container {
+  max-width: 1600px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
 .footer__links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+
+}
+
+.footer__col {
+  min-width: 0;
+}
+
+.footer__link-item {
+  overflow-wrap: anywhere;
+}
+
+.experimental-badge,
+.fork-badge {
+  display: inline-block;
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  vertical-align: middle;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.experimental-badge {
+  margin-left: 0.35rem;
+  background: #dc2626;
+}
+
+.fork-badge {
+  margin-left: 0.35rem;
+  background: #6366f1;
 }
 
 .header-sponsor-link {
@@ -53,7 +94,13 @@ html[data-theme='dark'] .header-sponsor-link {
   background: linear-gradient(135deg, #ea4aaa 0%, #ff6b9d 100%);
 }
 
-@media (max-width: 996px) {
+@media (max-width: 1400px) {
+  .footer__links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
   .footer__links {
     grid-template-columns: repeat(2, 1fr);
   }

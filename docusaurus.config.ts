@@ -204,16 +204,8 @@ const config: Config = {
               href: 'https://texlyre.github.io/wasm-latex-tools',
             },
             {
-              label: 'TeXlyre BusyTeX (TeX Live 2025)',
+              label: 'TeXlyre BusyTeX (TeX Live 2026)',
               href: 'https://texlyre.github.io/texlyre-busytex',
-            },
-            {
-              label: 'LaTeX WYSIWYM Editor',
-              href: 'https://texlyre.github.io/codemirror-latex-visual',
-            },
-            {
-              label: 'Vector to PDF Converter',
-              href: 'https://texlyre.github.io/vector-pdf-converter',
             },
             {
               label: 'Indicant',
@@ -224,12 +216,56 @@ const config: Config = {
               href: 'https://texlyre.github.io/filepizza-client',
             },
             {
-              label: 'Fork: FilePizza',
-              href: 'https://filepizza.texlyre.org',
+              html: `
+                      <a
+                        href="https://filepizza.texlyre.org"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__link-item footer-external-link"
+                      >
+                        FilePizza
+                        <span class="fork-badge">Fork</span>
+                      </a>
+                    `,
             },
             {
-              label: 'Fork: BibEditor (BibTeX Tidy)',
-              href: 'https://texlyre.github.io/bib-editor',
+              html: `
+                      <a
+                        href="https://texlyre.github.io/bib-editor"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__link-item footer-external-link"
+                      >
+                        BibEditor (BibTeX Tidy)
+                        <span class="fork-badge">Fork</span>
+                      </a>
+                    `,
+            },
+            {
+              html: `
+                      <a
+                        href="https://texlyre.github.io/codemirror-latex-visual"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__link-item footer-external-link"
+                      >
+                        LaTeX WYSIWYM Editor
+                        <span class="experimental-badge">Experimental</span>
+                      </a>
+                    `,
+            },
+            {
+              html: `
+                      <a
+                        href="https://texlyre.github.io/vector-pdf-converter"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="footer__link-item footer-external-link"
+                      >
+                        Vector to PDF Converter
+                        <span class="experimental-badge">Experimental</span>
+                      </a>
+                    `,
             },
           ],
         },

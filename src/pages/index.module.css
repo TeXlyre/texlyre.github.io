@@ -10,6 +10,10 @@
   overflow: hidden;
 }
 
+.heroBanner p {
+  color: var(--ifm-description-color);
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
@@ -50,6 +54,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: var(--ifm-description-color);
 }
 
 .buttonLogo {

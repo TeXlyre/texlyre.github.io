@@ -10,6 +10,7 @@ type Project = {
     description: string;
     image: string; // path under /static, e.g. 'img/foo.png'
     link: string;
+    experimental?: boolean;
 };
 
 const projects: Project[] = [
@@ -38,18 +39,6 @@ const projects: Project[] = [
         link: 'https://texlyre.github.io/texlyre-busytex/',
     },
     {
-        title: 'CodeMirror LaTeX Visual',
-        description: 'Visual editing enhancements for LaTeX in CodeMirror',
-        image: 'img/codemirror-latex-visual.png',
-        link: 'https://texlyre.github.io/codemirror-latex-visual/',
-    },
-    {
-        title: 'Vector PDF Converter',
-        description: 'Convert between vector PDF formats in the browser',
-        image: 'img/vector-pdf-converter.png',
-        link: 'https://texlyre.github.io/vector-pdf-converter/',
-    },
-    {
         title: 'Indicant',
         description: 'Keyed approximate room discovery for signaling servers',
         image: 'img/indicant.png',
@@ -66,6 +55,20 @@ const projects: Project[] = [
         description: 'Collection of LaTeX and Typst templates for various use cases',
         image: 'img/texlyre-templates.png',
         link: 'https://texlyre.github.io/texlyre-templates/',
+    },
+    {
+        title: 'CodeMirror LaTeX Visual',
+        description: 'Visual editing enhancements for LaTeX in CodeMirror',
+        image: 'img/codemirror-latex-visual.png',
+        link: 'https://texlyre.github.io/codemirror-latex-visual/',
+        experimental: true,
+    },
+    {
+        title: 'Vector PDF Converter',
+        description: 'Convert between vector PDF formats in the browser',
+        image: 'img/vector-pdf-converter.png',
+        link: 'https://texlyre.github.io/vector-pdf-converter/',
+        experimental: true,
     },
 ];
 
@@ -135,7 +138,14 @@ export default function ProjectCarousel(): ReactNode {
                                     }}
                                 />
                                 <div className={styles.slideInfo}>
-                                    <h3 className={styles.slideTitle}>{active.title}</h3>
+                                    <h3 className={styles.slideTitle}>
+                                        {active.title}
+                                        {active.experimental && (
+                                            <span className={styles.experimentalBadge}>
+                                                Experimental
+                                            </span>
+                                        )}
+                                    </h3>
                                     <p className={styles.slideDescription}>{active.description}</p>
                                 </div>
                             </a>

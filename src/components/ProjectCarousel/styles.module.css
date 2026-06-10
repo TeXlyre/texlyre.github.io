@@ -171,6 +171,22 @@
     background: var(--ifm-color-primary);
 }
 
+.experimentalBadge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: #dc2626;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
 @media (max-width: 996px) {
     .title {
         font-size: 2rem;
