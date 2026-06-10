@@ -58,6 +58,15 @@ google-chrome --headless --no-sandbox --hide-scrollbars \
   --incognito \
   --screenshot=temp.png \
   --virtual-time-budget=10000 \
+  https://texlyre.github.io/indicant/
+convert temp.png -crop 1320x1080+300+0 +repage indicant.png
+rm temp.png
+
+google-chrome --headless --no-sandbox --hide-scrollbars \
+  --window-size=1920,1080 \
+  --incognito \
+  --screenshot=temp.png \
+  --virtual-time-budget=10000 \
   https://texlyre.github.io/filepizza-client/
 convert temp.png -crop 1320x1080+300+0 +repage filepizza-client.png
 rm temp.png

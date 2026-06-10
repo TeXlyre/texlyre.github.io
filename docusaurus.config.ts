@@ -216,6 +216,10 @@ const config: Config = {
               href: 'https://texlyre.github.io/vector-pdf-converter',
             },
             {
+              label: 'Indicant',
+              href: 'https://texlyre.github.io/indicant',
+            },
+            {
               label: 'FilePizza API',
               href: 'https://texlyre.github.io/filepizza-client',
             },

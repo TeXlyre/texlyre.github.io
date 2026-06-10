@@ -50,6 +50,12 @@ const projects: Project[] = [
         link: 'https://texlyre.github.io/vector-pdf-converter/',
     },
     {
+        title: 'Indicant',
+        description: 'Keyed approximate room discovery for signaling servers',
+        image: 'img/indicant.png',
+        link: 'https://texlyre.github.io/indicant/',
+    },
+    {
         title: 'FilePizza Client',
         description: 'Peer-to-peer file transfer directly in your browser',
         image: 'img/filepizza-client.png',
