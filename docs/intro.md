@@ -6,11 +6,17 @@ sidebar_position: 1
 
 TeXlyre is a local-first LaTeX and Typst editor that runs entirely in your browser.
 
-## What Makes TeXlyre Different
+## A Local-First Approach to Collaborative Editing
 
-TeXlyre prioritizes data ownership and privacy. Documents live in your browser's local storage, not on remote servers. Collaboration happens directly between peers through WebRTC, and compilation runs locally using WebAssembly engines.
+TeXlyre is designed around data ownership and privacy. Your documents are stored in the browser’s local storage rather than on TeXlyre-hosted servers. Collaboration is established directly between peers through WebRTC, and supported LaTeX and Typst compilation runs locally through WebAssembly-based engines.
 
-Your work remains private while providing the full power of LaTeX and Typst typesetting.
+This gives you a private, local-first writing environment while still supporting modern collaborative editing and browser-based typesetting.
+
+:::info[Local compilation scope]
+
+Local compilation provides TeXlyre’s supported in-browser LaTeX and Typst workflows. It does not allow for arbitrary shell commands, build scripts, or external system tools can be executed on your device from within TeXlyre.
+
+:::
 
 ## Getting Started
 

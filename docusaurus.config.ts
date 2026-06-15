@@ -11,7 +11,7 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://texlyre.github.io',
+  url: 'https://texlyre.org',
   baseUrl: '/',
   trailingSlash: false,
 
@@ -35,7 +35,7 @@ const config: Config = {
       tagName: 'link',
       attributes: {
         rel: 'canonical',
-        href: 'https://texlyre.github.io',
+        href: 'https://texlyre.org',
       },
     },
     {
@@ -49,7 +49,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         property: 'og:logo',
-        content: 'https://texlyre.github.io/img/logo.svg',
+        content: 'https://texlyre.org/img/logo.svg',
       },
     },
   ],
@@ -136,7 +136,7 @@ const config: Config = {
           className: 'header-sponsor-link',
         },
         {
-          href: 'https://texlyre.github.io/texlyre',
+          href: 'https://texlyre.org/texlyre',
           label: 'Login to TeXlyre',
           position: 'right',
         },
@@ -176,7 +176,7 @@ const config: Config = {
             },
             {
               label: 'Launch TeXlyre',
-              href: 'https://texlyre.github.io/texlyre',
+              href: 'https://texlyre.org/texlyre',
             },
             {
               label: 'Self-Host TeXlyre',
@@ -184,7 +184,7 @@ const config: Config = {
             },
             {
               label: 'TeXlyre Templates',
-              href: 'https://texlyre.github.io/texlyre-templates',
+              href: 'https://texlyre.org/texlyre-templates',
             },
           ],
         },
@@ -193,27 +193,27 @@ const config: Config = {
           items: [
             {
               label: 'Codemirror LaTeX Language',
-              href: 'https://texlyre.github.io/codemirror-lang-latex',
+              href: 'https://texlyre.org/codemirror-lang-latex',
             },
             {
               label: 'Codemirror BibTeX Language',
-              href: 'https://texlyre.github.io/codemirror-lang-bib',
+              href: 'https://texlyre.org/codemirror-lang-bib',
             },
             {
               label: 'WASM LaTeX Tools',
-              href: 'https://texlyre.github.io/wasm-latex-tools',
+              href: 'https://texlyre.org/wasm-latex-tools',
             },
             {
               label: 'TeXlyre BusyTeX (TeX Live 2026)',
-              href: 'https://texlyre.github.io/texlyre-busytex',
+              href: 'https://texlyre.org/texlyre-busytex',
             },
             {
               label: 'Indicant',
-              href: 'https://texlyre.github.io/indicant',
+              href: 'https://texlyre.org/indicant',
             },
             {
               label: 'FilePizza API',
-              href: 'https://texlyre.github.io/filepizza-client',
+              href: 'https://texlyre.org/filepizza-client',
             },
             {
               html: `
@@ -231,7 +231,7 @@ const config: Config = {
             {
               html: `
                       <a
-                        href="https://texlyre.github.io/bib-editor"
+                        href="https://texlyre.org/bib-editor"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="footer__link-item footer-external-link"
@@ -244,7 +244,7 @@ const config: Config = {
             {
               html: `
                       <a
-                        href="https://texlyre.github.io/codemirror-latex-visual"
+                        href="https://texlyre.org/codemirror-latex-visual"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="footer__link-item footer-external-link"
@@ -257,7 +257,7 @@ const config: Config = {
             {
               html: `
                       <a
-                        href="https://texlyre.github.io/vector-pdf-converter"
+                        href="https://texlyre.org/vector-pdf-converter"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="footer__link-item footer-external-link"
@@ -356,7 +356,7 @@ const config: Config = {
           items: [
             {
               label: 'Privacy Policy',
-              href: 'https://texlyre.github.io/texlyre/#privacy-policy',
+              href: 'https://texlyre.org/texlyre/#privacy-policy',
             },
             {
               label: 'AGPL 3.0 License',

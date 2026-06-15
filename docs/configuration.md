@@ -36,7 +36,7 @@ Any manual changes to these files will be lost. Always edit `texlyre.config.ts` 
 const config: TexlyreConfig = {
   title: 'TeXlyre',
   tagline: 'A local-first LaTeX & Typst collaborative web editor',
-  url: 'https://texlyre.github.io',
+  url: 'https://texlyre.org',
   baseUrl: '/texlyre/',
   organizationName: 'texlyre',
   projectName: 'texlyre',

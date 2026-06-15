@@ -243,6 +243,6 @@ TeXlyre represents just the beginning of local-first collaborative document edit
 
 **Ready to own your LaTeX workflow?** 
 
-🚀 **[Try TeXlyre now](https://texlyre.github.io/texlyre/)** or contribute to the project on GitHub!
+🚀 **[Try TeXlyre now](https://texlyre.org/texlyre/)** or contribute to the project on GitHub!
 
 Whether you're a researcher collaborating on academic papers, a student working on thesis projects, or a team creating technical documentation, TeXlyre provides the tools you need for efficient, real-time LaTeX collaboration without compromising on privacy or offline capability.

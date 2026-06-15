@@ -10,7 +10,7 @@ TeXlyre is a local-first editor for LaTeX and Typst that keeps you in control of
 
 Traditional online editors store your documents on their servers. TeXlyre keeps your work in your browser's local storage, giving you immediate access without an internet connection and complete ownership of your data.
 
-Offline work continues normally. When you reconnect, collaborative features resume automatically.
+Offline work continues normally. When you reconnect, collaborative features resume automatically. [Learn more about local-first web applications](https://www.inkandswitch.com/essay/local-first/)
 
 ## Real-Time Collaboration
 
