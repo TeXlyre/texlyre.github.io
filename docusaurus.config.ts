@@ -187,6 +187,14 @@ const config: Config = {
               href: 'https://texlyre.org/texlyre-templates',
             },
             {
+              label: 'Chelys: Local Companion App',
+              href: 'https://texlyre.org/chelys',
+            },
+            {
+              label: 'Download Chelys',
+              href: 'https://github.com/TeXlyre/chelys/releases/latest',
+            },
+            {
               label: 'Chelys Plugin Recipes',
               href: 'https://texlyre.org/chelys-recipes',
             },

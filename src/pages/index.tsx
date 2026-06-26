@@ -43,6 +43,12 @@ function HomepageHeader() {
             <img src="/img/logo.svg" alt="TeXlyre" className={styles.buttonLogo} />
             Launch TeXlyre
           </Link>
+          <Link
+            className={clsx("button button--primary button--lg", styles.downloadButton)}
+            to="https://github.com/TeXlyre/chelys/releases/latest">
+            <img src="/img/chelys-logo.svg" alt="" className={styles.buttonLogo} />
+            Download Chelys
+          </Link>
         </div>
       </div>
     </header>
