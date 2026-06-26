@@ -51,12 +51,6 @@ const projects: Project[] = [
         link: 'https://texlyre.org/filepizza-client/',
     },
     {
-        title: 'TeXlyre Templates',
-        description: 'Collection of LaTeX and Typst templates for various use cases',
-        image: 'img/texlyre-templates.png',
-        link: 'https://texlyre.org/texlyre-templates/',
-    },
-    {
         title: 'CodeMirror LaTeX Visual',
         description: 'Visual editing enhancements for LaTeX in CodeMirror',
         image: 'img/codemirror-latex-visual.png',
@@ -69,6 +63,18 @@ const projects: Project[] = [
         image: 'img/vector-pdf-converter.png',
         link: 'https://texlyre.org/vector-pdf-converter/',
         experimental: true,
+    },
+    {
+        title: 'TeXlyre Templates',
+        description: 'Collection of LaTeX and Typst templates for various use cases',
+        image: 'img/texlyre-templates.png',
+        link: 'https://texlyre.org/texlyre-templates/',
+    },
+    {
+        title: 'Chelys Plugin Recipes',
+        description: 'Plugin recipes for Chelys, the local process host for TeXlyre language servers and tools',
+        image: 'img/chelys-recipes.png',
+        link: 'https://texlyre.org/chelys-recipes/',
     },
 ];
 

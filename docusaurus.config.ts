@@ -186,6 +186,10 @@ const config: Config = {
               label: 'TeXlyre Templates',
               href: 'https://texlyre.org/texlyre-templates',
             },
+            {
+              label: 'Chelys Plugin Recipes',
+              href: 'https://texlyre.org/chelys-recipes',
+            },
           ],
         },
         {

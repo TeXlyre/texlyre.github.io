@@ -79,3 +79,12 @@ google-chrome --headless --no-sandbox --hide-scrollbars \
   https://texlyre.org/texlyre-templates/
 convert temp.png -crop 1320x1080+300+0 +repage texlyre-templates.png
 rm temp.png
+
+google-chrome --headless --no-sandbox --hide-scrollbars \
+  --window-size=1920,1080 \
+  --incognito \
+  --screenshot=temp.png \
+  --virtual-time-budget=10000 \
+  https://texlyre.org/chelys-recipes/
+convert temp.png -crop 1320x1080+300+0 +repage chelys-recipes.png
+rm temp.png
