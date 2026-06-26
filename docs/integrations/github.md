@@ -22,9 +22,9 @@ Enter a descriptive note such as `TeXlyre` and set an expiration that matches yo
 
 Under **Select scopes**, enable the following:
 
-![GitHub token scopes — top](../img/github-token-scopes-top.png)
+![GitHub token scopes top](../img/github-token-scopes-top.png)
 
-![GitHub token scopes — bottom](../img/github-token-scopes-bottom.png)
+![GitHub token scopes bottom](../img/github-token-scopes-bottom.png)
 
 | Scope | Purpose |
 |---|---|
@@ -33,7 +33,7 @@ Under **Select scopes**, enable the following:
 | `write:packages` | Upload packages to GitHub Package Registry |
 | `delete:packages` | Delete packages from GitHub Package Registry |
 
-Click **Generate token** and copy the token immediately — GitHub will not display it again.
+Click **Generate token** and copy the token immediately as GitHub will not display it again.
 
 ## Adding the Token to TeXlyre
 

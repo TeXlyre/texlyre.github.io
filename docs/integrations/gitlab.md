@@ -27,7 +27,7 @@ Enable the following scopes:
 | `write_repository` | Push changes to repositories |
 | `api` | Full API access |
 
-Click **Generate token** and copy the token immediately — GitLab will not display it again.
+Click **Generate token** and copy the token immediately as GitLab will not display it again.
 
 ## Adding the Token to TeXlyre
 

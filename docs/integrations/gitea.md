@@ -31,7 +31,7 @@ Set the following permissions:
 | `repository` | Read and Write |
 | `user` | Read |
 
-Click **Generate Token** and copy the token immediately — it will not be shown again.
+Click **Generate Token** and copy the token immediately since it will not be shown again.
 
 ## Adding the Token to TeXlyre
 

@@ -30,7 +30,7 @@
   <!-- Title -->
   <text x="525" y="42" text-anchor="middle" fill="#2d3748" font-size="28" font-family="Arial" font-weight="bold">Local-First Privacy</text>
   <text x="525" y="67" text-anchor="middle" fill="#718096" font-size="14" font-family="Arial">
-    The server helps peers find each other — document data syncs directly and stays local.
+    The server only helps peers find each other while document data syncs directly and stays local.
   </text>
 
   <!-- Phase Timeline: reduced left padding and more even spacing -->

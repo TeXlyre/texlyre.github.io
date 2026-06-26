@@ -18,7 +18,7 @@ Scroll to the **Applications** section. Your User ID is displayed above the list
 
 > *Your user ID for use in API calls is `XXXXXXX`*
 
-Copy this number. Do not use your Zotero username — the API requires the numeric ID.
+Copy this number. Do not use your Zotero username since the API requires the numeric ID.
 
 ## Generating an API Key
 

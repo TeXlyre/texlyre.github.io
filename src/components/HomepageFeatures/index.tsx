@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Compile LaTeX and Typst documents directly in your browser.
-        No server required — SwiftLaTeX, BusyTeX, and Typst.ts WASM builds run entirely on the client, with support for pdfTeX, XeTeX, and LuaTeX.
+        No server required: SwiftLaTeX, BusyTeX, and Typst.ts WASM builds run entirely on the client, with support for pdfTeX, XeTeX, and LuaTeX.
       </>
     ),
   },
