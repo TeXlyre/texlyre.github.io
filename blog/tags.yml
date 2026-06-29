@@ -1,63 +1,94 @@
-texlyre:
-    label: TeXlyre
-    permalink: /texlyre
-    description: TeXlyre LaTeX & Typst editor
-
-latex:
-    label: LaTeX
-    permalink: /latex
-    description: LaTeX language
-
-typst:
-    label: Typst
-    permalink: /typst
-    description: Typst language
-
-markdown:
-    label: Markdown
-    permalink: /markdown
-    description: Markdown language
-
-javascript:
-    label: JavaScript
-    permalink: /javascript
-    description: JavaScript programming language
-
-typescript:
-    label: TypeScript
-    permalink: /typescript
-    description: TypeScript programming language
-
-bibtex:
-    label: BibTeX
-    permalink: /bibtex
-    description: BibTeX bibliography format
-
-react:
-    label: React
-    permalink: /react
-    description: React JavaScript library
-
-collaborative-editing:
-    label: Collaborative Editing
-    permalink: /collaborative-editing
-    description: Collaborative editing tools and technologies
-
-yjs:
-    label: Yjs
-    permalink: /yjs
-    description: Yjs real-time collaboration framework
-
-wasm:
-    label: WebAssembly
-    permalink: /wasm
-    description: WebAssembly technology
-
+# Products / Projects
 busytex:
   label: BusyTeX
   permalink: /busytex
   description: BusyTeX WebAssembly LaTeX engine
 
+chelys:
+  label: Chelys
+  permalink: /chelys
+  description: Chelys companion application
+
+texlyre:
+  label: TeXlyre
+  permalink: /texlyre
+  description: TeXlyre LaTeX & Typst editor
+
+
+# Document / Markup / Bibliography Languages
+bibtex:
+  label: BibTeX
+  permalink: /bibtex
+  description: BibTeX bibliography format
+
+latex:
+  label: LaTeX
+  permalink: /latex
+  description: LaTeX language
+
+markdown:
+  label: Markdown
+  permalink: /markdown
+  description: Markdown language
+
+typst:
+  label: Typst
+  permalink: /typst
+  description: Typst language
+
+
+# Programming Languages
+javascript:
+  label: JavaScript
+  permalink: /javascript
+  description: JavaScript programming language
+
+typescript:
+  label: TypeScript
+  permalink: /typescript
+  description: TypeScript programming language
+
+
+# Human Languages
+arabic:
+  label: Arabic
+  permalink: /arabic
+  description: Arabic language
+
+chinese:
+  label: Chinese
+  permalink: /chinese
+  description: Chinese language
+
+english:
+  label: English
+  permalink: /english
+  description: English language
+
+german:
+  label: German
+  permalink: /german
+  description: German language
+
+
+# Frameworks / Libraries
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus documentation framework
+
+react:
+  label: React
+  permalink: /react
+  description: React JavaScript library
+
+yjs:
+  label: Yjs
+  permalink: /yjs
+  description: Yjs real-time collaboration framework
+
+
+# TeX Engines / Distributions
 luatex:
   label: LuaTeX
   permalink: /luatex
@@ -68,65 +99,83 @@ pdftex:
   permalink: /pdftex
   description: pdfTeX engine
 
+texlive:
+  label: TeX Live
+  permalink: /texlive
+  description: TeX Live
+
 xetex:
   label: XeTeX
   permalink: /xetex
   description: XeTeX engine
 
-texlive:
-  label: TeX Live
-  permalink: /texlive
-  description: TeX Live
+
+# Editor / Developer Tooling
+docker:
+  label: Docker
+  permalink: /docker
+  description: Docker containerization platform
+
+language-server:
+  label: Language Server
+  permalink: /language-server
+  description: Language server technology
+
+lsp:
+  label: LSP
+  permalink: /lsp
+  description: Language Server Protocol
 
 synctex:
   label: SyncTeX
   permalink: /synctex
   description: SyncTeX source/PDF navigation
 
-nlnet:
-  label: NLnet
-  permalink: /nlnet
-  description: NLnet Foundation funding
+wasm:
+  label: WebAssembly
+  permalink: /wasm
+  description: WebAssembly technology
 
-docusaurus:
-    label: Docusaurus
-    permalink: /docusaurus
-    description: Docusaurus documentation framework
+
+# Authentication / Communication
+passkey:
+  label: Passkey
+  permalink: /passkey
+  description: Passkey authentication technology
+
+webauthn:
+  label: WebAuthn
+  permalink: /webauthn
+  description: WebAuthn authentication standard
+
+webrtc:
+  label: WebRTC
+  permalink: /webrtc
+  description: WebRTC real-time communication technology
+
+
+# Collaboration
+collaborative-editing:
+  label: Collaborative Editing
+  permalink: /collaborative-editing
+  description: Collaborative editing tools and technologies
+
+
+# Funding / Roadmap
+funding:
+  label: funding
+  permalink: /funding
 
 ngi0:
   label: NGI0
   permalink: /ngi0
   description: NGI0 funding programme
 
-funding:
-  label: funding
-  permalink: /funding
+nlnet:
+  label: NLnet
+  permalink: /nlnet
+  description: NLnet Foundation funding
 
 roadmap:
   label: roadmap
   permalink: /roadmap
-
-chelys:
-  label: Chelys
-  permalink: /chelys
-  description: Chelys companion application
-
-chinese:
-    label: Chinese
-    permalink: /chinese
-    description: Chinese language
-
-arabic:
-    label: Arabic
-    permalink: /arabic
-    description: Arabic language
-
-english:
-    label: English
-    permalink: /english
-    description: English language
-
-german:
-    label: German
-    permalink: /german
-    description: German language
