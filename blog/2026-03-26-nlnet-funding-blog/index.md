@@ -39,8 +39,8 @@ Full report: [WebAssembly engine upgrade](/blog/latex-wasm-engine-upgrade)
 
 Introduce Chelys as a local companion application that relays Language Server Protocol messages between TeXlyre and local LSP providers (JabRef, Zotero Better BibTeX, Tinymist, and others).
 
-- [ ] **2a.** Local Chelys application with WebSocket-based LSP communication
-- [ ] **2b.** Chelys running both as standalone background service and as a Tauri desktop extension
+- [x] **2a.** Local Chelys application with WebSocket-based LSP communication
+- [x] **2b.** Chelys running both as standalone background service and as a Tauri desktop extension
 
 ### Task 3: Peer-to-peer LSP modulation
 
@@ -53,7 +53,7 @@ Modulate LSP messages over TeXlyre's existing Yjs peer-to-peer network, so one c
 
 Graduate Chelys from proof-of-concept to a production-ready plugin system for managing local service providers.
 
-- [ ] **4a.** Plugin mechanism with install, update, remove, and dependency management
+- [x] **4a.** Plugin mechanism with install, update, remove, and dependency management
 - [ ] **4b.** Access control, usage logging, and rate limiting for plugin operations
 
 ### Task 5: Local typesetting engine support
