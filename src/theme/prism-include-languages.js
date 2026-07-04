@@ -1,26 +1,29 @@
-import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import siteConfig from '@generated/docusaurus.config';
 
 const prismIncludeLanguages = (PrismObject) => {
-    if (ExecutionEnvironment.canUseDOM) {
-        const {
-            themeConfig: { prism = {} },
-        } = siteConfig;
-        const { additionalLanguages = [] } = prism;
+    const {
+        themeConfig: { prism = {} },
+    } = siteConfig;
 
-        window.Prism = PrismObject;
+    const { additionalLanguages = [] } = prism;
 
-        additionalLanguages.forEach((lang) => {
-            if (lang === 'typst' || lang === 'typ') {
-                require('./prism-typst');
-            } else if (lang === 'bibtex' || lang === 'bib') {
-                require('prismjs-bibtex');
-            } else {
-                require(`prismjs/components/prism-${lang}`);
-            }
-        });
+    const previousPrism = globalThis.Prism;
+    globalThis.Prism = PrismObject;
 
-        delete window.Prism;
+    additionalLanguages.forEach((lang) => {
+        if (lang === 'typst' || lang === 'typ') {
+            require('./prism-typst');
+        } else if (lang === 'bibtex' || lang === 'bib') {
+            require('prismjs-bibtex');
+        } else {
+            require(`prismjs/components/prism-${lang}`);
+        }
+    });
+
+    if (previousPrism) {
+        globalThis.Prism = previousPrism;
+    } else {
+        delete globalThis.Prism;
     }
 };
 
