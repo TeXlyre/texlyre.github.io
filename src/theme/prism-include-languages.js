@@ -13,6 +13,8 @@ const prismIncludeLanguages = (PrismObject) => {
         additionalLanguages.forEach((lang) => {
             if (lang === 'typst' || lang === 'typ') {
                 require('./prism-typst');
+            } else if (lang === 'bibtex' || lang === 'bib') {
+                require('prismjs-bibtex');
             } else {
                 require(`prismjs/components/prism-${lang}`);
             }

@@ -62,6 +62,10 @@ Syntax highlighting powered by <a href="https://github.com/FormidableLabs/prism-
 
 Typst syntax highlighting for Prism by <a href="https://github.com/Mc-Zen/prism-typst" target="_blank">Mc-Zen</a>, licensed under the MIT License.
 
+### BibTeX Language Support
+
+BibTeX syntax highlighting for Prism by <a href="https://github.com/SaswatPadhi/prismjs-bibtex" target="_blank">Saswat Padhi</a>, licensed under the MIT License.
+
 ## Frameworks
 
 This site is built with <a href="https://react.dev/" target="_blank">React</a> by Meta Open Source, licensed under the MIT License.
