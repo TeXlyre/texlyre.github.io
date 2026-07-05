@@ -1,122 +1,29 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
-import OriginalCodeBlock from '@theme-original/CodeBlock';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { useLatexCompileConfig } from './config';
 import { useBusyTex } from './useBusyTex';
 import { useCompileLock } from './compileLock';
-import { useLatexCompileConfig } from './config';
 import styles from './styles.module.css';
 
-function PlayIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={styles.icon}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <polygon points="5 3 19 12 5 21 5 3" />
-        </svg>
-    );
+function SpinnerIcon() {
+    return <span className={styles.spinner} aria-hidden="true" />;
 }
 
 function StopIcon() {
     return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={styles.icon}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
+            <rect x="2" y="2" width="12" height="12" rx="1" fill="currentColor" />
         </svg>
     );
 }
 
-function SpinnerIcon() {
+function PlayIcon() {
     return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={`${styles.icon} ${styles.spinner}`}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <path d="M21 12a9 9 0 1 1-6.2-8.55" />
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
+            <path d="M3 2l11 6-11 6V2z" fill="currentColor" />
         </svg>
     );
 }
-
-function ChevronIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={styles.icon}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <polyline points="6 9 12 15 18 9" />
-        </svg>
-    );
-}
-
-function ExternalLinkIcon() {
-    return (
-        <svg
-            className={styles.icon}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-            <polyline points="15,3 21,3 21,9" />
-            <line x1="10" y1="14" x2="21" y2="3" />
-        </svg>
-    );
-}
-
-function DownloadIcon() {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={styles.icon}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-        >
-            <rect x="3" y="3" width="18" height="18" rx="4" ry="4" />
-            <polyline points="8 13 12 17 16 13" />
-            <line x1="12" y1="7" x2="12" y2="17" />
-        </svg>
-    );
-}
-
 
 export default function LatexCompileBlock({ source, engine, engines, pdfHeight, ...codeBlockProps }) {
     const config = useLatexCompileConfig();
@@ -133,7 +40,7 @@ export default function LatexCompileBlock({ source, engine, engines, pdfHeight, 
     const activeHeight = pdfHeight || config.pdfHeight;
     const logoUrl = useBaseUrl('/img/logo.svg');
 
-    const { compile, stop, status, error, log } = useBusyTex({
+    const { compile, stop, status, error, log, progress } = useBusyTex({
         basePath: config.assetBase,
         collections: config.collections,
         remoteEndpoint: config.remoteEndpoint,
@@ -175,7 +82,9 @@ export default function LatexCompileBlock({ source, engine, engines, pdfHeight, 
 
     const label = localBusy
         ? status === 'loading'
-            ? 'Stop (loading…)'
+            ? progress != null
+                ? `Stop (downloading… ${progress}%)`
+                : 'Stop (loading…)'
             : 'Stop compile'
         : `Compile with ${activeEngine}`;
 
@@ -201,85 +110,13 @@ export default function LatexCompileBlock({ source, engine, engines, pdfHeight, 
                         {icon}
                         {label}
                     </button>
-                    {hasChoice && (
-                        <>
-                            <button
-                                type="button"
-                                className={`${baseClass} ${styles.splitToggle}`}
-                                onClick={() => setMenuOpen((v) => !v)}
-                                disabled={localBusy || (globalBusy && !localBusy)}
-                                aria-haspopup="listbox"
-                                aria-expanded={menuOpen}
-                                aria-label="Choose engine"
-                            >
-                                <ChevronIcon />
-                            </button>
-                            {menuOpen && (
-                                <ul className={styles.menu} role="listbox">
-                                    {engineList.map((name) => (
-                                        <li key={name}>
-                                            <button
-                                                type="button"
-                                                role="option"
-                                                aria-selected={name === activeEngine}
-                                                className={`${styles.menuItem} ${name === activeEngine ? styles.menuItemActive : ''}`}
-                                                onClick={() => {
-                                                    setActiveEngine(name);
-                                                    setMenuOpen(false);
-                                                }}
-                                            >
-                                                {name}
-                                            </button>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </>
-                    )}
                 </div>
-                {pdfUrl && (
-                    <>
-                        <a className={`${styles.link} ${styles.linkDesktop}`} href={pdfUrl} target="_blank" rel="noreferrer">
-                            <span className={styles.linkLabel}>Open in new tab</span>
-                            <ExternalLinkIcon />
-                        </a>
-                        <a className={`${styles.link} ${styles.linkMobile}`} href={pdfUrl} download="document.pdf">
-                            <span className={styles.linkLabel}>Download PDF</span>
-                            <DownloadIcon />
-                        </a>
-                    </>
-                )}
-                <span className={styles.spacer} />
-                <a
-                    className={styles.credit}
-                    href="https://github.com/TeXlyre/texlyre-busytex"
-                    target="_blank"
-                    rel="noreferrer"
-                    title="Powered by texlyre-busytex"
-                >
-                    <img className={styles.creditLogo} src={logoUrl} alt="" />
-                    <span>Powered by texlyre-busytex</span>
-                </a>
             </div>
-            <OriginalCodeBlock {...codeBlockProps}>{source}</OriginalCodeBlock>
-            {
-                error && (
-                    <div className={styles.error}>
-                        {error}
-                        {log ? `\n\n${log.slice(-2000)}` : ''}
-                    </div>
-                )
-            }
-            {
-                pdfUrl && (
-                    <iframe
-                        className={styles.preview}
-                        src={pdfUrl}
-                        title="Compiled PDF"
-                        style={{ height: `${activeHeight}px` }}
-                    />
-                )
-            }
-        </div >
+            {error && <div className={styles.error}>{error}</div>}
+            {log && <pre className={styles.log}>{log}</pre>}
+            {pdfUrl && (
+                <iframe src={pdfUrl} title="Compiled PDF" style={{ width: '100%', height: activeHeight, border: 'none' }} />
+            )}
+        </div>
     );
 }

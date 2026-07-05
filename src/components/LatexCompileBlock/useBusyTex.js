@@ -1,9 +1,15 @@
 import { useCallback, useRef, useState } from 'react';
+
 import { resolvePreload } from './collections';
 import { acquireCompileLock, releaseCompileLock, stopCompile } from './compileLock';
 
 let runnerPromise = null;
 let runnerKey = null;
+let activeProgressListener = null;
+
+function notifyDownloadProgress(progress) {
+    if (activeProgressListener) activeProgressListener(progress);
+}
 
 async function getRunner(basePath, collections) {
     const key = `${basePath}::${collections.join(',')}`;
@@ -17,6 +23,7 @@ async function getRunner(basePath, collections) {
             engineMode: 'combined',
             preloadDataPackages: resolvePreload(basePath, collections),
             catalogDataPackages: [],
+            onDownloadProgress: notifyDownloadProgress,
         });
         await r.initialize(true);
         return r;
@@ -42,6 +49,7 @@ export function useBusyTex({ basePath = '/core/busytex', collections = ['recomme
     const [status, setStatus] = useState('idle');
     const [error, setError] = useState(null);
     const [log, setLog] = useState(null);
+    const [progress, setProgress] = useState(null);
     const urlRef = useRef(null);
 
     const compile = useCallback(
@@ -56,9 +64,12 @@ export function useBusyTex({ basePath = '/core/busytex', collections = ['recomme
                 resolveStop();
             });
 
+            activeProgressListener = (p) => setProgress(Math.min(100, p.percent));
+
             try {
                 setError(null);
                 setLog(null);
+                setProgress(null);
                 setStatus('loading');
 
                 const runner = await Promise.race([getRunner(basePath, collections), stopPromise]);
@@ -103,11 +114,12 @@ export function useBusyTex({ basePath = '/core/busytex', collections = ['recomme
                 setError(e && e.message ? e.message : String(e));
                 return null;
             } finally {
+                activeProgressListener = null;
                 releaseCompileLock();
             }
         },
         [basePath, collections.join(','), remoteEndpoint]
     );
 
-    return { compile, stop: stopCompile, status, error, log };
+    return { compile, stop: stopCompile, status, error, log, progress };
 }

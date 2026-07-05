@@ -30,7 +30,7 @@
     "prismjs-bibtex": "^2.1.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "texlyre-busytex": "^1.2.0",
+    "texlyre-busytex": "^1.2.1",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
