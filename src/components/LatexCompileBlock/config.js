@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 const DEFAULTS = {
     assetPath: '/core/busytex',
     remoteEndpoint: 'https://texlive2026.texlyre.org',
-    collections: ['recommended'],
+    collections: ['basic'],
     pdfHeight: 600,
     engine: 'pdflatex',
 };

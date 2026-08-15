@@ -90,7 +90,7 @@ export function useBusyTex({ basePath = '/core/busytex', collections = ['recomme
 
                 setStatus('compiling');
                 const result = await Promise.race([
-                    tex.compile({ input: source, bibtex: true, makeindex: true, remoteEndpoint }),
+                    tex.compile({ input: source, bibtex: true, biber: null, makeindex: true, remoteEndpoint }),
                     stopPromise,
                 ]);
 
