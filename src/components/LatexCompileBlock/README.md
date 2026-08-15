@@ -1,6 +1,6 @@
 # LaTeX Compile Button for Docusaurus
 
-Adds a compile button to LaTeX code fences in Docusaurus docs and blog posts. Compilation runs in the browser via [`texlyre-busytex`](https://github.com/TeXlyre/texlyre-busytex) (TeX Live 2026, WASM) with optional on-demand package fetching.
+Adds a compile button to LaTeX code fences in Docusaurus docs and blog posts. Compilation runs in the browser via [`texlyre-busytex`](https://github.com/TeXlyre/texlyre-busytex) (TeX Live 2026, WASM) with on-demand package and TeX Live font fetching.
 
 - Opt-in per block: only `latex` fences with `engine=pdflatex|xelatex|lualatex` get a button.
 - Per-block PDF preview height: `pdfheight=<pixels>`.
@@ -62,7 +62,7 @@ All runtime values read from `siteConfig.customFields.latexCompile`. Defaults:
 | Key              | Default                               | Meaning                                          |
 | ---------------- | ------------------------------------- | ------------------------------------------------ |
 | `assetPath`      | `/core/busytex`                       | Where the WASM assets are served (baseUrl-aware).|
-| `remoteEndpoint` | `https://texlive2026.texlyre.org`     | On-demand TeX Live package server.               |
+| `remoteEndpoint` | `https://texlive2026.texlyre.org`     | On-demand TeX Live package and font server.      |
 | `collections`    | `['recommended']`                     | Preloaded collections: `basic`, `recommended`, `extra`. |
 | `pdfHeight`      | `600`                                 | Default PDF preview height in pixels.            |
 | `engine`         | `pdflatex`                            | Fallback engine when fence metastring omits it.  |
@@ -164,9 +164,11 @@ Supported engines: `pdflatex`, `xelatex`, `lualatex`.
 ## Costs and caveats
 
 - **First compile downloads a collection** (~200 MB for `recommended`). The browser caches it; subsequent compiles reuse the cache.
-- **On-demand packages** are fetched per compile from `remoteEndpoint` for anything outside the preloaded collection. This is cached client-side too.
+- **On-demand TeX Live files** outside the preloaded collection are fetched from `remoteEndpoint`. This includes packages and supported TeX Live fonts.
+- **Biber** is loaded as a separate WebAssembly module only when a BibLaTeX compilation produces a `.bcf` file.
 - **Stop = terminate.** There's no graceful cancel API in `texlyre-busytex`; stopping kills the worker. The next compile re-initializes the engine.
-- **`shell-escape` is unavailable**, and custom fonts must be provided inline via `additionalFiles`. See the `texlyre-busytex` README for details.
+- **Shell escape is not enabled by this component.** `texlyre-busytex` supports explicitly registered browser-side handlers, but not arbitrary native commands.
+- **Custom fonts** are not supplied by the code-block component. The remote font resolver covers fonts from the configured TeX Live tree.
 
 ## License
 

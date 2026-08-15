@@ -1,0 +1,8 @@
+{
+  "label": "LaTeX Compilation",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "LaTeX engines, packages, bibliographies, fonts, and browser limitations."
+  }
+}

@@ -130,6 +130,8 @@ TeXlyre defaults to pdfTeX for most documents, which handles standard LaTeX cont
 
 The platform automatically detects your main file when you have only one `.tex` file. For complex projects with multiple LaTeX files, you can manually specify the main file in the compilation settings.
 
+See [LaTeX Compilation](../latex-compilation/overview) for supported engines, packages, bibliography tools, and fonts.
+
 </TabItem>
 <TabItem value="typst" label="Typst">
 
@@ -221,6 +223,8 @@ Add bibliography support to your main document:
 % At the end of your document, before \end{document}
 \bibliography{references}
 ```
+
+TeXlyre also supports BibLaTeX with Biber. See [Bibliographies](../latex-compilation/bibliographies) for an example.
 
 </TabItem>
 <TabItem value="typst" label="Typst">
