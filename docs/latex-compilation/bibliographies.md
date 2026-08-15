@@ -20,20 +20,22 @@ Store the entries in a project file such as `references.bib`.
 
 ## BibLaTeX and Biber
 
-Use `backend=biber` with `biblatex` as in a regular TeX Live installation. Biber is a separate WebAssembly module and is loaded on demand when the compilation produces a `.bcf` file.
+Use `backend=biber` with `biblatex` as in a regular TeX Live installation.
 
-The example below creates its bibliography file inside the document so it can be compiled directly on this page:
+Create a bibliography file named `references.bib`:
 
-```latex engine=lualatex pdfheight=500
-\begin{filecontents*}{references.bib}
+```bibtex title="references.bib"
 @book{knuth1984,
   author    = {Donald E. Knuth},
   title     = {The TeXbook},
   year      = {1984},
   publisher = {Addison-Wesley}
 }
-\end{filecontents*}
+```
 
+Then reference it from the LaTeX document:
+
+```latex engine=lualatex pdfheight=500
 \documentclass{article}
 \usepackage[backend=biber,style=authoryear]{biblatex}
 \addbibresource{references.bib}

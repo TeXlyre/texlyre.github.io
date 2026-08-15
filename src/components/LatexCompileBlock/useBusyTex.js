@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from 'react';
 
 import { resolvePreload } from './collections';
 import { acquireCompileLock, releaseCompileLock, stopCompile } from './compileLock';
+import { getExampleFiles } from './exampleFiles';
 
 let runnerPromise = null;
 let runnerKey = null;
@@ -10,6 +11,7 @@ let activeProgressListener = null;
 function notifyDownloadProgress(progress) {
     if (activeProgressListener) activeProgressListener(progress);
 }
+
 
 async function getRunner(basePath, collections) {
     const key = `${basePath}::${collections.join(',')}`;
@@ -87,10 +89,18 @@ export function useBusyTex({ basePath = '/core/busytex', collections = ['recomme
                 const EngineCtor =
                     engine === 'xelatex' ? mod.XeLatex : engine === 'lualatex' ? mod.LuaLatex : mod.PdfLatex;
                 const tex = new EngineCtor(runner);
+                const additionalFiles = getExampleFiles();
 
                 setStatus('compiling');
                 const result = await Promise.race([
-                    tex.compile({ input: source, bibtex: true, biber: null, makeindex: true, remoteEndpoint }),
+                    tex.compile({
+                        input: source,
+                        bibtex: true,
+                        biber: null,
+                        makeindex: true,
+                        additionalFiles: additionalFiles.length ? additionalFiles : undefined,
+                        remoteEndpoint,
+                    }),
                     stopPromise,
                 ]);
 
