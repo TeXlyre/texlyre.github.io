@@ -167,7 +167,7 @@ Biber source maps can adjust bibliography data while it is processed, without ch
     \map{
       \step[
         fieldsource=journaltitle,
-        match=\regexp{Journal of Very Long Example Names},
+        match=\regexp{Journal\s+of\s+Very\s+Long\s+Example\s+Names},
         replace={J. Long Example Names}
       ]
     }
