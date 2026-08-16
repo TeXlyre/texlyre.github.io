@@ -13,7 +13,11 @@ The pipeline supports pdfLaTeX and LuaLaTeX. LuaLaTeX is the engine recommended 
 `\DocumentMetadata` must come before `\documentclass`. It is the only declaration that does:
 
 ```latex
-\DocumentMetadata{tagging = on}
+\DocumentMetadata{
+  lang        = en,
+  pdfstandard = ua-2,
+  tagging     = on
+}
 \documentclass{article}
 ```
 
@@ -42,7 +46,12 @@ Structure has to be expressed through sectioning commands and environments. Text
 Tables need one addition. Every cell is treated as a data cell by default, so header rows have to be declared with `\tagpdfsetup{table/header-rows={...}}`, either in the preamble or immediately before the table:
 
 ```latex engine=lualatex pdfheight=620
-\DocumentMetadata{lang = en, tagging = on}
+\DocumentMetadata{
+  lang        = en,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f,
+  tagging     = on
+}
 \documentclass[10pt,twocolumn,a4paper]{article}
 \usepackage[a4paper,margin=18mm,columnsep=6mm]{geometry}
 \usepackage{fontspec}
@@ -201,7 +210,12 @@ LuaLaTeX loads the `luamml` package automatically and converts TeX to MathML its
 In practice this means LuaLaTeX for any document with mathematics. The `ltx-talk` presentation class builds on `\DocumentMetadata` and the tagging pipeline to produce structurally tagged output including mathematical content:
 
 ```latex engine=lualatex pdfheight=650
-\DocumentMetadata{lang = en, tagging = on}
+\DocumentMetadata{
+  lang        = en,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f,
+  tagging     = on
+}
 \documentclass{ltx-talk}
 \usepackage{amsmath}
 
@@ -270,7 +284,12 @@ The class used in the example above is written for this purpose. `ltx-talk` take
 Content lives in a `frame` environment, and each frame can produce several slides. Overlay specifications in angle brackets control which material appears on which slide; text carrying no specification appears on every slide of the frame. A `+` in a specification stands for one more than the current value of the `pauses` counter, which resets at the start of each frame, so a list can be revealed one item at a time without numbering each step by hand:
 
 ```latex engine=lualatex pdfheight=540
-\DocumentMetadata{lang = en, tagging = on}
+\DocumentMetadata{
+  lang        = en,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f,
+  tagging     = on
+}
 \documentclass{ltx-talk}
 \usepackage{amsmath}
 
