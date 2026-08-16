@@ -32,7 +32,7 @@ Set document metadata, use real headings, and mark table header rows explicitly.
 ```typst compile pdf=1.7+ua-1 tags=true pdfheight=560
 #set document(
   title: "Dynamic Scanpath Prediction",
-  author: "A. Researcher",
+  author: "F. Abawi",
   keywords: ("gaze", "saliency", "scanpath", "accessibility"),
 )
 #set page(paper: "a4", margin: 24mm, numbering: "1")
@@ -146,7 +146,7 @@ PDF 2.0 is the current version of the format and the basis for the PDF/A-4 archi
 ```typst compile pdf=2.0 tags=true pdfheight=440
 #set document(
   title: "Robot Gaze Control",
-  author: "A. Researcher",
+  author: "F. Abawi",
 )
 #set page(paper: "a4", margin: 24mm, numbering: "1")
 #set text(font: "Libertinus Serif", size: 11pt, lang: "en")
