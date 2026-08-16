@@ -43,51 +43,77 @@ Tables need one addition. Every cell is treated as a data cell by default, so he
 
 ```latex engine=lualatex pdfheight=620
 \DocumentMetadata{lang = en, tagging = on}
-\documentclass{article}
-\usepackage[a4paper,margin=25mm]{geometry}
-\usepackage{fontspec}
+\documentclass[conference]{IEEEtran}
 \usepackage{booktabs}
+\usepackage{lipsum}
 
-\setmainfont{Libertinus Serif}
-\setsansfont{Fira Sans}
+\title{Sequential Scanpath Prediction}
 
-\title{Unified Dynamic Scanpath Prediction}
-\author{Fares Abawi, Di Fu, and Stefan Wermter}
-\date{}
+\author{
+\IEEEauthorblockN{Fares Abawi}
+\IEEEauthorblockA{Department of Informatics\\
+University of Hamburg\\
+Hamburg, Germany}
+\and
+\IEEEauthorblockN{John Smith}
+\IEEEauthorblockA{Department of Informatics\\
+University of Hamburg\\
+Hamburg, Germany}
+\and
+\IEEEauthorblockN{Max Mustermann}
+\IEEEauthorblockA{Department of Informatics\\
+University of Hamburg\\
+Hamburg, Germany}
+}
 
 \begin{document}
 \maketitle
 
-\section{Multimodal Input}
-
+\begin{abstract}
 The model predicts sequential gaze behaviour in dynamic social scenes by
 combining audiovisual saliency, social cues, and the observer's previous
-fixations.
+fixations. \lipsum[1][1-4]
+\end{abstract}
+
+\begin{IEEEkeywords}
+scanpath prediction, social attention, multimodal integration
+\end{IEEEkeywords}
+
+\section{Multimodal Input}
+
+Sectioning commands become real heading elements in the tagged output, so a
+screen reader can move between sections and report the nesting level.
+\lipsum[2][1-6]
 
 \subsection{Fixation History}
 
 Previous fixation points are blurred with a Gaussian filter and supplied as
 an additional sequence of priority maps. The fixation history distinguishes
-the gaze trajectories of different observers.
+the gaze trajectories of different observers. \lipsum[3][1-5]
 
 \section{Representations}
 
 \tagpdfsetup{table/header-rows={1}}
 
-\begin{table}[h]
+\begin{table}[!t]
 \centering
+\caption{Inputs to the dynamic scanpath prediction model.}
+\label{tab:inputs}
+\small
 \begin{tabular}{lll}
 \toprule
 Input & Source & Representation \\
 \midrule
-SP      & DAVE              & Fixation density map \\
-GE      & Gaze360           & Gaze-direction features \\
-FER     & Facial expression & Affective features \\
+SP      & DAVE               & Fixation density map \\
+GE      & Gaze360            & Gaze-direction features \\
+FER     & Facial expression  & Affective features \\
 History & Previous fixations & Priority maps \\
 \bottomrule
 \end{tabular}
-\caption{Inputs to the dynamic scanpath prediction model.}
 \end{table}
+
+Declaring the header row lets a cell be announced together with the column it
+belongs to. \lipsum[4][1-5]
 
 \section{Integration}
 
@@ -101,6 +127,8 @@ sequential attention, and gated multimodal integration.
   \item Perform recurrent multimodal integration
   \item Predict the next fixation priority map
 \end{enumerate}
+
+\lipsum[5-6]
 
 \end{document}
 ```
@@ -291,8 +319,8 @@ PDF 2.0 is the basis for the PDF/UA-2 accessibility standard and the PDF/A-4 arc
 
 \setmainfont{Libertinus Serif}
 
-\title{Gated Attention for Saliency Prediction}
-\author{Fares Abawi, Tom Weber, and Stefan Wermter}
+\title{Gated Attention for Saliency Prediction Model}
+\author{Fares Abawi}
 \date{}
 
 \begin{document}
