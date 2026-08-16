@@ -56,22 +56,22 @@ Tables need one addition. Every cell is treated as a data cell by default, so he
 \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
 
 \newcommand{\authorblock}[3]{%
-  \begin{minipage}[t]{0.32\linewidth}
+  \parbox[t]{0.31\textwidth}{%
     \centering
     \normalsize #1\\[2pt]
     \small\itshape #2\\
     \small\ttfamily #3
-  \end{minipage}%
+  }%
 }
 
 \title{\bfseries Sequential Scanpath Prediction}
 
 \author{
-  \authorblock{Fares Abawi}{Department of Informatics\\University of Hamburg\\Hamburg, Germany}{abawi@uni-hamburg.de}
-  \hfill
-  \authorblock{John Smith}{Institut für Kognitive Systeme\\Universität Musterstadt\\Musterstadt, Germany}{smith@musterstadt.edu}
-  \hfill
-  \authorblock{Max Mustermann}{Institut für Kognitive Systeme\\Universität Musterstadt\\Musterstadt, Germany}{mustermann@musterstadt.edu}
+  \authorblock{Fares Abawi}{Department of Informatics\\University of Hamburg\\Hamburg, Germany}{abawi@uni-hamburg.de}%
+  \hspace{0.02\textwidth}%
+  \authorblock{John Smith}{Institut für Kognitive Systeme\\Universität Musterstadt\\Musterstadt, Germany}{smith@musterstadt.edu}%
+  \hspace{0.02\textwidth}%
+  \authorblock{Max Mustermann}{Institut für Kognitive Systeme\\Universität Musterstadt\\Musterstadt, Germany}{mustermann@musterstadt.edu}%
 }
 \date{}
 
