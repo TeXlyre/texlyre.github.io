@@ -207,65 +207,9 @@ Mathematics is tagged by embedding a MathML representation of each formula. Ther
 
 LuaLaTeX loads the `luamml` package automatically and converts TeX to MathML itself, so it can produce either form with no author intervention. Other engines can use only the associated file mechanism, and the MathML has to be supplied: LaTeX writes a dummy file with an entry per formula when `math/mathml/write-dummy` is set, the entries are filled in by hand, and the file is renamed to `<file>-mathml.html` for the next run.
 
-In practice this means LuaLaTeX for any document with mathematics. The `ltx-talk` presentation class builds on `\DocumentMetadata` and the tagging pipeline to produce structurally tagged output including mathematical content:
+In practice this means LuaLaTeX for any document with mathematics. The example below explicitly selects MathML structure element tagging, so the formula is represented directly in the PDF structure tree rather than only through an associated MathML file:
 
-```latex engine=lualatex pdfheight=650
-\DocumentMetadata{
-  lang        = en,
-  pdfstandard = ua-2,
-  pdfstandard = a-4f,
-  tagging     = on
-}
-\documentclass{ltx-talk}
-\usepackage{amsmath}
-
-\begin{document}
-\begin{frame}
-\frametitle{Attentive convolutional LSTM}
-
-\begin{align}
-\mathbf{i}^{\langle t\rangle}
-  &= \sigma\left(
-    \mathbf{W}_i * \mathbf{s}^{\langle t\rangle}
-    + \mathbf{U}_i * \mathbf{h}^{\langle t-1\rangle}
-    + \mathbf{b}_i
-  \right), \\
-\mathbf{f}^{\langle t\rangle}
-  &= \sigma\left(
-    \mathbf{W}_f * \mathbf{s}^{\langle t\rangle}
-    + \mathbf{U}_f * \mathbf{h}^{\langle t-1\rangle}
-    + \mathbf{b}_f
-  \right), \\
-\mathbf{o}^{\langle t\rangle}
-  &= \sigma\left(
-    \mathbf{W}_o * \mathbf{s}^{\langle t\rangle}
-    + \mathbf{U}_o * \mathbf{h}^{\langle t-1\rangle}
-    + \mathbf{b}_o
-  \right), \\
-\mathbf{g}^{\langle t\rangle}
-  &= \tanh\left(
-    \mathbf{W}_c * \mathbf{s}^{\langle t\rangle}
-    + \mathbf{U}_c * \mathbf{h}^{\langle t-1\rangle}
-    + \mathbf{b}_c
-  \right), \\
-\mathbf{c}^{\langle t\rangle}
-  &= \mathbf{f}^{\langle t\rangle}
-     \odot \mathbf{c}^{\langle t-1\rangle}
-     + \mathbf{i}^{\langle t\rangle}
-     \odot \mathbf{g}^{\langle t\rangle}, \\
-\mathbf{h}^{\langle t\rangle}
-  &= \mathbf{o}^{\langle t\rangle}
-     \odot \tanh\left(\mathbf{c}^{\langle t\rangle}\right).
-\end{align}
-
-\end{frame}
-\end{document}
-```
-
-
-Structure element tagging is selected through `tagging-setup`, which accepts the same keys as `\tagpdfsetup`:
-
-```latex
+```latex engine=lualatex pdfheight=500
 \DocumentMetadata{
   lang          = en,
   tagging       = on,
@@ -273,7 +217,43 @@ Structure element tagging is selected through `tagging-setup`, which accepts the
   pdfstandard   = ua-2,
   pdfstandard   = a-4f
 }
+\documentclass{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{fontspec}
+\usepackage{amsmath}
+
+\setmainfont{Libertinus Serif}
+
+\title{Softmax Attention}
+\author{Fares Abawi}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Attention Weights}
+
+Given a query vector \(\mathbf{q}\) and key vectors
+\(\mathbf{k}_1,\ldots,\mathbf{k}_n\), the attention weight assigned to
+key \(i\) is
+
+\begin{equation}
+  \alpha_i =
+  \frac{\exp(\mathbf{q}^{\mathsf T}\mathbf{k}_i)}
+       {\sum_{j=1}^{n}\exp(\mathbf{q}^{\mathsf T}\mathbf{k}_j)}.
+  \label{eq:attention}
+\end{equation}
+
+Equation~\ref{eq:attention} normalises the exponentiated similarity scores, so
+the weights are non-negative and sum to one.
+
+\end{document}
 ```
+
+Here `tagging-setup = {math/setup=mathml-SE}` selects MathML namespace
+structure elements for the mathematical content. LuaLaTeX generates the
+MathML automatically; the author does not have to provide a separate MathML
+representation.
 
 How well an expression is announced still varies between assistive tools, so where an equation carries meaning its symbols alone do not convey, state that meaning in the surrounding text as well.
 
