@@ -91,6 +91,19 @@ Arabic text can stay in the bibliography file as Unicode. The `sorting=nyt` opti
 \usepackage[backend=biber,style=authoryear,sorting=nyt,autolang=other]{biblatex}
 \addbibresource{unicode-references.bib}
 
+\providecommand{\LRE}[1]{\mbox{\textdir TLT #1}}
+
+\DeclareFieldFormat*{date}{\LRE{#1}}
+\DeclareFieldFormat*{labeldate}{\LRE{#1}}
+\DeclareFieldFormat*{year}{\LRE{#1}}
+\DeclareFieldFormat*{volume}{\LRE{#1}}
+\DeclareFieldFormat*{number}{\LRE{#1}}
+\DeclareFieldFormat*{pages}{\LRE{#1}}
+\DeclareFieldFormat*{edition}{\LRE{#1}}
+\DeclareFieldFormat*{isbn}{\LRE{#1}}
+\DeclareFieldFormat*{doi}{\LRE{#1}}
+\DeclareFieldFormat*{url}{\LRE{#1}}
+
 \begin{document}
 \nocite{*}
 \printbibliography
