@@ -55,10 +55,23 @@ Tables need one addition. Every cell is treated as a data cell by default, so he
 \renewcommand{\thesection}{\Roman{section}}
 \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
 
+\newcommand{\authorblock}[3]{%
+  \begin{minipage}[t]{0.32\linewidth}
+    \centering
+    \normalsize #1\\[2pt]
+    \small\itshape #2\\
+    \small\ttfamily #3
+  \end{minipage}%
+}
+
 \title{\bfseries Sequential Scanpath Prediction}
+
 \author{
-  Fares Abawi \and John Smith \and Max Mustermann \\[2pt]
-  \normalsize Department of Informatics, University of Hamburg
+  \authorblock{Fares Abawi}{Department of Informatics\\University of Hamburg\\Hamburg, Germany}{abawi@uni-hamburg.de}
+  \hfill
+  \authorblock{John Smith}{Institut für Kognitive Systeme\\Universität Musterstadt\\Musterstadt, Germany}{smith@musterstadt.edu}
+  \hfill
+  \authorblock{Max Mustermann}{Institut für Kognitive Systeme\\Universität Musterstadt\\Musterstadt, Germany}{mustermann@musterstadt.edu}
 }
 \date{}
 
@@ -78,16 +91,23 @@ priority map for each timestep from which the next fixation is sampled.
 Sectioning commands become real heading elements in the tagged output, so a
 screen reader can move between sections and report the nesting level. The
 numbering style below is cosmetic; the underlying structure stays stock, which
-keeps the generated tags reliable.
+keeps the generated tags reliable. Gated integration of social cues was
+introduced in earlier work on saliency prediction \cite{abawi2021gasp}.
+\lipsum[1][1-6]
 
 \subsection{Fixation History}
 
 Previous fixation points are blurred with a Gaussian filter and supplied as an
 additional sequence of priority maps. The fixation history distinguishes the
 gaze trajectories of different observers viewing the same scene, so two
-observers with different histories receive different predictions.
+observers with different histories receive different predictions
+\cite{smith2024observer}. \lipsum[2][1-7]
 
 \section{Representations}
+
+Each input contributes a representation with the spatial layout of the scene
+preserved, so the encoders can be applied without resampling
+\cite{mustermann2023priority}. \lipsum[3][1-5]
 
 \tagpdfsetup{table/header-rows={1}}
 
@@ -110,7 +130,7 @@ History & Previous fixations & Priority maps \\
 
 Declaring the header row lets a cell be announced together with the column it
 belongs to, as shown in Table~\ref{tab:inputs}. Every cell is treated as a data
-cell until the header rows are named.
+cell until the header rows are named. \lipsum[4][1-6]
 
 \section{Integration}
 
@@ -128,10 +148,46 @@ directly against recorded fixation densities.
 \end{enumerate}
 
 Gate weights vary per timestep, so the model can rely on social cues in one
-frame and on audiovisual saliency in the next.
+frame and on audiovisual saliency in the next. Embodied evaluation of the
+predicted maps can be carried out in simulation, avoiding large-scale
+participant recruitment \cite{abawi2025hrifree}. \lipsum[5][1-7]
 
+\section{Evaluation}
 
-\lipsum[5-6]
+Predicted scanpaths are compared against recorded fixation sequences using
+sequence-level similarity measures \cite{smith2022scanmetrics}. \lipsum[6][1-6]
+
+\small
+\begin{thebibliography}{9}
+
+\bibitem{abawi2021gasp}
+F.~Abawi, T.~Weber, and S.~Wermter,
+``GASP: Gated attention for saliency prediction,''
+in \emph{Proc. Int. Joint Conf. Artificial Intelligence (IJCAI)}, 2021.
+
+\bibitem{abawi2025hrifree}
+F.~Abawi and D.~Fu,
+``HRI-Free: Cognitive robotic simulation for evaluating embodied social
+attention models,''
+in \emph{Proc. IEEE Int. Conf. Robotics and Automation (ICRA)}, 2025,
+pp.~11249--11255.
+
+\bibitem{smith2024observer}
+J.~Smith and M.~Mustermann,
+``Observer-conditioned priority maps for dynamic scene viewing,''
+\emph{J. Musterstadt Cognitive Systems}, vol.~12, no.~3, pp.~211--228, 2024.
+
+\bibitem{smith2022scanmetrics}
+J.~Smith,
+``A comparison of sequence similarity measures for scanpath evaluation,''
+\emph{J. Musterstadt Cognitive Systems}, vol.~10, no.~1, pp.~44--61, 2022.
+
+\bibitem{mustermann2023priority}
+M.~Mustermann and J.~Smith,
+``Spatial consistency in recurrent priority map estimation,''
+in \emph{Proc. Musterstadt Symp. Cognitive Modelling}, 2023, pp.~89--97.
+
+\end{thebibliography}
 
 \end{document}
 ```
