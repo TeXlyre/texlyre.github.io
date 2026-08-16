@@ -43,53 +43,49 @@ Tables need one addition. Every cell is treated as a data cell by default, so he
 
 ```latex engine=lualatex pdfheight=620
 \DocumentMetadata{lang = en, tagging = on}
-\documentclass[conference]{IEEEtran}
+\documentclass[10pt,twocolumn,a4paper]{article}
+\usepackage[a4paper,margin=18mm,columnsep=6mm]{geometry}
+\usepackage{fontspec}
 \usepackage{booktabs}
 \usepackage{lipsum}
 
-\title{Sequential Scanpath Prediction}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
 
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
+
+\title{\bfseries Sequential Scanpath Prediction}
 \author{
-\IEEEauthorblockN{Fares Abawi}
-\IEEEauthorblockA{Department of Informatics\\
-University of Hamburg\\
-Hamburg, Germany}
-\and
-\IEEEauthorblockN{John Smith}
-\IEEEauthorblockA{Department of Informatics\\
-University of Hamburg\\
-Hamburg, Germany}
-\and
-\IEEEauthorblockN{Max Mustermann}
-\IEEEauthorblockA{Department of Informatics\\
-University of Hamburg\\
-Hamburg, Germany}
+  Fares Abawi \and John Smith \and Max Mustermann \\[2pt]
+  \normalsize Department of Informatics, University of Hamburg
 }
+\date{}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
+\noindent
 The model predicts sequential gaze behaviour in dynamic social scenes by
 combining audiovisual saliency, social cues, and the observer's previous
-fixations. \lipsum[1][1-4]
+fixations. Modality representations are integrated recurrently, producing a
+priority map for each timestep from which the next fixation is sampled.
 \end{abstract}
-
-\begin{IEEEkeywords}
-scanpath prediction, social attention, multimodal integration
-\end{IEEEkeywords}
 
 \section{Multimodal Input}
 
 Sectioning commands become real heading elements in the tagged output, so a
-screen reader can move between sections and report the nesting level.
-\lipsum[2][1-6]
+screen reader can move between sections and report the nesting level. The
+numbering style below is cosmetic; the underlying structure stays stock, which
+keeps the generated tags reliable.
 
 \subsection{Fixation History}
 
-Previous fixation points are blurred with a Gaussian filter and supplied as
-an additional sequence of priority maps. The fixation history distinguishes
-the gaze trajectories of different observers. \lipsum[3][1-5]
+Previous fixation points are blurred with a Gaussian filter and supplied as an
+additional sequence of priority maps. The fixation history distinguishes the
+gaze trajectories of different observers viewing the same scene, so two
+observers with different histories receive different predictions.
 
 \section{Representations}
 
@@ -113,12 +109,15 @@ History & Previous fixations & Priority maps \\
 \end{table}
 
 Declaring the header row lets a cell be announced together with the column it
-belongs to. \lipsum[4][1-5]
+belongs to, as shown in Table~\ref{tab:inputs}. Every cell is treated as a data
+cell until the header rows are named.
 
 \section{Integration}
 
 The representations pass through modality encoders, directed attention,
-sequential attention, and gated multimodal integration.
+sequential attention, and gated multimodal integration. Each stage keeps the
+spatial layout of the priority map intact, so the output can be compared
+directly against recorded fixation densities.
 
 \begin{enumerate}
   \item Encode audiovisual and social-cue representations
@@ -127,6 +126,10 @@ sequential attention, and gated multimodal integration.
   \item Perform recurrent multimodal integration
   \item Predict the next fixation priority map
 \end{enumerate}
+
+Gate weights vary per timestep, so the model can rely on social cues in one
+frame and on audiovisual saliency in the next.
+
 
 \lipsum[5-6]
 
