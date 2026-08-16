@@ -1,9 +1,10 @@
 {
   "name": "texlyre",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "scripts": {
     "prebuild": "node scripts/sync-lsp-recipes.mjs",
+    "typst-assets": "node scripts/download-typst-assets.mjs ./static/core",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -25,6 +26,8 @@
     "@docusaurus/preset-classic": "^3.10.2",
     "@docusaurus/remark-plugin-npm2yarn": "^3.10.2",
     "@mdx-js/react": "^3.1.1",
+    "@myriaddreamin/typst-ts-web-compiler": "npm:@texlyre/typst-ts-web-compiler@0.8.0-rc1",
+    "@myriaddreamin/typst.ts": "npm:@texlyre/typst.ts@0.8.0-rc1",
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.1",
     "prismjs-bibtex": "^2.1.0",

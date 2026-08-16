@@ -70,7 +70,7 @@ Create your main Typst file by clicking the "New File" button in the file explor
 
 Start with a basic Typst document structure:
 
-```typst
+```typst compile
 #set document(title: "My First TeXlyre Document", author: "Your Name")
 #set page(numbering: "1")
 #set text(font: "Linux Libertine", size: 11pt)

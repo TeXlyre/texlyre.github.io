@@ -2,6 +2,10 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const latexCollections = process.env.LATEX_COLLECTIONS
+  ? process.env.LATEX_COLLECTIONS.split(',')
+  : undefined;
+
 const config: Config = {
   title: 'TeXlyre',
   tagline: 'The Free, Open-source, & Local-First LaTeX & Typst Collaborative Web Editor',
@@ -28,6 +32,25 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  customFields: {
+    latexCompile: {
+      assetPath: process.env.LATEX_ASSET_PATH,
+      remoteEndpoint: process.env.LATEX_REMOTE_ENDPOINT,
+      collections: latexCollections,
+      pdfHeight: process.env.LATEX_PDF_HEIGHT
+        ? parseInt(process.env.LATEX_PDF_HEIGHT, 10)
+        : undefined,
+      engine: process.env.LATEX_ENGINE,
+    },
+    typstCompile: {
+      assetPath: process.env.TYPST_ASSET_PATH,
+      fontPath: process.env.TYPST_FONT_PATH,
+      pdfHeight: process.env.TYPST_PDF_HEIGHT
+        ? parseInt(process.env.TYPST_PDF_HEIGHT, 10)
+        : undefined,
+    },
   },
 
   headTags: [

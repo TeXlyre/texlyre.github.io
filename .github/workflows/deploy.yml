@@ -21,9 +21,13 @@ jobs:
     env:
       LATEX_ASSET_PATH: ${{ vars.LATEX_ASSET_PATH || '/core/busytex' }}
       LATEX_REMOTE_ENDPOINT: ${{ vars.LATEX_REMOTE_ENDPOINT || 'https://texlive2026.texlyre.org' }}
-      LATEX_COLLECTIONS: ${{ vars.LATEX_COLLECTIONS || 'recommended' }}
+      LATEX_COLLECTIONS: ${{ vars.LATEX_COLLECTIONS || 'basic' }}
       LATEX_PDF_HEIGHT: ${{ vars.LATEX_PDF_HEIGHT || '600' }}
       LATEX_ENGINE: ${{ vars.LATEX_ENGINE || 'pdflatex' }}
+      TYPST_ASSET_PATH: ${{ vars.TYPST_ASSET_PATH || '/core' }}
+      TYPST_FONT_PATH: ${{ vars.TYPST_FONT_PATH || '/core/assets/fonts' }}
+      TYPST_PDF_HEIGHT: ${{ vars.TYPST_PDF_HEIGHT || '600' }}
+      TYPST_FONT_EXCLUDE: ${{ vars.TYPST_FONT_EXCLUDE || 'ColorEmoji|CJK' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -55,6 +59,9 @@ jobs:
 
       - name: Download BusyTeX assets
         run: yarn texlyre-busytex download-assets ./static/core
+
+      - name: Download Typst assets
+        run: yarn typst-assets
 
       - name: Build website
         run: yarn build

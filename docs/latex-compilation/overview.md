@@ -20,6 +20,7 @@ TeXlyre uses [TeXlyre-BusyTeX](https://github.com/TeXlyre/texlyre-busytex) to ru
 | SyncTeX | ✅ |
 | Multilingual hyphenation | ✅ |
 | Multi-file projects | ✅ |
+| Tagged PDF output | ✅ |
 | TeX Live fonts | ✅ On demand |
 | Project fonts | ✅ |
 | Host system fonts | ❌ |
@@ -31,7 +32,7 @@ The recommended TeX Live collection is preloaded by default. Missing packages, c
 
 A network connection is therefore required the first time an uncached remote file is needed. Files already bundled or cached remain available without another download.
 
-For bibliography workflows, see [Bibliographies](./bibliographies). For font loading and custom fonts, see [Fonts](./fonts).
+For bibliography workflows, see [Bibliographies](./bibliographies). For font loading and custom fonts, see [Fonts](./fonts). For tagged and standards-conformant PDFs, see [Accessibility](./accessibility).
 
 ## Browser Sandbox
 

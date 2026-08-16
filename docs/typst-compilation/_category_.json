@@ -1,0 +1,8 @@
+{
+  "label": "Typst Compilation",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "The Typst compiler, packages, output formats, and accessible PDF output."
+  }
+}

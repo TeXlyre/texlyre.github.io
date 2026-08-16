@@ -1,8 +1,12 @@
 import { useCallback, useRef, useState } from 'react';
 
 import { resolvePreload } from './collections';
-import { acquireCompileLock, releaseCompileLock, stopCompile } from './compileLock';
-import { getExampleFiles } from './exampleFiles';
+import {
+    acquireCompileLock,
+    releaseCompileLock,
+    stopCompile,
+} from '@site/src/components/CompileBlock/compileLock';
+import { getExampleFiles } from '@site/src/components/CompileBlock/exampleFiles';
 
 let runnerPromise = null;
 let runnerKey = null;
