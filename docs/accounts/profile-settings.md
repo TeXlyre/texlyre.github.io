@@ -24,7 +24,7 @@ Changing your username updates your identity in future collaborative sessions bu
 
 ### Email Address
 
-Email addresses are optional in TeXlyre and serve primarily as a recovery mechanism for your account credentials. TeXlyre doesn't send promotional emails or notifications to the address you provide.
+Email addresses are optional in TeXlyre and serve primarily as an auxiliary identifier alongside the username as a contact detail for your collaborators.
 
 The email field supports standard email validation but doesn't require verification. You can leave this field empty if you prefer not to provide an email address.
 
