@@ -221,6 +221,10 @@ const config: Config = {
               label: 'Chelys Plugin Recipes',
               href: 'https://texlyre.org/chelys-recipes',
             },
+            {
+              label: 'Service Status',
+              href: 'https://texlyre.org/upptime',
+            },
           ],
         },
         {
@@ -279,12 +283,12 @@ const config: Config = {
             {
               html: `
                       <a
-                        href="https://texlyre.org/codemirror-latex-visual"
+                        href="https://github.com/TeXlyre/codemirror-visual-markup"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="footer__link-item footer-external-link"
                       >
-                        LaTeX WYSIWYM Editor
+                        Codemirror WYSIWYM Editor
                         <span class="experimental-badge">Experimental</span>
                       </a>
                     `,
@@ -330,10 +334,6 @@ const config: Config = {
             {
               label: 'Issues & Support',
               href: 'https://github.com/texlyre/texlyre/issues',
-            },
-            {
-              label: 'Service Status',
-              href: 'https://texlyre.org/upptime',
             },
           ],
         },
