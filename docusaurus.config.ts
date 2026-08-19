@@ -331,6 +331,10 @@ const config: Config = {
               label: 'Issues & Support',
               href: 'https://github.com/texlyre/texlyre/issues',
             },
+            {
+              label: 'Service Status',
+              href: 'https://texlyre.org/upptime',
+            },
           ],
         },
         {
