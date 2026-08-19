@@ -15,7 +15,7 @@ type Status = {
 
 function label(status: Status): string {
     if (status.status === 'up') {
-        return 'All systems operational';
+        return 'All services online';
     }
     const affected = status.down + status.degraded;
     const suffix = affected === 1 ? 'service' : 'services';
