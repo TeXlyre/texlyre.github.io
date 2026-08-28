@@ -4,53 +4,31 @@ title: Attributions
 
 ## Icons
 
-The icons, logos, and trademarks used in this project are the property of their respective owners and are used in accordance with their usage guidelines. Their use does not imply endorsement by or affiliation with the respective trademark holders.
+Third-party names, logos, and icons remain the property of their respective owners. They are used only to identify the corresponding service or tool and do not imply affiliation, sponsorship, or endorsement.
 
-### GitHub, npm, reddit, YouTube Icons
+### TeXlyre Application Extras
 
-Vectors and icons by <a href="https://github.com/garudatechnologydevelopers/sketch-icons?ref=svgrepo.com" target="_blank">Garuda Technology</a> in MIT License via <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
+- **GitHub** — official GitHub mark used for the backup integration. [Logo policy](https://github.com/logos)
+- **GitLab** — the backup integration uses the GitLab name only; the GitLab logo is not bundled without separate authorization. [Trademark guidelines](https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/brand/brand-activation/trademark-guidelines/)
+- **Gitea** — official Gitea logo, © 2016 Gitea Authors / © 2015 Gogs Authors, MIT. [Source](https://github.com/go-gitea/gitea/blob/main/assets/logo.svg) · [License](https://github.com/go-gitea/gitea/blob/main/LICENSE)
+- **Forgejo** — Forgejo logo by Caesar Schinas, CC BY-SA 4.0; monochrome theme rendering used. [License](https://creativecommons.org/licenses/by-sa/4.0/)
+- **Zotero** — official Zotero artwork; Zotero is a trademark of the Corporation for Digital Scholarship. [Brand](https://www.zotero.org/support/brand)
+- **OpenAlex** — official OpenAlex mark used to identify the OpenAlex integration. [Terms](https://openalex.org/OpenAlex_termsofservice.pdf)
+- **JabRef** — official JabRef artwork, © JabRef Authors, MIT. [License](https://github.com/JabRef/jabref/blob/main/LICENSE)
+- **draw.io** — official draw.io artwork; draw.io and diagrams.net marks are owned by draw.io Ltd. [Terms](https://www.drawio.com/trust/terms-of-use/)
+- **Milkdown** — official Milkdown artwork, MIT. [License](https://github.com/Milkdown/milkdown/blob/main/LICENSE)
+- **TikZ Editor** — official TikZ Editor artwork, © Dominik Peters, MIT. [License](https://github.com/DominikPeters/tikz-editor/blob/master/LICENSE)
 
-GITHUB®, the GITHUB® logo design, the INVERTOCAT logo design, OCTOCAT®, and the OCTOCAT® logo design are trademarks of GitHub, Inc., registered in the United States and other countries. The OCTOCAT design is the exclusive property of GitHub, Inc and has been federally registered with the United States Copyright Office. All rights reserved. <a href="https://github.com/logos" target="_blank">GitHub Logos and Usage</a>
+### Documentation Site
 
-The npm logo is a trademark of npm, Inc. <a href="https://docs.npmjs.com/policies/logos-and-usage" target="_blank">npm Logos and Usage</a>
+- **GitHub, npm, reddit, YouTube** — vectors by [Garuda Technology](https://github.com/garudatechnologydevelopers/sketch-icons?ref=svgrepo.com), MIT, via [SVG Repo](https://www.svgrepo.com/); respective trademarks remain with their owners.
+- **GitLab** — GitLab and its logos are trademarks of GitLab Inc. [Trademark guidelines](https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/brand/brand-activation/trademark-guidelines/)
+- **Codeberg** — Codeberg and the Codeberg logo are trademarks of Codeberg e.V.; logo artwork is CC0. [Forgejo license notes](https://forgejo.org/docs/latest/license/)
+- **Hugging Face** — Hugging Face logo is a trademark of Hugging Face, Inc. [Brand assets](https://huggingface.co/brand)
+- **Lemmy** — logo by Andy Cuccaro, CC BY-SA 4.0; modified by Fares Abawi under the same license.
+- **PeerTube** — logo by Aegis Icons, CC BY-SA 4.0; modified by Fares Abawi under the same license.
+- **Docusaurus** — logo by Meta Open Source, MIT. [Docusaurus](https://docusaurus.io/)
 
-The reddit logo and wordmark are trademarks of Reddit, Inc. <a href="https://www.redditinc.com/policies/trademark-use-policy" target="_blank">Reddit Trademark Policy</a>
-
-YouTube and the YouTube logo are trademarks of Google LLC. <a href="https://www.youtube.com/howyoutubeworks/resources/brand-resources/" target="_blank">YouTube Brand Resources</a>
-
-### GitLab Icon
-
-The GitLab logo is a trademark of GitLab Inc. and is used in accordance with GitLab’s trademark and logo usage guidelines.
-<a href="https://about.gitlab.com/press/press-kit/" target="_blank">GitLab Logos and Brand Guidelines</a>
-
-### Codeberg
-
-The Codeberg logo is a trademark of Codeberg e.V. and is used in accordance with Codeberg’s branding and logo usage guidelines.
-<a href="https://codeberg.org/Codeberg/Design" target="_blank">Codeberg Brand and Design Resources</a>
-
-### Hugging Face Icon
-
-The Hugging Face logo is a trademark of Hugging Face, Inc. <a href="https://huggingface.co/brand" target="_blank">Hugging Face Brand Assets</a>
-
-### Lemmy Icon
-
-Lemmy logo by <a href="https://github.com/LemmyNet/lemmy/commit/977a996920e5e907ac8dae2d3afa4bbbb8836441" target="_blank">Andy Cuccaro (@andycuccaro)</a> under the CC-BY-SA 4.0 License
-
-Modified by [Fares Abawi](https://abawi.me) under the same license
-
-### PeerTube Icon
-
-Peertube logo by <a href="https://openiconlibrary.com/packs/aegis-icons/peertube-ef0fe8" target="_blank"> Aegis Icons</a> under the CC BY-SA 4.0 License
-
-Modified by [Fares Abawi](https://abawi.me) under the same license
-
-### Docusaurus Icon
-
-Docusaurus logo by <a href="https://docusaurus.io/" target="_blank">Meta Open Source</a> under the MIT License
-
-## Documentation Platform
-
-This documentation site is built with <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> by Meta Open Source, licensed under the MIT License.
 
 ## Syntax Highlighting
 
@@ -65,6 +43,10 @@ Typst syntax highlighting for Prism by <a href="https://github.com/Mc-Zen/prism-
 ### BibTeX Language Support
 
 BibTeX syntax highlighting for Prism by <a href="https://github.com/SaswatPadhi/prismjs-bibtex" target="_blank">Saswat Padhi</a>, licensed under the MIT License.
+
+## Documentation Platform
+
+This documentation site is built with <a href="https://docusaurus.io/" target="_blank">Docusaurus</a> by Meta Open Source, licensed under the MIT License.
 
 ## Frameworks
 
