@@ -1,0 +1,157 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Milestone 5b - Typesetter lifecycle" id="m5b-lifecycle">
+    <mxGraphModel dx="1404" dy="902" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="430" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="chelys-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFEFC;strokeColor=#16835F;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="300" width="650" x="20" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="chelys-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#16835F;fontStyle=1;" value="Chelys-managed service" vertex="1">
+          <mxGeometry height="30" width="270" x="210" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="provider-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFAFF;strokeColor=#7C3AED;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="300" width="265" x="745" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="provider-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#7C3AED;fontStyle=1;" value="Provider state" vertex="1">
+          <mxGeometry height="30" width="185" x="785" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="texlyre-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFDFF;strokeColor=#2463EB;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="300" width="255" x="1085" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="texlyre-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#2463EB;fontStyle=1;" value="TeXlyre" vertex="1">
+          <mxGeometry height="30" width="145" x="1140" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C56A18;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="170" width="245" x="50" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="runtime-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#C56A18;fontStyle=1;" value="Runtime source" vertex="1">
+          <mxGeometry height="25" width="160" x="92" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="docker-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E8;strokeColor=#C56A18;strokeWidth=1.2;absoluteArcSize=1;arcSize=24;fontFamily=Helvetica;fontSize=15;fontColor=#172033;align=center;verticalAlign=middle;" value="&lt;b&gt;Docker recipe&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#536078&quot; style=&quot;font-size: 13px;&quot;&gt;builds backend&lt;/font&gt;" vertex="1">
+          <mxGeometry height="42" width="201" x="72" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="connect-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E8;strokeColor=#C56A18;strokeWidth=1.2;absoluteArcSize=1;arcSize=24;fontFamily=Helvetica;fontSize=15;fontColor=#172033;align=center;verticalAlign=middle;" value="&lt;b&gt;Connect mode&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#536078&quot; style=&quot;font-size:13px&quot;&gt;attaches to existing service&lt;/font&gt;" vertex="1">
+          <mxGeometry height="42" width="201" x="72" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="service-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#16835F;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="170" width="245" x="390" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="service-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#16835F;fontStyle=1;" value="Typesetter service" vertex="1">
+          <mxGeometry height="25" width="175" x="425" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="service-running" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#16835F;fontStyle=1;" value="running" vertex="1">
+          <mxGeometry height="25" width="145" x="440" y="135.5" as="geometry" />
+        </mxCell>
+        <mxCell id="service-divider" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#D7E7E0;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="184" as="sourcePoint" />
+            <mxPoint x="615" y="184" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service-stopped" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=#536078;fontStyle=1;" value="stopped / removed" vertex="1">
+          <mxGeometry height="25" width="185" x="420" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="service-note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;" value="same recipe lifecycle" vertex="1">
+          <mxGeometry height="20" width="165" x="430" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="configuration-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="170" width="205" x="775" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="configuration-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#7C3AED;fontStyle=1;" value="Configuration" vertex="1">
+          <mxGeometry height="25" width="145" x="805" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="configuration-published" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#7C3AED;fontStyle=1;" value="published" vertex="1">
+          <mxGeometry height="22" width="125" x="815" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="configuration-present" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;" value="provider present" vertex="1">
+          <mxGeometry height="18" width="141" x="807" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="configuration-divider" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#E5DDFB;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795" y="184" as="sourcePoint" />
+            <mxPoint x="960" y="184" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="configuration-withdrawn" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#536078;fontStyle=1;" value="withdrawn" vertex="1">
+          <mxGeometry height="22" width="125" x="815" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="configuration-absent" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;" value="provider absent" vertex="1">
+          <mxGeometry height="18" width="141" x="807" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="registry-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2463EB;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="170" width="205" x="1110" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="registry-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#2463EB;fontStyle=1;" value="Typesetter registry" vertex="1">
+          <mxGeometry height="25" width="155" x="1135" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="registry-registered" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#2463EB;fontStyle=1;" value="registered" vertex="1">
+          <mxGeometry height="22" width="125" x="1150" y="137" as="geometry" />
+        </mxCell>
+        <mxCell id="registry-available" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;" value="compiler available" vertex="1">
+          <mxGeometry height="18" width="149" x="1138" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="registry-divider" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;strokeColor=#D9E6FF;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1130" y="184" as="sourcePoint" />
+            <mxPoint x="1295" y="184" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="registry-unregistered" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#536078;fontStyle=1;" value="unregistered" vertex="1">
+          <mxGeometry height="22" width="125" x="1150" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="registry-unavailable" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;" value="compiler unavailable" vertex="1">
+          <mxGeometry height="18" width="159" x="1133" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="label-start" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#16835F;fontStyle=1;" value="start" vertex="1">
+          <mxGeometry height="20" width="60" x="312" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="label-publish" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#7C3AED;fontStyle=1;" value="publish" vertex="1">
+          <mxGeometry height="20" width="61" x="677" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="label-withdraw" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;fontStyle=1;" value="withdraw" vertex="1">
+          <mxGeometry height="20" width="73" x="671" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="label-observe-top" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#2463EB;fontStyle=1;" value="observe" vertex="1">
+          <mxGeometry height="20" width="67" x="1014" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="label-observe-bottom" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#536078;fontStyle=1;" value="observe" vertex="1">
+          <mxGeometry height="20" width="67" x="1014" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-start" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#16835F;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="295" y="150" as="sourcePoint" />
+            <mxPoint x="390" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-publish" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#7C3AED;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="635" y="150" as="sourcePoint" />
+            <mxPoint x="775" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-withdraw" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#7C3AED;strokeWidth=2.6;dashed=1;dashPattern=9 7;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="635" y="212" as="sourcePoint" />
+            <mxPoint x="775" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-observe-top" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="150" as="sourcePoint" />
+            <mxPoint x="1110" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-observe-bottom" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=2.6;dashed=1;dashPattern=9 7;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="212" as="sourcePoint" />
+            <mxPoint x="1110" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="caption" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;fontColor=#536078;" value="Runtime choice stays inside Chelys; TeXlyre only observes whether a provider is currently available." vertex="1">
+          <mxGeometry height="24" width="860" x="250" y="342" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

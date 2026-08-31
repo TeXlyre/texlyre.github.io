@@ -42,12 +42,24 @@ Introduce Chelys as a local companion application that relays Language Server Pr
 - [x] **2a.** Local Chelys application with WebSocket-based LSP communication
 - [x] **2b.** Chelys running both as standalone background service and as a Tauri desktop extension
 
+:::tip[Completed]
+
+Full report: [Chelys local LSP bridge and plugin system](/blog/chelys-lsp-bridge)
+
+:::
+
 ### Task 3: Peer-to-peer LSP modulation
 
 Modulate LSP messages over TeXlyre's existing Yjs peer-to-peer network, so one collaborator's local language server can serve the whole session.
 
-- [ ] **3a.** LSP message serialization and transport over the Yjs sync layer
-- [ ] **3b.** WebRTC-based relay for secure remote LSP access
+- [x] **3a.** LSP message serialization and transport over the Yjs sync layer
+- [x] **3b.** WebRTC-based relay for secure remote LSP access
+
+:::tip[Completed]
+
+Full report: [Peer-to-peer Chelys tool sharing](/blog/chelys-peer-to-peer-tools)
+
+:::
 
 ### Task 4: Chelys plugin system
 
@@ -60,8 +72,14 @@ Graduate Chelys from proof-of-concept to a production-ready plugin system for ma
 
 Extend Chelys to run local typesetting engines (LuaTeX, optionally LuaMetaTeX, PreTeXt, SILE) using the same peer-to-peer modulation layer built for LSP.
 
-- [ ] **5a.** Compile dispatch, file transfer, and PDF retrieval between TeXlyre and Chelys
-- [ ] **5b.** Typesetting engine lifecycle integrated into the Chelys plugin system
+- [x] **5a.** Compile dispatch, file transfer, and PDF retrieval between TeXlyre and Chelys
+- [x] **5b.** Typesetting engine lifecycle integrated into the Chelys plugin system
+
+:::tip[Completed]
+
+Full report: [Chelys local typesetting engine support](/blog/chelys-local-typesetters)
+
+:::
 
 ### Task 6: Chelys distributed storage, local foundation
 
@@ -86,4 +104,4 @@ Implement version comparison and change review inside TeXlyre.
 
 ## Following Updates
 
-Each completed task will get a dedicated report post here on the blog, linked from the roadmap above. Development happens in the open across the [TeXlyre organization on GitHub](https://github.com/TeXlyre), with one repository per component (`texlyre`, `texlyre-busytex`, `texlyre-busytex-build`, and later `chelys`).
+Each completed task will get a dedicated report post here on the blog, linked from the roadmap above. Development happens in the open across the [TeXlyre organization on GitHub](https://github.com/TeXlyre), with one repository per component (`texlyre`, `texlyre-busytex`, `texlyre-busytex-build`, `chelys` and `chelys-recipes`).

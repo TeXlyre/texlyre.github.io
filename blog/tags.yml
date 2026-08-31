@@ -99,6 +99,11 @@ pdftex:
   permalink: /pdftex
   description: pdfTeX engine
 
+sile:
+  label: SILE
+  permalink: /sile
+  description: SILE typesetting system
+
 texlive:
   label: TeX Live
   permalink: /texlive
@@ -131,6 +136,16 @@ synctex:
   permalink: /synctex
   description: SyncTeX source/PDF navigation
 
+typesetter:
+  label: Typesetter
+  permalink: /typesetter
+  description: External typesetting backends
+
+typesetting:
+  label: Typesetting
+  permalink: /typesetting
+  description: Typesetting engines and workflows
+
 wasm:
   label: WebAssembly
   permalink: /wasm
@@ -148,6 +163,11 @@ webauthn:
   permalink: /webauthn
   description: WebAuthn authentication standard
 
+websocket:
+  label: WebSocket
+  permalink: /websocket
+  description: WebSocket transport protocol
+
 webrtc:
   label: WebRTC
   permalink: /webrtc
@@ -155,10 +175,20 @@ webrtc:
 
 
 # Collaboration
+collaboration:
+  label: Collaboration
+  permalink: /collaboration
+  description: Collaboration features and workflows
+
 collaborative-editing:
   label: Collaborative Editing
   permalink: /collaborative-editing
   description: Collaborative editing tools and technologies
+
+peer-to-peer:
+  label: Peer-to-Peer
+  permalink: /peer-to-peer
+  description: Peer-to-peer networking
 
 
 # Funding / Roadmap

@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Milestone 3a - Service transport" id="task3-3a-service-transport">
+    <mxGraphModel dx="1425" dy="1372" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1420" pageHeight="470" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="client-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFDFF;strokeColor=#2463EB;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="310" width="270" x="20" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="client-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#2463EB;fontStyle=1;" value="Requesting TeXlyre" vertex="1">
+          <mxGeometry height="30" width="200" x="55" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="peer-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFAFF;strokeColor=#7C3AED;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="310" width="545" x="399" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="peer-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#7C3AED;fontStyle=1;" value="Peer-to-peer collaboration" vertex="1">
+          <mxGeometry height="30" width="260" x="540" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="host-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFEFC;strokeColor=#16835F;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="310" width="287" x="1056" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="host-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#16835F;fontStyle=1;" value="Shared provider host" vertex="1">
+          <mxGeometry height="30" width="220" x="1090" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="client-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2463EB;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="170" width="206" x="52" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="client-card-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#2463EB;fontStyle=1;" value="Service client" vertex="1">
+          <mxGeometry height="25" width="150" x="80" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="client-card-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#172033;" value="provider resolution&lt;br&gt;message framing&lt;br&gt;tool integration" vertex="1">
+          <mxGeometry height="85" width="166" x="72" y="153" as="geometry" />
+        </mxCell>
+        <mxCell id="control-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="82" width="480" x="430" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="control-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#7C3AED;fontStyle=1;" value="Yjs + Awareness" vertex="1">
+          <mxGeometry height="24" width="160" x="590" y="101" as="geometry" />
+        </mxCell>
+        <mxCell id="control-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;fontColor=#536078;" value="service advertisement · peer identity · rendezvous state" vertex="1">
+          <mxGeometry height="40" width="347" x="493" y="119" as="geometry" />
+        </mxCell>
+        <mxCell id="control-pill" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=none;arcSize=50;fontFamily=Helvetica;fontSize=12;fontColor=#7C3AED;align=center;verticalAlign=middle;" value="coordination only" vertex="1">
+          <mxGeometry height="21" width="125" x="597" y="149" as="geometry" />
+        </mxCell>
+        <mxCell id="payload-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2463EB;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="82" width="480" x="430" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="payload-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=18;fontColor=#2463EB;fontStyle=1;" value="Ordered WebRTC service channel" vertex="1">
+          <mxGeometry height="24" width="245" x="549" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="payload-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;fontColor=#536078;" value="framed text / binary payload → reassembled message stream" vertex="1">
+          <mxGeometry height="42" width="388" x="476" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="payload-pill" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=none;arcSize=50;fontFamily=Helvetica;fontSize=12;fontColor=#2463EB;align=center;verticalAlign=middle;" value="payload does not pass through Yjs" vertex="1">
+          <mxGeometry height="21" width="205" x="557" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="host-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#16835F;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="170" width="220" x="1090" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="host-card-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#16835F;fontStyle=1;" value="Service endpoint" vertex="1">
+          <mxGeometry height="25" width="170" x="1115" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="host-card-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#172033;" value="shared provider&lt;br&gt;message reassembly&lt;br&gt;connection lifecycle" vertex="1">
+          <mxGeometry height="85" width="180" x="1110" y="153" as="geometry" />
+        </mxCell>
+        <mxCell id="control-left-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#7C3AED;fontStyle=1;" value="resolve / join" vertex="1">
+          <mxGeometry height="18" width="78" x="305" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="control-right-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#7C3AED;fontStyle=1;" value="advertise" vertex="1">
+          <mxGeometry height="18" width="75" x="958" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="payload-left-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2463EB;fontStyle=1;" value="service messages" vertex="1">
+          <mxGeometry height="18" width="98" x="295" y="217" as="geometry" />
+        </mxCell>
+        <mxCell id="payload-right-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=#2463EB;fontStyle=1;" value="service messages" vertex="1">
+          <mxGeometry height="18" width="98" x="950" y="217" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-control-left" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#7C3AED;strokeWidth=2.6;dashed=1;dashPattern=9 7;startArrow=block;startFill=1;endArrow=block;endFill=1;startSize=6;endSize=6;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="134" as="sourcePoint" />
+            <mxPoint x="430" y="134" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-control-right" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#7C3AED;strokeWidth=2.6;dashed=1;dashPattern=9 7;startArrow=block;startFill=1;endArrow=block;endFill=1;startSize=6;endSize=6;entryX=0.001;entryY=0.354;entryDx=0;entryDy=0;entryPerimeter=0;" target="host-region">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="134" as="sourcePoint" />
+            <mxPoint x="1050" y="134" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-payload-left" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=3.2;startArrow=block;startFill=1;endArrow=block;endFill=1;startSize=7;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="247" as="sourcePoint" />
+            <mxPoint x="430" y="247" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-payload-right" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=3.2;startArrow=block;startFill=1;endArrow=block;endFill=1;startSize=7;endSize=7;entryX=0.004;entryY=0.719;entryDx=0;entryDy=0;entryPerimeter=0;" target="host-region">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="247" as="sourcePoint" />
+            <mxPoint x="1050" y="247" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="caption" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;fontColor=#536078;" value="Yjs coordinates service discovery; framed tool payloads travel on a separate ordered WebRTC data channel." vertex="1">
+          <mxGeometry height="24" width="890" x="245" y="356" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

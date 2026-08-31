@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="TeXlyre compile synchronization" id="compile-sync-final">
+    <mxGraphModel dx="1360" dy="385" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="430" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Outer regions -->
+        <mxCell id="browser-region" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFDFF;strokeColor=#2463EB;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;">
+          <mxGeometry x="20" y="25" width="270" height="295" as="geometry"/>
+        </mxCell>
+        <mxCell id="browser-title" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#2463EB;fontStyle=1;" value="TeXlyre browser">
+          <mxGeometry x="55" y="42" width="200" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bridge-region" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFEFC;strokeColor=#16835F;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;">
+          <mxGeometry x="465" y="25" width="420" height="295" as="geometry"/>
+        </mxCell>
+        <mxCell id="bridge-title" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#16835F;fontStyle=1;" value="Recipe bridge">
+          <mxGeometry x="575" y="42" width="200" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="backend-region" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF8;strokeColor=#C56A18;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;">
+          <mxGeometry x="1060" y="25" width="270" height="295" as="geometry"/>
+        </mxCell>
+        <mxCell id="backend-title" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#C56A18;fontStyle=1;" value="External backend">
+          <mxGeometry x="1090" y="42" width="210" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Browser card -->
+        <mxCell id="project-card" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2463EB;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;">
+          <mxGeometry x="52" y="90" width="206" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="project-title" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#2463EB;fontStyle=1;" value="Project state">
+          <mxGeometry x="72" y="101" width="166" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="project-files" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=16;fontColor=#172033;spacing=0;" value="main.sil&lt;br&gt;refs.bib&lt;br&gt;figures/&lt;br&gt;&amp;nbsp;&amp;nbsp;└─ plot.svg">
+          <mxGeometry x="78" y="140" width="150" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- Bridge card -->
+        <mxCell id="working-card" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#16835F;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;">
+          <mxGeometry x="505" y="80" width="340" height="205" as="geometry"/>
+        </mxCell>
+        <mxCell id="working-title" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#16835F;fontStyle=1;" value="Connection working tree">
+          <mxGeometry x="545" y="94" width="260" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="working-files" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Helvetica;fontSize=16;fontColor=#172033;spacing=0;" value="/tmp/session-42/&lt;br&gt;├─ main.sil&lt;br&gt;├─ refs.bib&lt;br&gt;└─ figures/&lt;br&gt;&amp;nbsp;&amp;nbsp;└─ plot.svg">
+          <mxGeometry x="540" y="132" width="220" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="scope-pill" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=none;arcSize=50;fontFamily=Helvetica;fontSize=13;fontColor=#536078;align=center;verticalAlign=middle;" value="connection-scoped · removed on close">
+          <mxGeometry x="548" y="251" width="254" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- Backend card -->
+        <mxCell id="typesetter-card" parent="1" vertex="1"
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C56A18;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;">
+          <mxGeometry x="1092" y="95" width="206" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="typesetter-title" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#C56A18;fontStyle=1;" value="Typesetter">
+          <mxGeometry x="1112" y="108" width="166" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="typesetter-list" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=16;fontColor=#172033;spacing=0;" value="SILE&lt;br&gt;TeX Live&lt;br&gt;PreTeXt&lt;br&gt;…">
+          <mxGeometry x="1132" y="148" width="126" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Labels between browser and bridge -->
+        <mxCell id="label-full" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#2463EB;fontStyle=1;" value="first: full tree">
+          <mxGeometry x="315" y="108" width="125" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-delta" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#2463EB;fontStyle=1;" value="later: deltas only">
+          <mxGeometry x="310" y="171" width="135" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-result-left" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#C56A18;fontStyle=1;" value="structured result">
+          <mxGeometry x="310" y="249" width="135" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Labels between bridge and backend -->
+        <mxCell id="label-compile" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#16835F;fontStyle=1;" value="compile + options">
+          <mxGeometry x="905" y="108" width="135" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-result-right" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#C56A18;fontStyle=1;" value="PDF + log + artifacts">
+          <mxGeometry x="895" y="201" width="155" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Straight horizontal connectors -->
+        <mxCell id="edge-full" parent="1" edge="1"
+          style="edgeStyle=none;orthogonalLoop=0;jettySize=auto;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="142" as="sourcePoint"/>
+            <mxPoint x="465" y="142" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge-delta" parent="1" edge="1"
+          style="edgeStyle=none;orthogonalLoop=0;jettySize=auto;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=2.6;dashed=1;dashPattern=10 7;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="205" as="sourcePoint"/>
+            <mxPoint x="465" y="205" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge-result-left" parent="1" edge="1"
+          style="edgeStyle=none;orthogonalLoop=0;jettySize=auto;html=1;rounded=0;strokeColor=#C56A18;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="282" as="sourcePoint"/>
+            <mxPoint x="290" y="282" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge-compile" parent="1" edge="1"
+          style="edgeStyle=none;orthogonalLoop=0;jettySize=auto;html=1;rounded=0;strokeColor=#16835F;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="885" y="142" as="sourcePoint"/>
+            <mxPoint x="1060" y="142" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="edge-result-right" parent="1" edge="1"
+          style="edgeStyle=none;orthogonalLoop=0;jettySize=auto;html=1;rounded=0;strokeColor=#C56A18;strokeWidth=3;endArrow=block;endFill=1;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1060" y="235" as="sourcePoint"/>
+            <mxPoint x="885" y="235" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bottom caption -->
+        <mxCell id="caption" parent="1" vertex="1"
+          style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;fontColor=#536078;" value="One isolated working tree is kept per connection, so later compiles synchronize only project changes.">
+          <mxGeometry x="250" y="342" width="860" height="24" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

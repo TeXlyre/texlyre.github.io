@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Milestone 3b - WebRTC relay" id="task3-3b-webrtc-relay">
+    <mxGraphModel dx="1346" dy="852" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1420" pageHeight="470" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="remote-region" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFDFF;strokeColor=#2463EB;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="310" width="270" x="20" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="remote-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#2463EB;fontStyle=1;" value="Remote TeXlyre" vertex="1">
+          <mxGeometry height="30" width="180" x="65" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="host-machine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFEFC;strokeColor=#16835F;strokeWidth=2.5;absoluteArcSize=1;arcSize=44;" vertex="1">
+          <mxGeometry height="310" width="840" x="510" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="host-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=22;fontColor=#16835F;fontStyle=1;" value="Host machine" vertex="1">
+          <mxGeometry height="30" width="210" x="825" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="remote-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2463EB;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="155" width="213" x="49" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="remote-card-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#2463EB;fontStyle=1;" value="Shared provider" vertex="1">
+          <mxGeometry height="25" width="154" x="78" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="remote-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#172033;" value="LSP / compile client&lt;br&gt;uses normal provider interface" vertex="1">
+          <mxGeometry height="70" width="170" x="70" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="chelys-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#16835F;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="155" width="220" x="560" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="chelys-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#16835F;fontStyle=1;" value="Chelys relay" vertex="1">
+          <mxGeometry height="25" width="150" x="595" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="chelys-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#172033;" value="terminates WebRTC&lt;br&gt;forwards service messages" vertex="1">
+          <mxGeometry height="70" width="180" x="580" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-card" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C56A18;strokeWidth=1.8;absoluteArcSize=1;arcSize=30;" vertex="1">
+          <mxGeometry height="155" width="235" x="1065" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=19;fontColor=#C56A18;fontStyle=1;" value="Recipe service" vertex="1">
+          <mxGeometry height="25" width="155" x="1105" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-body" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;fontColor=#172033;" value="LSP / typesetter&lt;br&gt;existing local endpoint" vertex="1">
+          <mxGeometry height="70" width="185" x="1090" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#2463EB;fontStyle=1;" value="WebRTC service channel" vertex="1">
+          <mxGeometry height="20" width="170" x="315" y="142" as="geometry" />
+        </mxCell>
+        <mxCell id="local-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=13;fontColor=#C56A18;fontStyle=1;" value="localhost WebSocket" vertex="1">
+          <mxGeometry height="20" width="200" x="820" y="142" as="geometry" />
+        </mxCell>
+        <mxCell id="webrtc-edge" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=3.2;startArrow=block;startFill=1;endArrow=block;endFill=1;startSize=7;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="185" as="sourcePoint" />
+            <mxPoint x="560" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="local-edge" edge="1" parent="1" style="edgeStyle=none;html=1;rounded=0;strokeColor=#C56A18;strokeWidth=3.2;startArrow=block;startFill=1;endArrow=block;endFill=1;startSize=7;endSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="185" as="sourcePoint" />
+            <mxPoint x="1065" y="185" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="public-pill" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E8;strokeColor=none;arcSize=50;fontFamily=Helvetica;fontSize=12;fontColor=#C56A18;align=center;verticalAlign=middle;" value="tool has no public network endpoint" vertex="1">
+          <mxGeometry height="22" width="205" x="1080" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="availability-pill" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.2;arcSize=50;fontFamily=Helvetica;fontSize=12;fontColor=#7C3AED;align=center;verticalAlign=middle;" value="provider available only while host service is present" vertex="1">
+          <mxGeometry height="35" width="200" x="52" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="caption" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=14;fontColor=#536078;" value="Only Chelys participates in WebRTC. The recipe continues to use its existing local WebSocket protocol." vertex="1">
+          <mxGeometry height="24" width="860" x="260" y="356" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
