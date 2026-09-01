@@ -80,13 +80,13 @@ The following steps walk through the install to live diagnostics from a local la
 
     ![Copying PRF in TeXlyre](./showcase/walkthrough_passkey_copy.png)
 
-  *TeXlyre generates a WebAuthn/PRF passkey for Chelys; the PRF key shown here is copied into Chelys to derive the shared account room.*
+    *TeXlyre generates a WebAuthn/PRF passkey for Chelys; the PRF key shown here is copied into Chelys to derive the shared account room.*
 
 3. In Chelys, log in with the same username and password and paste the copied PRF key.
 
     ![Logging in to Chelys with the TeXlyre credentials and PRF key](./showcase/walkthough_passkey_paste.png)
 
-  *Chelys pairs with the existing TeXlyre identity; credentials are stored in the system keychain.*
+      *Chelys pairs with the existing TeXlyre identity; credentials are stored in the system keychain.*
 
 4. In Chelys, open **Browse recipes** and add one of the provided recipes.
 
