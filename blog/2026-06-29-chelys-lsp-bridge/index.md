@@ -76,30 +76,30 @@ The following steps walk through the install to live diagnostics from a local la
 
 2. In TeXlyre, register a passkey for Chelys at [texlyre.org/texlyre](https://texlyre.org/texlyre) and copy the resulting PRF key.
 
-![Registering a Chelys passkey in TeXlyre](./showcase/walkthrough_passkey_register.png)
+  ![Registering a Chelys passkey in TeXlyre](./showcase/walkthrough_passkey_register.png)
 
 
-![Copying PRF in TeXlyre](./showcase/walkthrough_passkey_copy.png)
+  ![Copying PRF in TeXlyre](./showcase/walkthrough_passkey_copy.png)
 
-*TeXlyre generates a WebAuthn/PRF passkey for Chelys; the PRF key shown here is copied into Chelys to derive the shared account room.*
+  *TeXlyre generates a WebAuthn/PRF passkey for Chelys; the PRF key shown here is copied into Chelys to derive the shared account room.*
 
 3. In Chelys, log in with the same username and password and paste the copied PRF key.
 
-![Logging in to Chelys with the TeXlyre credentials and PRF key](./showcase/walkthough_passkey_paste.png)
+  ![Logging in to Chelys with the TeXlyre credentials and PRF key](./showcase/walkthough_passkey_paste.png)
 
-*Chelys pairs with the existing TeXlyre identity; credentials are stored in the system keychain.*
+  *Chelys pairs with the existing TeXlyre identity; credentials are stored in the system keychain.*
 
 4. In Chelys, open **Browse recipes** and add one of the provided recipes.
 
-![Browsing a recipe in Chelys](./showcase/walkthrough_recipe_add.svg)
+  ![Browsing a recipe in Chelys](./showcase/walkthrough_recipe_add.svg)
 
-*The recipe browser lists available providers; adding one prepares it to be installed as either a system process or a Docker container.*
+  *The recipe browser lists available providers; adding one prepares it to be installed as either a system process or a Docker container.*
 
 5. With the recipe added, click **Install** and choose **Docker container**.
 
-![Installing the JabRef recipe as a Docker container](./showcase/walkthrough_recipe_docker.svg)
+  ![Installing the JabRef recipe as a Docker container](./showcase/walkthrough_recipe_docker.svg)
 
-*Installing a recipe in Docker mode; the plugin system builds the image and resolves its dependencies.*
+  *Installing a recipe in Docker mode; the plugin system builds the image and resolves its dependencies.*
 
 6. Once installation succeeds, click **Run**.
 
@@ -107,57 +107,57 @@ The following steps walk through the install to live diagnostics from a local la
 
 8. Edit a BibTeX entry and introduce an integrity problem, such as a duplicate citation key or a malformed fields:
 
-```bib
-@article{knuth1984,
-  author  = {Donald E. Knuth},
-  title   = {Literate Programming},
-  journal = {The Computer Journal},
-  year    = {1984},
-  volume  = {27},
-  number  = {2},
-  pages   = {97--111}
-}
-
-@article{knuth1984,
-  author  = {Leslie Lamport},
-  title   = {LaTeX: A Document Preparation System},
-  year    = {1986}
-}
-
-@book{goossens1993
-  author    = {Michel Goossens and Frank Mittelbach and Alexander Samarin},
-  title     = {The LaTeX Companion},
-  publisher = {Addison-Wesley},
-  year      = {1993},
-}
-
-@article{lamport1994,
-  author  = {Leslie Lamport}
-  title   = {LaTeX: A Document Preparation System},
-  journal = {Addison-Wesley},
-  year    = {nineteen ninety-four},
-}
-
-@inproceedings{,
-  author    = {Jane Doe},
-  title     = {An Untitled Contribution},
-  booktitle = {Proceedings of Nowhere},
-  year      = {2020}
-}
-
-@misc{oren2021,
-  author = {Oren Patashnik},
-  title  = {BibTeXing},
-  Year   = {1988},
-  url    = {https://example.org/bibtex}
-}
-```
-
-With `jabls` running, the issue is underlined as a diagnostic, and hovering or clicking it shows the reported problem.
-
-![Live BibTeX diagnostics from jabls in the TeXlyre editor](./showcase/walkthrough_live_diagnostics.svg)
-
-*Diagnostics produced by the local `jabls` server, relayed through Chelys, appear inline in the TeXlyre editor.*
+  ```bib
+  @article{knuth1984,
+    author  = {Donald E. Knuth},
+    title   = {Literate Programming},
+    journal = {The Computer Journal},
+    year    = {1984},
+    volume  = {27},
+    number  = {2},
+    pages   = {97--111}
+  }
+  
+  @article{knuth1984,
+    author  = {Leslie Lamport},
+    title   = {LaTeX: A Document Preparation System},
+    year    = {1986}
+  }
+  
+  @book{goossens1993
+    author    = {Michel Goossens and Frank Mittelbach and Alexander Samarin},
+    title     = {The LaTeX Companion},
+    publisher = {Addison-Wesley},
+    year      = {1993},
+  }
+  
+  @article{lamport1994,
+    author  = {Leslie Lamport}
+    title   = {LaTeX: A Document Preparation System},
+    journal = {Addison-Wesley},
+    year    = {nineteen ninety-four},
+  }
+  
+  @inproceedings{,
+    author    = {Jane Doe},
+    title     = {An Untitled Contribution},
+    booktitle = {Proceedings of Nowhere},
+    year      = {2020}
+  }
+  
+  @misc{oren2021,
+    author = {Oren Patashnik},
+    title  = {BibTeXing},
+    Year   = {1988},
+    url    = {https://example.org/bibtex}
+  }
+  ```
+  
+  With `jabls` running, the issue is underlined as a diagnostic, and hovering or clicking it shows the reported problem.
+  
+  ![Live BibTeX diagnostics from jabls in the TeXlyre editor](./showcase/walkthrough_live_diagnostics.svg)
+  
+  *Diagnostics produced by the local `jabls` server, relayed through Chelys, appear inline in the TeXlyre editor.*
 
 ## Acknowledgements
 
