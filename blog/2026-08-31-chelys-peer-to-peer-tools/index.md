@@ -60,35 +60,35 @@ The following steps walk through exposing a Chelys typesetter to a collaborator,
 
 2. In Chelys, open **Browse recipes**, add the SILE recipe, and install it as a Docker container (click the dropdown and choose `ghcr.io...` to download a pre-built Docker image instead for a quicker install).
 
-![Chelys recipe browser with the SILE typesetter recipe added and installing in Docker mode](./showcase/walkthrough_sile_install.svg)
+   ![Chelys recipe browser with the SILE typesetter recipe added and installing in Docker mode](./showcase/walkthrough_sile_install.svg)
 
 3. Before starting the service, switch its transport from the local WebSocket endpoint to a WebRTC room. The transport is resolved when the service starts, so a running service has to be stopped and started again for a change to take effect.
 
-![Chelys share options for the SILE recipe with the transport set to a WebRTC room instead of the local WebSocket endpoint](./showcase/walkthrough_share_transport.svg)
+   ![Chelys share options for the SILE recipe with the transport set to a WebRTC room instead of the local WebSocket endpoint](./showcase/walkthrough_share_transport.svg)
 
 4. Click **Run**. Chelys starts the SILE backend, joins the configured room, and relays the room's service messages to the recipe's local endpoint.
 
 5. In TeXlyre, Alice opens a SILE project ([download example](https://sile-typesetter.org/examples/book.sil) and upload it to TeXlyre SILE project), selects the shared services to offer in it, and sends the collaboration link to Bob.
 
-![TeXlyre project sharing panel listing Alice's running Chelys services with per-project selection](./showcase/walkthrough_project_sharing.svg)
+   ![TeXlyre project sharing panel listing Alice's running Chelys services with per-project selection](./showcase/walkthrough_project_sharing.svg)
 
 6. Bob opens the shared project. SILE appears in his compiler list next to the built-in browser compilers, marked as hosted by Alice. Clicking `use` in the approval toast allows the tools shared by Alice to be used for current and other projects where applicable.
 
-![TeXlyre on Bob's instance showing the 'Use' toast to begin using Alice's SILE typestting compiler](./showcase/walkthrough_remote_use.svg)
+   ![TeXlyre on Bob's instance showing the 'Use' toast to begin using Alice's SILE typestting compiler](./showcase/walkthrough_remote_use.svg)
 
 7. Bob compiles `parshape.sil`. The project files are synchronized to Alice's machine over the service channel, SILE runs there, and the PDF and log are returned to Bob's preview pane.
 
-![TeXlyre on Bob's instance showing the PDF produced by Alice's SILE backend alongside the returned compiler log](./showcase/walkthrough_remote_compile.svg)
+   ![TeXlyre on Bob's instance showing the PDF produced by Alice's SILE backend alongside the returned compiler log](./showcase/walkthrough_remote_compile.svg)
 
 8. If Alice closes the TeXlyre window and keeps Chelys running, the provider remains available to Bob who can still compile using SILE. 
 
 9. Shared tools can be reviewed and revoked from two places. **Collab → Tools** opens the per-project **Shared Tools** dialog, showing tools offered by collaborators with a `Using`/`Ignore` toggle and, under **Shared by me**, the option to share the tools used in the current project.
 
-![TeXlyre Shared Tools dialog reached through the Collab menu, listing Alice's SILE typesetter and the per-project sharing option](./showcase/walkthrough_remote_project_share_options.svg)
+   ![TeXlyre Shared Tools dialog reached through the Collab menu, listing Alice's SILE typesetter and the per-project sharing option](./showcase/walkthrough_remote_project_share_options.svg)
 
-    **Settings → External Tools** manages the same providers account-wide, where a shared entry such as SILE can be disabled (TeXlyre account retains recipe but becomes inactive), edited, removed, or offered to all collaborators regardless of project.
+   **Settings → External Tools** manages the same providers account-wide, where a shared entry such as SILE can be disabled (TeXlyre account retains recipe but becomes inactive), edited, removed, or offered to all collaborators regardless of project.
 
-![TeXlyre External Tools settings showing the SILE typesetter shared by Alice alongside the account-wide sharing option](./showcase/walkthrough_remote_collab_share_options.svg)
+   ![TeXlyre External Tools settings showing the SILE typesetter shared by Alice alongside the account-wide sharing option](./showcase/walkthrough_remote_collab_share_options.svg)
 
 ## Acknowledgements
 
