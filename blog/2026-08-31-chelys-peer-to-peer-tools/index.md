@@ -3,6 +3,7 @@ slug: chelys-peer-to-peer-tools
 title: Peer-to-Peer Chelys Tool Sharing
 authors: [fabawi]
 tags: [texlyre, chelys, lsp, webrtc, yjs, collaboration, peer-to-peer, nlnet]
+image: ./showcase/walkthrough_remote_compile.png
 ---
 
 :::info[Part of the NGI0 Core roadmap]
