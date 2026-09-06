@@ -1,0 +1,158 @@
+.section {
+  margin-bottom: 3rem;
+}
+
+.description {
+  color: var(--ifm-color-emphasis-700);
+  max-width: 48rem;
+}
+
+.platform {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.channels {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.channel:last-child {
+  border-bottom: none;
+}
+
+/* Label + description */
+
+.channelInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.channelLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.channelIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.channelMeta {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Badge / button + command */
+
+.channelActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.badgeLink {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease;
+}
+
+.badgeLink:hover {
+  opacity: 0.85;
+}
+
+.badge {
+  display: block;
+  width: auto;
+  height: 40px;
+}
+
+.command {
+  margin: 0;
+  min-width: 14rem;
+  max-width: 30rem;
+  flex-shrink: 0;
+}
+
+.command>div {
+  margin: 0;
+}
+
+/* Section heading */
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionLogo {
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 996px) {
+  .channel {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .channelActions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .command {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+  .channel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .channelActions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .command {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+}

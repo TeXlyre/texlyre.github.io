@@ -27,6 +27,8 @@ Third-party names, logos, and icons remain the property of their respective owne
 - **Hugging Face** — Hugging Face logo is a trademark of Hugging Face, Inc. [Brand assets](https://huggingface.co/brand)
 - **Lemmy** — logo by Andy Cuccaro, CC BY-SA 4.0; modified by Fares Abawi under the same license.
 - **PeerTube** — logo by Aegis Icons, CC BY-SA 4.0; modified by Fares Abawi under the same license.
+- **NixOS** — "NixOS Logo" by [Simon Frankau](https://github.com/simon-frankau), [Tim Cuthbertson](https://github.com/timbertson), and [Daniel Baker](https://github.com/djacu), maintained by the [NixOS Marketing Team](https://nixos.org/community/teams/marketing/), from [nixos/branding](https://github.com/NixOS/branding), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); used unmodified.
+- **Microsoft Store** — "Get it from Microsoft" badge artwork provided by Microsoft via the [Store badge creator](https://apps.microsoft.com/store/app-badge/) and used unmodified as a link to the product listing; Microsoft, Windows, and Microsoft Store are trademarks of the Microsoft group of companies. [Trademark guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks)
 - **Docusaurus** — logo by Meta Open Source, MIT. [Docusaurus](https://docusaurus.io/)
 
 

@@ -45,11 +45,15 @@ function HomepageHeader() {
           </Link>
           <Link
             className={clsx("button button--primary button--lg", styles.downloadButton)}
-            to="https://github.com/TeXlyre/chelys/releases/latest">
+            to="/download#chelys">
             <img src="/img/chelys-logo.svg" alt="" className={styles.buttonLogo} />
             Download Chelys
           </Link>
         </div>
+        <p className={styles.installNote}>
+          Windows, macOS, and Linux &middot; Microsoft Store, nixpkgs, and direct downloads &middot;{' '}
+          <Link to="/download">all install options</Link>
+        </p>
       </div>
     </header>
   );

@@ -69,6 +69,18 @@
   color: var(--ifm-description-color);
 }
 
+.installNote {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+  font-size: 0.9375rem;
+  opacity: 0.9;
+}
+
+.installNote a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .buttonLogo {
   width: 20px;
   height: 20px;

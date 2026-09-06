@@ -159,6 +159,11 @@ const config: Config = {
           className: 'header-sponsor-link',
         },
         {
+          to: '/download',
+          label: 'Download',
+          position: 'right',
+        },
+        {
           href: 'https://texlyre.org/texlyre',
           label: 'Login to TeXlyre',
           position: 'right',
@@ -215,7 +220,11 @@ const config: Config = {
             },
             {
               label: 'Download Chelys',
-              href: 'https://github.com/TeXlyre/chelys/releases/latest',
+              to: '/download#chelys',
+            },
+            {
+              label: 'TeXlyre on NixOS',
+              to: '/download#texlyre',
             },
             {
               label: 'Chelys Plugin Recipes',
