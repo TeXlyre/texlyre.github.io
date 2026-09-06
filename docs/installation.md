@@ -8,7 +8,7 @@ Get started with TeXlyre development in minutes.
 
 ## Prerequisites
 
-- **Node.js** 18 or higher
+- **Node.js** 24 or higher
 - **Modern browser** with File System Access API support (Chrome, Edge recommended)
 - **Git** for cloning the repository
 
