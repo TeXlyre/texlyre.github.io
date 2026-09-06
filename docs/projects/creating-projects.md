@@ -84,7 +84,7 @@ Switching engines mid-project can surface package incompatibilities, so it is wo
 
 ### Output Format
 
-Choose the Typst output format to render your Typst documents. Currently, PDF rendering is the default output format, however, TeXlyre also supports SVG and HTML rendering. 
+Typst documents render as PDF, Canvas (PDF), or Canvas (SVG). PDF is the default, and the default for new compilations is set in <SettingsPath path="Compilation > Typst > Default output format" />. See [Output Formats](../typst-compilation/output-formats) for the trade-offs between them.
 
 Note that including SVG figures in your Typst document may not render PDF in full or may be distorted due to Typst's built-in conversion engine. 
 

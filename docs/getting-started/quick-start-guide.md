@@ -128,7 +128,7 @@ If compilation errors occur, the Log tab displays detailed error information. Te
 
 TeXlyre defaults to pdfTeX for most documents, which handles standard LaTeX content well. For documents requiring Unicode support or advanced typography, switch to XeTeX or LuaTeX using the engine selector in the compilation controls.
 
-The platform automatically detects your main file when you have only one `.tex` file. For complex projects with multiple LaTeX files, you can manually specify the main file in the compilation settings.
+The platform automatically detects your main file when you have only one `.tex` file. For complex projects with multiple LaTeX files, you can select the main file from the compile menu.
 
 See [LaTeX Compilation](../latex-compilation/overview) for supported engines, packages, bibliography tools, and fonts.
 
@@ -137,7 +137,7 @@ See [LaTeX Compilation](../latex-compilation/overview) for supported engines, pa
 
 TeXlyre uses the Typst compiler which provides fast compilation with native Unicode support. The default output format is PDF.
 
-The platform automatically detects your main file when you have only one `.typ` file. For complex projects with multiple Typst files, you can manually specify the main file in the compilation settings.
+The platform automatically detects your main file when you have only one `.typ` file. For complex projects with multiple Typst files, you can select the main file from the compile menu.
 
 </TabItem>
 </Tabs>

@@ -12,7 +12,7 @@ The project dashboard serves as your primary workspace for accessing and managin
 
 Grid view displays projects as cards with prominent titles, descriptions, and metadata. This visual format works well when you recognize projects by name or visual characteristics and prefer browsing through your collection.
 
-List view presents projects in a compact tabular format with sortable columns for name, creation date, and modification time. This format enables quick scanning of many projects and efficient sorting by various criteria.
+List view presents projects in a compact tabular format with sortable columns for name, creation date, and modification time. This format enables quick scanning of many projects and efficient sorting by various criteria. Both modes provide the same project actions, so switch between them based on your current task.
 
 ### Project Information Display
 
@@ -66,15 +66,7 @@ Use date-based sorting in combination with search and filtering to locate projec
 
 Consider creating systematic search and filter combinations for recurring organizational needs. Document useful filter patterns to recreate them efficiently when needed.
 
-## View Modes and Sorting
-
-### Grid vs List Views
-
-Grid view provides visual browsing that works well when you recognize projects by name and prefer seeing multiple projects simultaneously. The card format displays project information prominently with clear visual separation.
-
-List view enables efficient scanning of project metadata with sortable columns for different organizational criteria. This format works well when managing many projects or when you need to sort by specific attributes.
-
-Switch between view modes based on your current task and personal preference. Both modes provide access to the same project actions and maintain consistent functionality.
+## Project Operations and Sorting
 
 ### Sorting Options
 

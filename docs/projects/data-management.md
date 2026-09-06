@@ -88,7 +88,7 @@ Verify that any configured integrations like GitHub tokens or bibliography servi
 
 ### Deletion Process
 
-Account deletion permanently removes all your TeXlyre data including projects, files, documents, settings, and collaboration history. Access this feature through Profile Settings, but consider the irreversible nature of this action.
+Account deletion permanently removes all your TeXlyre data including projects, files, documents, settings, and collaboration history. Access this feature through the "Delete Account" option in the user menu, but consider the irreversible nature of this action.
 
 The deletion process requires your current password for security verification and asks you to type a confirmation phrase to prevent accidental deletions. These safeguards ensure you fully understand the consequences of account removal.
 

@@ -8,7 +8,7 @@ TeXlyre can back up your projects to Codeberg repositories using an access token
 
 ## Generating a Token
 
-Navigate to [Codeberg → User Settings → Applications](https://codeberg.org/user/settings/applications).
+Navigate to <SettingsPath app="Codeberg" href="https://codeberg.org/user/settings/applications" path="User settings > Applications" />.
 
 ![Codeberg access token creation](../img/codeberg-token-create.png)
 
@@ -45,5 +45,5 @@ Click **Generate token** and copy the token immediately as it will not be shown 
 8. Click **Unlock**.
 
 :::note[Changing the Endpoint]
-To change the connected repository endpoint, navigate to **Settings → Backup → Forgejo**.
+To change the connected repository endpoint, open <SettingsPath path="Backup > Forgejo > API endpoint" />. Codeberg is served by the Forgejo integration.
 :::

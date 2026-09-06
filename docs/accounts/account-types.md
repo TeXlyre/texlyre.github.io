@@ -18,13 +18,29 @@ Guest accounts support file uploads, project organization, and sharing capabilit
 
 ### Guest Account Limitations
 
-Guest sessions are temporary by design. A guest account expires 24 hours after it is created, and TeXlyre removes the expired session and its data the next time the application starts. Closing the browser does not end the session early; the 24-hour window continues to run.
+Guest sessions are temporary by design. A guest account expires 24 hours after it is created, and TeXlyre removes the expired session and its data the next time the application starts. Closing the browser does not end the session early and the 24-hour window continues to run.
 
 File system backup features are disabled for guest accounts. This means you cannot connect TeXlyre to local folders or use automatic synchronization with cloud storage services.
 
 Profile settings, account export, and account deletion are unavailable while using a guest session, since each of those depends on a persistent account. Chelys connection is also unavailable to guests.
 
 Guest users appear as "Guest User" in collaborative sessions, with no chosen username on display. This affects how others see your contributions in shared projects and chat discussions.
+
+### Upgrading from Guest to Full Account
+
+Guest sessions can be converted to [full accounts](#full-accounts) at any time without losing current work. TeXlyre preserves all projects, recent changes, and workspace state (properties, settings, and currently opened file or document) during the upgrade process.
+
+#### Upgrade Process
+
+Look for upgrade prompts in the interface, or access the upgrade option through the user menu in the top-right corner. The upgrade process requires choosing a username and password for your new account.
+
+During upgrade, TeXlyre automatically transfers all current projects to permanent storage. Your workspace state, including open documents and recent files, remains intact after the upgrade completes.
+
+#### Post-Upgrade Features
+
+After upgrading, you immediately gain access to file system backup, persistent settings, profile customization, and Chelys connection. Previously unavailable features become active without requiring application restart or re-login.
+
+Your collaboration identity changes from "Guest User" to your chosen username in future collaborative sessions. Existing collaboration connections remain active during the upgrade process.
 
 ### When to Use Guest Accounts
 
@@ -48,7 +64,7 @@ Full accounts provide persistent storage and access to all TeXlyre features. Acc
 
 ### Full Account Benefits
 
-Your projects persist indefinitely in your browser's local storage. This enables long-term project development, complex document workflows, and gradual accumulation of a personal LaTeX/Typst library.
+Your projects persist in your browser's local storage. This enables long-term project development, complex document workflows, and gradual accumulation of a personal LaTeX/Typst library.
 
 Full accounts unlock file system backup capabilities, allowing you to connect TeXlyre to local folders for automatic synchronization. This feature works with cloud storage services to provide cross-device access and automatic backup.
 
@@ -70,15 +86,15 @@ The local storage approach means your account security depends primarily on your
 
 ## Chelys Accounts
 
-Chelys accounts add a passkey to a full account. The passkey is what allows two devices running TeXlyre to recognise each other as the same person and keep account data in step, with no TeXlyre server involved in the exchange.
+Chelys accounts add a passkey to a full account. The passkey is what allows two devices running TeXlyre to recognise each other as the same person and keep account data in step, without a TeXlyre server involved in the exchange.
 
-### What a Chelys Account Does
+### Purpose of Chelys Accounts
 
 Connecting Chelys places your account settings, properties, encrypted secrets, and records in an end-to-end encrypted synchronisation room. Any other device that connects with the same passkey, username, and password joins the same room and receives those stores.
 
-Projects and documents are not part of this synchronisation. Chelys keeps your account configuration consistent across devices; project files continue to travel through file system backup, collaboration URLs, or account export.
+Projects and documents are not part of this synchronisation. Chelys keeps your account configuration consistent across devices, meaning that project files will continue to work (synchronize) through file system backup, collaboration URLs, and account export.
 
-### How the Passkey Works
+### Using Passkey
 
 TeXlyre uses the WebAuthn PRF extension. When you enrol, your authenticator creates a discoverable credential for TeXlyre and returns a secret value derived from that credential. The credential itself stays inside the authenticator and cannot be exported.
 
@@ -86,15 +102,27 @@ The room identifier and encryption key are derived from three inputs together: y
 
 Enrolment requires an authenticator that supports the PRF extension. TeXlyre reports an error during enrolment if the authenticator lacks it.
 
-:::note[Connecting without a passkey]
-Chelys can generate a temporary key for devices with no PRF-capable authenticator. Open TeXlyre with that key appended to the URL as `#tempPrf:<key>`, and it substitutes for the passkey when deriving the room. When logged out (no existing session), log in with the same username and password used un Chelys. When logged in an existing session a prompt asks for your password to complete the connection. TeXlyre strips the key from the address bar on load and discards it once the connection is made, keeping only the derived room keys, so the device stays connected across reloads until you disconnect or log out of Chelys. Treat the generated link with `#tempPrf:<key>` as a credential: anyone who has it needs only your username and password to reach the room.
-:::
-
 ### Connecting Chelys
 
-From the login screen, "Log in to Chelys" prompts for your passkey alongside your username and password. If no matching account exists on the device, TeXlyre offers to create one and enrol a passkey in the same step.
+There are two ways to supply the third input to the key derivation: a passkey held by an authenticator, or a temporary key generated by Chelys for devices that have no PRF-capable authenticator.
 
-From an existing session, open Profile Settings and use the Chelys connection section. Enrolling asks for your current password to confirm the account, then creates the passkey. If a passkey for that username already exists on the device, use "Log in to Chelys" to reconnect it.
+#### With a passkey
+
+From the login screen, **Log in to Chelys** prompts for your passkey alongside your username and password. If no matching account exists on the device, TeXlyre offers to create one and enrol a passkey in the same step.
+
+From an existing session, open Profile Settings and use the Chelys connection section. Enrolling asks for your current password to confirm the account, then creates the passkey. If a passkey for that username already exists on the device, use **Log in to Chelys** to reconnect it. **Get Chelys key** displays the value derived from your passkey so it can be copied into your local Chelys app.
+
+#### With a temporary key
+
+Chelys can generate a temporary key for a device whose authenticator does not support the PRF extension. Open TeXlyre with the key appended to the address as `#tempPrf:<key>` and it substitutes for the passkey when deriving the room.
+
+With no session open, the login screen shows **Log in to Chelys** marked as temporary; sign in with the same username and password the account uses in Chelys. Within an existing session, a prompt asks for your password to complete the connection.
+
+TeXlyre strips the key from the address bar on load and discards it once the connection is made, keeping only the derived room keys, so the device stays connected across reloads until you disconnect or log out of Chelys.
+
+:::warning[The temporary link is a credential]
+Anyone holding a `#tempPrf:<key>` link needs only your username and password to reach the synchronisation room. Send it over a channel you trust and do not reuse it.
+:::
 
 Disconnecting Chelys stops synchronisation and clears the room keys from the device. Your local account, projects, and settings are unaffected.
 
@@ -108,40 +136,16 @@ Passkeys held in a platform authenticator, such as a phone or a password manager
 Chelys synchronises account configuration; file system backup synchronises project files. Using both gives cross-device access to settings and documents together.
 :::
 
-## Upgrading from Guest to Full Account
-
-Guest sessions can be converted to full accounts at any time without losing current work. TeXlyre preserves all projects, recent changes, and workspace state (properties, settings, and currently opened file or document) during the upgrade process.
-
-### Upgrade Process
-
-Look for upgrade prompts in the interface, or access the upgrade option through the user menu in the top-right corner. The upgrade process requires choosing a username and password for your new account.
-
-During upgrade, TeXlyre automatically transfers all current projects to permanent storage. Your workspace state, including open documents and recent files, remains intact after the upgrade completes.
-
-### Post-Upgrade Features
-
-After upgrading, you immediately gain access to file system backup, persistent settings, profile customization, and Chelys connection. Previously unavailable features become active without requiring application restart or re-login.
-
-Your collaboration identity changes from "Guest User" to your chosen username in future collaborative sessions. Existing collaboration connections remain active during the upgrade process.
-
 ## Account Migration
 
 TeXlyre accounts are tied to specific browser profiles. Connecting Chelys keeps account configuration in step across devices, and the platform provides export and import capabilities for moving complete accounts, including projects.
 
-### Export Your Account
+Full account exports include your account record, projects, settings, and preferences. Use the "Export Account" option in the user menu in the top-right corner to create a complete backup ZIP file, and the "Import Account" option on the login screen to restore it elsewhere.
 
-Full account exports include your account record, projects, settings, and preferences. Use the "Export Account" option in your profile settings to create a complete backup ZIP file.
-
-Export files are self-contained and can be imported into any TeXlyre instance. This enables migration between browsers, computers, or even different TeXlyre installations.
-
-### Import Process
-
-Import account data using the "Import Account" option from the login screen. Select your exported ZIP file, and TeXlyre will restore all projects and settings to the new browser location.
-
-The import process preserves collaboration URLs, meaning shared projects continue working after migration. However, active collaboration sessions may need to be re-established.
+Export files are self-contained and can be imported into any TeXlyre instance, which enables migration between browsers, computers, or different TeXlyre installations. See [Data Management](../projects/data-management) for export scope options, import behaviour, and migration verification.
 
 :::tip[Cross-Device Usage]
-For regular cross-device usage, combine a Chelys connection for account configuration with file system backup and cloud storage for project files. Export and import suit one-off moves between browsers or machines.
+For regular cross-device usage, combine a Chelys connection for account configuration with file system backup and cloud storage for project files. Export and import suit one-time moves between browsers or machines.
 :::
 
 ## Privacy Considerations
@@ -150,6 +154,6 @@ All three account types maintain TeXlyre's private local-first approach. Your do
 
 Guest accounts provide maximum privacy since the session and its data are removed once the 24-hour window closes. Full accounts store data locally, maintaining privacy while enabling persistence.
 
-Chelys accounts add one exchange over the network, and it carries account configuration only. The room identifier and encryption key are derived on your device from your username, password, and passkey, so the synchronisation room's contents stay readable only to devices holding all three.
+Chelys accounts add one exchange over the network, and it carries **account configuration only**. The room identifier and encryption key are derived on your device from your username, password, and passkey, so the synchronisation room's contents stay readable only to devices holding all three.
 
 The local-first architecture means your data privacy depends on your device security, with no external service policies governing it.

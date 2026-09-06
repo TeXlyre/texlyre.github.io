@@ -10,7 +10,7 @@ TeXlyre can connect to your Zotero library to import references directly into yo
 
 Your **User ID** is a numeric identifier distinct from your Zotero username. You must provide it alongside your API key.
 
-Navigate to [Zotero → Settings → Security](https://www.zotero.org/settings/security).
+Navigate to <SettingsPath app="Zotero" href="https://www.zotero.org/settings/security" path="Settings > Security" />.
 
 ![Zotero security settings showing Applications section](../img/zotero-security-settings.png)
 
@@ -59,5 +59,5 @@ The Zotero integration is accessible directly from the editor header when a LaTe
 7. Click **Unlock**.
 
 :::warning[User ID vs. Username]
-The **User ID** is a numeric value found in **Settings → Security → Applications**, not your Zotero login username. Using your username instead of the ID will cause authentication to fail.
+The **User ID** is a numeric value found in <SettingsPath app="Zotero" path="Settings > Security > Applications" />, not your Zotero login username. Using your username instead of the ID will cause authentication to fail.
 :::

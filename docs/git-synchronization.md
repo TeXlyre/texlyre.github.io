@@ -18,7 +18,7 @@ This means a TeXlyre project is not locked inside the application. After pushing
 
 **Import** reads the selected branch and applies the repository state back into TeXlyre. It can restore missing projects, update existing projects, import documents and files, and restore deleted-file markers. Because import applies the remote state locally, it can overwrite local changes that have not been pushed first.
 
-By default, a successful push is followed by an automatic import when **Import After Push** is enabled in the Git integration settings. This push-then-import flow is the recommended synchronization path: the push preserves local changes, handles remote conflicts when needed, and the import refreshes TeXlyre from the final committed repository state.
+By default, a successful push is followed by an automatic import when **Import after push** is enabled for the connected integration under <SettingsPath path="Backup" />. This push-then-import flow is the recommended synchronization path: the push preserves local changes, handles remote conflicts when needed, and the import refreshes TeXlyre from the final committed repository state.
 
 ![Merge conflict dialog showing local, remote, and merged changes](./img/git-merge-modal.png)
 

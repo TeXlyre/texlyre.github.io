@@ -8,7 +8,7 @@ TeXlyre can back up your projects to GitHub repositories using a personal access
 
 ## Generating a Token
 
-Navigate to [GitHub → Settings → Developer Settings → Personal access tokens → Tokens (classic)](https://github.com/settings/tokens).
+Navigate to <SettingsPath app="GitHub" href="https://github.com/settings/tokens" path="Settings > Developer settings > Personal access tokens > Tokens (classic)" />.
 
 ![GitHub classic tokens list](../img/github-tokens-list.png)
 
@@ -47,7 +47,7 @@ Click **Generate token** and copy the token immediately as GitHub will not displ
 8. Click **Unlock**.
 
 :::note[Changing the Endpoint]
-To change the connected repository endpoint, navigate to **Settings → Backup → GitHub**.
+To change the connected repository endpoint, open <SettingsPath path="Backup > GitHub > API endpoint" />.
 :::
 
 :::warning[Token Expiry]

@@ -22,7 +22,7 @@ Local compilation provides TeXlyre’s supported in-browser LaTeX and Typst work
 
 Choose your path based on your needs:
 
-**For Quick Exploration**: Start with a guest session to try TeXlyre immediately without any setup. Guest sessions provide full functionality but don't persist after you close your browser.
+**For Quick Exploration**: Start with a guest session to try TeXlyre immediately without any setup. Guest sessions provide full functionality but expire 24 hours after they are created.
 
 **For Regular Use**: Create a full account to save your projects permanently in your browser. You can upgrade from a guest session at any time.
 

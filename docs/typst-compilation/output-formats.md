@@ -1,10 +1,11 @@
 ---
 sidebar_position: 3
+description: Typst compilation produces one of three previews. The default is set in the Typst compilation settings and can be changed per compilation from the compile menu.
 ---
 
 # Output Formats
 
-Typst compilation produces one of three previews. The default is set in Settings ⚙️ → Typst → Default output format and can be changed per compilation from the compile menu.
+Typst compilation produces one of three previews. The default is set in <SettingsPath path="Compilation > Typst > Default output format" /> and can be changed per compilation from the compile menu.
 
 ## PDF
 
@@ -28,11 +29,11 @@ SVG is the format that supports source maps.
 
 With source maps enabled, positions in the SVG output are linked back to the source that produced them, so clicking in the preview moves the cursor to the corresponding place in the document and moving the cursor scrolls the preview. This is the Typst equivalent of SyncTeX.
 
-Source maps require SVG output. They are enabled in Settings ⚙️ → Typst → Enable source map (SVG only) and have no effect on PDF or canvas-PDF output, where no such mapping is produced.
+Source maps require SVG output. They are enabled in <SettingsPath path="Compilation > Typst > Enable source map (SVG only)" /> and have no effect on PDF or canvas-PDF output, where no such mapping is produced.
 
 ## Remote Content
 
-Documents can reference remote images and other remote resources. Fetching them requires a network connection and reveals the request to the remote host, so the behaviour is controlled by Settings ⚙️ → Typst → Allow remote content in Typst output.
+Documents can reference remote images and other remote resources. Fetching them requires a network connection and reveals the request to the remote host, so the behaviour is controlled by <SettingsPath path="Compilation > Typst > Allow remote content in Typst output" />.
 
 With remote content disabled, the reference is dropped and compilation continues. Local project files are unaffected by this setting.
 

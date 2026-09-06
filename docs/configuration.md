@@ -192,7 +192,7 @@ Fork the TeXlyre repository to your GitHub account.
 
 #### Step 2: Enable GitHub Pages
 
-Navigate to repository **Settings** → **Pages** and configure the deployment source.
+Navigate to <SettingsPath app="GitHub" path="Your repository > Settings > Pages" /> and configure the deployment source.
 
 ![GitHub Pages settings showing source configuration](./img/github-pages-settings.png)
 

@@ -80,6 +80,6 @@ Font files stored in a project are not registered with the compiler, and fonts i
 
 ## Browser Sandbox
 
-Typst has no equivalent of `\write18`, so the sandbox imposes the same restrictions a local Typst installation would. The one practical difference is network access: remote images and other remote content are fetched by the browser and can be disabled in Settings, and package downloads require a connection the first time a package version is used.
+Typst has no equivalent of `\write18`, so the sandbox imposes the same restrictions a local Typst installation would. The one practical difference is network access: remote images and other remote content are fetched by the browser and can be disabled in <SettingsPath path="Compilation > Typst > Allow remote content in Typst output" />, and package downloads require a connection the first time a package version is used.
 
 For importing packages, see [Packages](./packages). For choosing between PDF, canvas, and SVG output, see [Output Formats](./output-formats). For tagged and standards-conformant PDFs, see [Accessibility](./accessibility).

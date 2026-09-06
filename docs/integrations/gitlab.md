@@ -8,7 +8,7 @@ TeXlyre can back up your projects to GitLab repositories using a personal access
 
 ## Generating a Token
 
-Navigate to [GitLab → User Settings → Personal access tokens](https://gitlab.com/-/user_settings/personal_access_tokens).
+Navigate to <SettingsPath app="GitLab" href="https://gitlab.com/-/user_settings/personal_access_tokens" path="User settings > Access tokens" />.
 
 Click **Add new token**.
 
@@ -41,7 +41,7 @@ Click **Generate token** and copy the token immediately as GitLab will not displ
 8. Click **Unlock**.
 
 :::note[Self-Hosted GitLab]
-If you use a self-hosted GitLab instance, you can change the API endpoint by navigating to **Settings → Backup → GitLab** and updating the instance URL (e.g. `https://gitlab.example.com`).
+If you use a self-hosted GitLab instance, open <SettingsPath path="Backup > GitLab > API endpoint" /> and set it to your instance (e.g. `https://gitlab.example.com`).
 :::
 
 :::warning[Token Expiry]

@@ -8,7 +8,7 @@ TeXlyre can back up your projects to Gitea repositories using an access token. T
 
 ## Generating a Token
 
-Navigate to your Gitea instance at [Gitea → User Settings → Applications](https://gitea.com/user/settings/applications).
+Navigate to your Gitea instance at <SettingsPath app="Gitea" href="https://gitea.com/user/settings/applications" path="User settings > Applications" />.
 
 ![Gitea access token creation](../img/gitea-token-create.png)
 
@@ -46,5 +46,5 @@ Click **Generate Token** and copy the token immediately since it will not be sho
 9. Click **Unlock**.
 
 :::note[Changing the Endpoint]
-To change the connected repository instance URL, navigate to **Settings → Backup → Gitea**.
+To change the connected repository instance URL, open <SettingsPath path="Backup > Gitea > API endpoint" />.
 :::

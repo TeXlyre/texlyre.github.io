@@ -12,9 +12,9 @@ TeXlyre offers two ways to get started, each suited to different needs and situa
 
 Guest sessions provide immediate access to TeXlyre's full feature set without any registration process. Click "Try as Guest" to begin editing immediately. Guest accounts include all core functionality: document editing, LaTeX/Typst compilation, real-time collaboration, and file management.
 
-The trade-off with guest sessions is persistence. Your projects exist only for the current browser session and disappear when you close the browser or after 24 hours, whichever comes first. Guest sessions also cannot access file system backup features.
+The limitation with guest sessions is persistence and inability to use any plugin requiring API keys (which are stored in a secrets object, protected by your log in password). A guest session expires 24 hours after it is created, and TeXlyre removes it and its data the next time the application starts. Guest sessions also cannot access file system backup features.
 
-Guest sessions work well for trying TeXlyre, collaborating on someone else's project, or working on temporary documents that don't need long-term storage.
+Guest sessions work well for trying TeXlyre, collaborating on someone else's project, or working on temporary documents that don't need long-term storage. See [Account Types](../accounts/account-types) for the full comparison.
 
 ### Full Accounts
 
