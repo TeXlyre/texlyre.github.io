@@ -60,6 +60,12 @@ export const downloadSections: DownloadSection[] = [
         platform: 'Self-host',
         channels: [
           {
+            label: 'Local installation',
+            meta: 'Clone TeXlyre and build or run it directly on your machine',
+            href: '/docs/installation',
+            action: 'Installation guide',
+          },
+          {
             label: 'TeXlyre Infrastructure',
             meta: 'Dockerized deployment of TeXlyre and the supporting servers',
             href: 'https://github.com/texlyre/texlyre-infrastructure',

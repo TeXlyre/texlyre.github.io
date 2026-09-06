@@ -11,8 +11,7 @@ export default function Download(): ReactNode {
       <main className="container margin-vert--lg">
         <Heading as="h1">Download</Heading>
         <p>
-          Chelys is the desktop companion for TeXlyre. TeXlyre itself is a web application: it runs
-          in your browser, and can also be served locally.
+          TeXlyre is a local-first typesetting editor that runs in the browser and can also be served locally. Chelys is its desktop companion, providing locally installed tools and services that TeXlyre can use on your machine.
         </p>
         <DownloadChannels />
       </main>
