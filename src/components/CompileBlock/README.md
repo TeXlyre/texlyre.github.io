@@ -93,7 +93,7 @@ Supported variables (all optional since unset falls through to the defaults abov
 
 | Variable              | Default                    | Meaning                                                        |
 | --------------------- | -------------------------- | -------------------------------------------------------------- |
-| `TYPST_FONT_BASE_URL` | TeXlyre `public/assets/fonts` | Where the font index and files are mirrored from.            |
+| `TYPST_FONT_BASE_URL` | TeXlyre fonts repo `texlyre-font-assets/fonts` | Where the font index and files are mirrored from.            |
 | `TYPST_FONT_EXCLUDE`  | `ColorEmoji\|CJK`          | Case-insensitive regex dropping fonts from the upstream index. |
 
 Set `TYPST_FONT_EXCLUDE=` (empty) to stage TeXlyre's full set.

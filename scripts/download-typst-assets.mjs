@@ -7,7 +7,7 @@ const require = createRequire(import.meta.url);
 const OUTPUT_ROOT = process.argv[2] || './static/core';
 const FONT_BASE_URL =
     process.env.TYPST_FONT_BASE_URL ||
-    'https://raw.githubusercontent.com/TeXlyre/texlyre/main/public/assets/fonts';
+    'https://raw.githubusercontent.com/TeXlyre/texlyre-font-assets/main/fonts';
 const FONT_EXCLUDE =
     process.env.TYPST_FONT_EXCLUDE === undefined ? 'ColorEmoji|CJK' : process.env.TYPST_FONT_EXCLUDE;
 
@@ -45,7 +45,7 @@ async function downloadFonts() {
         try {
             await fs.access(destination);
             continue;
-        } catch {}
+        } catch { }
 
         const response = await fetch(`${FONT_BASE_URL}/${encodeURIComponent(font)}`);
         if (!response.ok) {
