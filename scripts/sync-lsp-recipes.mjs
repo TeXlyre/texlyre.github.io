@@ -12,10 +12,11 @@ fs.rmSync(path.join(DOCS, "lsp-with-texlyre.md"), { force: true });
 const yamlQuote = (s) =>
     `"${String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 
-const writeDoc = (outPath, title, sourceMd) => {
+const writeDoc = (outPath, title, sourceMd, sidebarPosition) => {
     const fm = [
         "---",
         `title: ${yamlQuote(title)}`,
+        ...(sidebarPosition ? [`sidebar_position: ${sidebarPosition}`] : []),
         "---",
         "",
         "",
@@ -33,6 +34,7 @@ writeDoc(
     path.join(DOCS, "lsp-with-texlyre.md"),
     "LSP with TeXlyre",
     fs.readFileSync(path.join(SRC, "README.md"), "utf8"),
+    10,
 );
 
 /**
@@ -47,6 +49,7 @@ fs.writeFileSync(
     JSON.stringify(
         {
             label: "Supported LSP",
+            position: 11,
             link: {
                 type: "generated-index",
                 title: "Supported LSP",

@@ -1,6 +1,7 @@
 ---
-## sidebar_position: 4
+sidebar_position: 4
 ---
+
 # Accessibility
 
 Typst can produce tagged PDFs that include document structure, so assistive software can announce headings, lists, tables, and figures as the distinct elements they are. TeXlyre exposes the PDF version, conformance standards, and tagging as compile options.

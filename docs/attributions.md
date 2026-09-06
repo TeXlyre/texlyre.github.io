@@ -1,5 +1,6 @@
 ---
 title: Attributions
+sidebar_position: 14
 ---
 
 ## Icons

@@ -1,3 +1,7 @@
+---
+sidebar_position: 13
+---
+
 # Configuration
 
 TeXlyre uses a centralized configuration system that generates runtime files from a single source of truth: `texlyre.config.ts`.

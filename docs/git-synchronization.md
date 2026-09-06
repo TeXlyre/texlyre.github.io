@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 # Git Synchronization
 
 TeXlyre can synchronize projects with Git repositories through its Git integrations, including GitHub, GitLab, Gitea, and Forgejo. Each integration connects TeXlyre to a repository and branch, then stores project data in a regular Git file layout that can also be edited outside TeXlyre.
