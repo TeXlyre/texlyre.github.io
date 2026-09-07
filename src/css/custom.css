@@ -71,16 +71,43 @@
   overflow-wrap: anywhere;
 }
 
-.themeable-icon {
+/*
+ * Only icons with a clear one-color treatment opt into theme switching.
+ * Add .themeable-icon to opt another asset in, or .preserve-icon-color
+ * to explicitly keep its native brand colors.
+ */
+.themeable-icon,
+img[src$='/github.svg'],
+img[src$='/gitlab.svg'],
+img[src$='/crowdin.svg'] {
   filter: var(--texlyre-icon-dark-filter);
 }
 
 html[data-theme='dark'] .themeable-icon,
-.footer .themeable-icon {
+html[data-theme='dark'] img[src$='/github.svg'],
+html[data-theme='dark'] img[src$='/gitlab.svg'],
+html[data-theme='dark'] img[src$='/crowdin.svg'],
+.footer .themeable-icon,
+.footer img[src$='/github.svg'],
+.footer img[src$='/gitlab.svg'],
+.footer img[src$='/crowdin.svg'] {
   filter: var(--texlyre-icon-light-filter);
 }
 
-.themeable-icon.themeable-icon--preserve-color {
+.preserve-icon-color,
+.themeable-icon.preserve-icon-color,
+.footer .preserve-icon-color {
+  filter: none !important;
+}
+
+/* Brand marks whose color/gradient is part of their identity stay untouched. */
+img[src$='/codeberg.svg'],
+img[src$='/npm.svg'],
+img[src$='/huggingface.svg'],
+img[src$='/reddit.svg'],
+img[src$='/lemmy.svg'],
+img[src$='/youtube.svg'],
+img[src$='/peertube.svg'] {
   filter: none !important;
 }
 
