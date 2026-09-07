@@ -41,6 +41,18 @@
   color: white;
 }
 
+:global(html[data-theme='dark']) .sampleButton {
+  background-color: #566276;
+  border-color: #566276;
+  color: white;
+}
+
+:global(html[data-theme='dark']) .sampleButton:hover {
+  background-color: #647186;
+  border-color: #647186;
+  color: white;
+}
+
 .launchButtonContainer {
   display: flex;
   flex-wrap: wrap;

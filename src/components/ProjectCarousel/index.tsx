@@ -53,8 +53,8 @@ const projects: Project[] = [
     {
         title: 'CodeMirror LaTeX Visual',
         description: 'Visual editing enhancements for LaTeX in CodeMirror',
-        image: 'img/codemirror-latex-visual.png',
-        link: 'https://texlyre.org/codemirror-latex-visual/',
+        image: 'img/codemirror-visual-markup.png',
+        link: 'https://texlyre.org/codemirror-visual-markup/',
         experimental: true,
     },
     {
