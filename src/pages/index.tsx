@@ -51,7 +51,7 @@ function HomepageHeader() {
           </Link>
         </div>
         <p className={styles.installNote}>
-          Windows, macOS, and Linux &middot; Microsoft Store, nixpkgs, and direct downloads &middot;{' '}
+          Windows, macOS, and Linux &middot; Microsoft Store, nixpkgs, and others &middot;{' '}
           <Link to="/download">all install options</Link>
         </p>
       </div>

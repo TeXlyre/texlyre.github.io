@@ -127,12 +127,31 @@ const config: Config = {
     ],
   ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: false,
+        docsRouteBasePath: '/docs',
+        blogRouteBasePath: '/blog',
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 8,
+      },
+    ],
+  ],
+
   themeConfig: {
     image: 'img/main_showcase_dark.png',
     metadata: [
       { name: 'keywords', content: 'LaTeX editor, Typst editor, collaborative editor, local-first, open-source, web editor, LaTeX online, Typst online' },
       { name: 'description', content: 'TeXlyre is a local-first LaTeX and Typst collaborative web editor. Write, compile, and collaborate on LaTeX and Typst documents directly in your browser.' },
     ],
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'TeXlyre',
       logo: {
@@ -148,11 +167,6 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/texlyre/texlyre',
-          label: 'GitHub',
-          position: 'left',
-        },
-        {
           href: 'https://github.com/sponsors/texlyre',
           label: 'Sponsor',
           position: 'left',
@@ -167,6 +181,12 @@ const config: Config = {
           href: 'https://texlyre.org/texlyre',
           label: 'Login to TeXlyre',
           position: 'right',
+        },
+        {
+          href: 'https://github.com/texlyre/texlyre',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
