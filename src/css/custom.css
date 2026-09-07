@@ -17,8 +17,8 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --texlyre-surface-background: #0d7ea4;
   --texlyre-surface-color: #fff;
-  --texlyre-icon-dark-filter: grayscale(1) brightness(0.55) contrast(100);
-  --texlyre-icon-light-filter: grayscale(1) brightness(0.55) contrast(100) invert(1);
+  --texlyre-icon-dark-filter: brightness(0) saturate(100%);
+  --texlyre-icon-light-filter: brightness(0) saturate(100%) invert(1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -71,8 +71,17 @@
   overflow-wrap: anywhere;
 }
 
-.footer img[src^='/img/icons/'] {
-  filter: var(--texlyre-icon-light-filter) !important;
+.themeable-icon {
+  filter: var(--texlyre-icon-dark-filter);
+}
+
+html[data-theme='dark'] .themeable-icon,
+.footer .themeable-icon {
+  filter: var(--texlyre-icon-light-filter);
+}
+
+.themeable-icon.themeable-icon--preserve-color {
+  filter: none !important;
 }
 
 .experimental-badge,
