@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" modified="2026-11-13T00:00:00.000Z" agent="TeXlyre" version="24.7.17" type="device">
+  <diagram id="texlyre-remote-storage" name="Architecture">
+    <mxGraphModel dx="1380" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1320" pageHeight="405" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="element-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFDFF;strokeColor=#2463EB;strokeWidth=2.5;" vertex="1" parent="1">
+          <mxGeometry x="22.0" y="26.0" width="335" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="element-2" value="TeXlyre browser" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=22.0;fontColor=#2463EB;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="70.9" y="45.2" width="237.1" height="30.8" as="geometry" />
+        </mxCell>
+        <mxCell id="element-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2463EB;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="105.0" width="279" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="element-4" value="Local project" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=19.0;fontColor=#2463EB;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="98.8" y="125.5" width="181.5" height="26.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-5" value="Documents and files" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=15.0;fontColor=#172033;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="86.0" y="157.8" width="207.0" height="21.0" as="geometry" />
+        </mxCell>
+        <mxCell id="element-6" value="TeXlyre-managed projects" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#536078;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="68.9" y="181.9" width="241.1" height="19.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="74.0" y="238.0" width="231" height="51" as="geometry" />
+        </mxCell>
+        <mxCell id="element-8" value="Encrypt / decrypt" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=16.0;fontColor=#2463EB;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="90.4" y="242.7" width="198.2" height="22.4" as="geometry" />
+        </mxCell>
+        <mxCell id="element-9" value="AES-256-GCM" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=13.0;fontColor=#2463EB;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="133.6" y="265.0" width="111.8" height="18.2" as="geometry" />
+        </mxCell>
+        <mxCell id="element-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FBFEFC;strokeColor=#16835F;strokeWidth=2.5;" vertex="1" parent="1">
+          <mxGeometry x="552.0" y="26.0" width="745" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="element-11" value="Chelys-managed Garage recipe" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=22.0;fontColor=#16835F;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710.1" y="45.2" width="428.7" height="30.8" as="geometry" />
+        </mxCell>
+        <mxCell id="element-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#16835F;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="578.0" y="105.0" width="285" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="element-13" value="Storage bridge" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=19.0;fontColor=#16835F;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="623.4" y="127.5" width="194.2" height="26.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-14" value="TeXlyre storage protocol" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=15.0;fontColor=#172033;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="591.9" y="166.8" width="257.2" height="21.0" as="geometry" />
+        </mxCell>
+        <mxCell id="element-15" value="WebSocket endpoint" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#536078;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="628.1" y="190.9" width="184.8" height="19.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-16" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF7F1;strokeColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="618.0" y="243.0" width="205" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="element-17" value="Managed by Chelys" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#16835F;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="632.8" y="253.9" width="175.5" height="19.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-18" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C56A18;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="985.0" y="105.0" width="282" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="element-19" value="Garage storage" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=19.0;fontColor=#C56A18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1028.9" y="127.5" width="194.2" height="26.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-20" value="S3 object storage" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=15.0;fontColor=#172033;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1032.6" y="166.8" width="186.9" height="21.0" as="geometry" />
+        </mxCell>
+        <mxCell id="element-21" value="Persistent project revisions" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#536078;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="986.7" y="190.9" width="278.6" height="19.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7E8;strokeColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1013.0" y="243.0" width="225" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="element-23" value="Encrypted objects" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#C56A18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1037.8" y="253.9" width="175.5" height="19.6" as="geometry" />
+        </mxCell>
+        <mxCell id="element-24" value="WebSocket / WebRTC" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=13.0;fontColor=#2463EB;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="367.6" y="150.0" width="172.8" height="18.2" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-25" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=#2463EB;strokeWidth=3.2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="371.0" y="211.0" as="sourcePoint" />
+            <mxPoint x="539.0" y="211.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="element-26" value="Encrypted data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=13.0;fontColor=#536078;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="385.0" y="233.0" width="137.9" height="18.2" as="geometry" />
+        </mxCell>
+        <mxCell id="element-27" value="S3" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#C56A18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="874.0" y="148.9" width="100" height="19.6" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;strokeColor=#C56A18;strokeWidth=3.2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="875.0" y="211.0" as="sourcePoint" />
+            <mxPoint x="973.0" y="211.0" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="element-29" value="Objects" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=13.0;fontColor=#536078;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="874.0" y="233.0" width="100" height="18.2" as="geometry" />
+        </mxCell>
+        <mxCell id="element-30" value="TeXlyre encrypts project data before transfer. Garage stores encrypted copies for sync and restore." style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=none;fillColor=none;fontFamily=Helvetica;fontSize=14.0;fontColor=#536078;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="309.0" y="371.9" width="700" height="19.6" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

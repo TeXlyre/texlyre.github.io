@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="405" viewBox="0 0 1320 405" role="img" aria-labelledby="title desc">
+  <title id="title">TeXlyre encrypted project storage architecture</title>
+  <desc id="desc">The TeXlyre browser encrypts and decrypts local projects. Encrypted data travels by WebSocket or WebRTC to a Chelys-managed storage bridge, which stores encrypted objects and revisions in Garage.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#2463EB"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#C56A18"/>
+    </marker>
+  </defs>
+  <rect width="1320" height="405" fill="#FFFFFF"/>
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="22" y="26" width="335" height="325" rx="21" fill="#FBFDFF" stroke="#2463EB" stroke-width="2.5"/>
+    <text x="189.5" y="69" fill="#2463EB" font-size="22" font-weight="700" text-anchor="middle">TeXlyre browser</text>
+    <rect x="50" y="105" width="279" height="208" rx="15" fill="#FFFFFF" stroke="#2463EB" stroke-width="1.8"/>
+    <text x="189.5" y="146" fill="#2463EB" font-size="19" font-weight="700" text-anchor="middle">Local project</text>
+    <text x="189.5" y="174" fill="#172033" font-size="15" text-anchor="middle">Documents and files</text>
+    <text x="189.5" y="197" fill="#536078" font-size="14" text-anchor="middle">TeXlyre-managed projects</text>
+    <path d="M70 219 H309" stroke="#D7E4FB" stroke-width="1.5"/>
+    <rect x="74" y="238" width="231" height="51" rx="12" fill="#EFF6FF"/>
+    <text x="189.5" y="260" fill="#2463EB" font-size="16" font-weight="700" text-anchor="middle">Encrypt / decrypt</text>
+    <text x="189.5" y="279" fill="#2463EB" font-size="13" text-anchor="middle">AES-256-GCM</text>
+
+    <rect x="552" y="26" width="745" height="325" rx="21" fill="#FBFEFC" stroke="#16835F" stroke-width="2.5"/>
+    <text x="924.5" y="69" fill="#16835F" font-size="22" font-weight="700" text-anchor="middle">Chelys-managed Garage recipe</text>
+    <rect x="578" y="105" width="285" height="208" rx="15" fill="#FFFFFF" stroke="#16835F" stroke-width="1.8"/>
+    <text x="720.5" y="148" fill="#16835F" font-size="19" font-weight="700" text-anchor="middle">Storage bridge</text>
+    <text x="720.5" y="183" fill="#172033" font-size="15" text-anchor="middle">TeXlyre storage protocol</text>
+    <text x="720.5" y="206" fill="#536078" font-size="14" text-anchor="middle">WebSocket endpoint</text>
+    <rect x="618" y="243" width="205" height="40" rx="12" fill="#EAF7F1"/>
+    <text x="720.5" y="269" fill="#16835F" font-size="14" font-weight="700" text-anchor="middle">Managed by Chelys</text>
+
+    <rect x="985" y="105" width="282" height="208" rx="15" fill="#FFFFFF" stroke="#C56A18" stroke-width="1.8"/>
+    <text x="1126" y="148" fill="#C56A18" font-size="19" font-weight="700" text-anchor="middle">Garage storage</text>
+    <text x="1126" y="183" fill="#172033" font-size="15" text-anchor="middle">S3 object storage</text>
+    <text x="1126" y="206" fill="#536078" font-size="14" text-anchor="middle">Persistent project revisions</text>
+    <rect x="1013" y="243" width="225" height="40" rx="12" fill="#FFF7E8"/>
+    <text x="1125.5" y="269" fill="#C56A18" font-size="14" font-weight="700" text-anchor="middle">Encrypted objects</text>
+
+    <text x="454" y="164" fill="#2463EB" font-size="13" font-weight="700" text-anchor="middle">WebSocket / WebRTC</text>
+    <path d="M371 211 H539" stroke="#2463EB" stroke-width="3.2" marker-start="url(#arrow-blue)" marker-end="url(#arrow-blue)"/>
+    <text x="454" y="247" fill="#536078" font-size="13" text-anchor="middle">Encrypted data</text>
+
+    <text x="924" y="164" fill="#C56A18" font-size="14" font-weight="700" text-anchor="middle">S3</text>
+    <path d="M875 211 H973" stroke="#C56A18" stroke-width="3.2" marker-start="url(#arrow-orange)" marker-end="url(#arrow-orange)"/>
+    <text x="924" y="247" fill="#536078" font-size="13" text-anchor="middle">Objects</text>
+
+    <text x="659" y="387" fill="#536078" font-size="14" text-anchor="middle">TeXlyre encrypts project data before transfer. Garage stores encrypted copies for sync and restore.</text>
+  </g>
+</svg>
