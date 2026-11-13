@@ -86,7 +86,7 @@ Full report: [Chelys local typesetting engine support](/blog/chelys-local-typese
 Add encrypted local storage to Chelys, accessible remotely through TeXlyre but scoped strictly to project files.
 
 - [x] **6a.** Secure end-to-end encrypted local storage, restricted to TeXlyre-managed projects
-- [x] **6b.** Evaluate and optionally integrate a decentralized storage backend (Solid Pods, Garage, or similar)
+- [x] **6b.** Evaluate and optionally integrate a decentralized storage backend (Garage)
 
 :::tip[Completed]
 
