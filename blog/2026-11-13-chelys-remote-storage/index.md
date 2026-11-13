@@ -18,11 +18,11 @@ TeXlyre can now store encrypted copies of projects outside the browser using [Ga
 
 TeXlyre saves projects in the browser. Remote storage adds yet another option to keep project copies, making it easier to recover or continue work on another device. The storage system handles TeXlyre-managed projects, including their documents and files.
 
-The work covers three repositories:
+The work spans three repositories. Each link below shows the full diff for that repository's contribution to this task.
 
-- [texlyre](https://github.com/TeXlyre/texlyre/tree/nlnet_032026_T6-external-storage): project encryption, syncing, and restore controls.
-- [chelys](https://github.com/TeXlyre/chelys/tree/nlnet_032026_T6-external-storage): storage provider setup and connections.
-- [chelys-recipes](https://github.com/TeXlyre/chelys-recipes/tree/nlnet_032026_T6-external-storage): the Garage recipe and storage bridge.
+- [texlyre](https://github.com/TeXlyre/texlyre/compare/efa72cd%5E...nlnet_032026_T6-external-storage): project encryption, syncing, and restore controls.
+- [chelys](https://github.com/TeXlyre/chelys/compare/d34d00a%5E...nlnet_032026_T6-external-storage): storage provider setup and connections.
+- [chelys-recipes](https://github.com/TeXlyre/chelys-recipes/compare/84791eb%5E...3888b7c): the Garage recipe and storage bridge.
 
 ## Milestone 6a: Encrypted project storage
 
