@@ -61,3 +61,34 @@
         height: 36px !important;
     }
 }
+
+.hostingSponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    font-size: 0.85rem;
+    color: var(--ifm-color-emphasis-600);
+}
+
+.hostingLogoLink {
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+}
+
+.hostingLogoLink:hover,
+.hostingLogoLink:focus-visible {
+    opacity: 1;
+}
+
+.hostingLogo {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 4px;
+}

@@ -36,7 +36,10 @@ const funders: Funder[] = [
     },
 ];
 
+const hostingSponsorUrl = 'https://www.simafri.com/en/managed-vps/';
+
 export default function FundingBanner(): ReactNode {
+    const hostingSponsorLogo = useBaseUrl('img/sponsors/simafri.png');
     return (
         <section className={styles.funding}>
             <div className="container">
@@ -61,6 +64,28 @@ export default function FundingBanner(): ReactNode {
                             <span className={styles.logoName}>{f.name}</span>
                         </a>
                     ))}
+                </div>
+                <div className={styles.hostingSponsor}>
+                    <a
+                        href={hostingSponsorUrl}
+                        target="_blank"
+                        rel="sponsored noopener noreferrer"
+                        className={styles.hostingLogoLink}
+                    >
+                        <img
+                            src={hostingSponsorLogo}
+                            alt="Simafri"
+                            className={styles.hostingLogo}
+                            width={32}
+                            height={32}
+                            loading="lazy"
+                        />
+                    </a>
+                    <span>
+                        Hosting sponsored by{' '}
+                        <a href={hostingSponsorUrl} rel="sponsored">Simafri</a>{' '}
+                        (managed VPS)
+                    </span>
                 </div>
             </div>
         </section>
